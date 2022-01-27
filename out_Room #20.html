@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+:root {
+  --border-strong: 3px solid #777;
+  --border-normal: 1px solid gray;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table>caption {
+  font-size: 6mm;
+  font-weight: bolder;
+  letter-spacing: 1mm;
+}
+
+
+/* 210 x 297 mm */
+
+table {
+  width: 297mm;
+  height: 210mm;
+  border-collapse: collapse;
+}
+
+td {
+  border: var(--border-normal);
+  position: relative;
+  font-size: 2.6mm;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+tbody tr:last-child {
+  border-bottom: var(--border-strong);
+}
+
+tbody tr> :last-child {
+  border-right: var(--border-strong);
+}
+
+
+/* top header */
+
+.top_head>th {
+  width: 54mm;
+  height: 10mm;
+  vertical-align: bottom;
+  border-top: var(--border-strong);
+  border-bottom: var(--border-strong);
+  border-right: 1px solid gray;
+}
+
+.top_head :first-child {
+  width: 27mm;
+  border: var(--border-strong);
+}
+
+.top_head :last-child {
+  border-right: var(--border-strong);
+}
+
+
+/* left header */
+
+tbody th {
+  border-left: var(--border-strong);
+  border-right: var(--border-strong);
+  border-bottom: 1px solid gray;
+}
+
+tbody>tr:last-child th {
+  border-bottom: var(--border-strong);
+}
+
+
+/* row */
+
+tbody td>div {
+  height: 34mm;
+  overflow: hidden;
+}
+
+.vertical_span_all {
+  font-size: 5mm;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: var(--border-strong);
+}
+
+.vertical_span_all div {
+  height: 10mm;
+}
+
+
+/* td contents */
+
+
+.note {
+  font-size: 3mm;
+}
+
+.note :last-child {
+  float: right;
+}
+
+@page {
+  margin: 5mm;
+}
+.new-page {
+    page-break-before: always;
+  }
+.center
+{
+  text-align: center;
+
+}
+.left
+{
+    text-align: left;
+    margin-left: 6px;
+    /*margin-top: 10px;*/
+}
+.right
+{
+    text-align: right;  margin-right: 4px;
+}
+.teacher
+{
+    margin-left: 4px;
+}
+td{
+  height:175px;
+  width:150px;
+}
+
+
+  </style>
+<body>
+<!-- Heading -->
+    <h1 class="center">Room #20</h1>
+
+<!-- Table -->
+    <table border="1">
+
+<!-- Day/Periods -->
+        <tr>
+            <td class="center" ><br>
+                <b>Day/Period</b></br>
+            </td>
+            <td class="center" >
+                <b>I</b>
+            </td>
+            <td class="center" >
+                <b>II</b>
+            </td>
+            <td class="center">
+                <b>III</b>
+            </td>
+            <td class="center">
+                <b>1:15-1:45</b>
+            </td>
+            <td class="center" >
+                <b>IV</b>
+            </td>
+            <td class="center" >
+                <b>V</b>
+            </td>
+
+        </tr>
+<!-- Monday -->
+        <tr>
+            <td class="center">
+                <b>Monday</b></td>
+            
+                
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Software Quality Engineering</p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Tehreem Aslam</p>
+                        <!-- <p class="left">Software_Quality_Engineering@SE-5A@Tehreem_Aslam</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td rowspan="6" class="center">
+                        <h2>L<br>U<br>N<br>C<br>H</h2>
+                    </td>
+                
+                
+                    <td colspan=1>
+                        <p class="left">Human Computer Interaction</p>
+                                    
+                                    <p class = "right">SE-3B</p>
+                            
+                        <p class = "teacher">Dr. Shahnawaz Qureshi</p>
+                        <!-- <p class="left">Human_Computer_Interaction@SE-3B@Dr._Shahnawaz_Qureshi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+
+        </tr>
+<!-- Tuesday -->
+        <tr>
+            <td class="center">
+                <b>Tuesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Data Science</p>
+                                    
+                                    <p class = "right">CS-7A</p>
+                            
+                        <p class = "teacher">Adeel Ashraf Cheema</p>
+                        <!-- <p class="left">Data_Science@CS-7A@Adeel_Ashraf_Cheema</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Data Structures</p>
+                                    
+                                    <p class = "right">SE-3B</p>
+                            
+                        <p class = "teacher">Asif Ameer</p>
+                        <!-- <p class="left">Data_Structures@SE-3B@Asif_Ameer</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Theory of Automata</p>
+                                    
+                                    <p class = "right">CS-5D</p>
+                            
+                        <p class = "teacher">Numan Shafi</p>
+                        <!-- <p class="left">Theory_of_Automata@CS-5D@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+        </tr>
+<!-- Wednesday -->
+        <tr>
+            <td class="center">
+                <b>Wednesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Programming Fundamentals</p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Aliza Saeed</p>
+                        <!-- <p class="left">Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Operation Research</p>
+                                    
+                                    <p class = "right">SE-5B</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Imran Babar</p>
+                        <!-- <p class="left">Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Operation Research</p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Imran Babar</p>
+                        <!-- <p class="left">Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Information Security</p>
+                                    
+                                    <p class = "right">CS-7E</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Umar Aftab</p>
+                        <!-- <p class="left">Information_Security@CS-7E@Dr._Muhammad_Umar_Aftab</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Data Mining</p>
+                                    
+                                    <p class = "right">CS-7A</p>
+                            
+                        <p class = "teacher">Dr. Rabia Maqsood</p>
+                        <!-- <p class="left">Data_Mining@CS-7A@Dr._Rabia_Maqsood</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Information Security</p>
+                                    
+                                    <p class = "right">CS-7D</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Umar Aftab</p>
+                        <!-- <p class="left">Information_Security@CS-7D@Dr._Muhammad_Umar_Aftab</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+
+        </tr>
+<!-- Friday -->
+        <tr>
+            <td class="center">
+                <b>Friday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Database Systems</p>
+                                    
+                                    <p class = "right">CS-5E</p>
+                            
+                        <p class = "teacher">Aliza Saeed</p>
+                        <!-- <p class="left">Database_Systems@CS-5E@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+
+        </tr>
+
+    </table>
+</body>
+<p class = "new-page"></div>
+
+
+</html>

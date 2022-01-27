@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+:root {
+  --border-strong: 3px solid #777;
+  --border-normal: 1px solid gray;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table>caption {
+  font-size: 6mm;
+  font-weight: bolder;
+  letter-spacing: 1mm;
+}
+
+
+/* 210 x 297 mm */
+
+table {
+  width: 297mm;
+  height: 210mm;
+  border-collapse: collapse;
+}
+
+td {
+  border: var(--border-normal);
+  position: relative;
+  font-size: 2.6mm;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+tbody tr:last-child {
+  border-bottom: var(--border-strong);
+}
+
+tbody tr> :last-child {
+  border-right: var(--border-strong);
+}
+
+
+/* top header */
+
+.top_head>th {
+  width: 54mm;
+  height: 10mm;
+  vertical-align: bottom;
+  border-top: var(--border-strong);
+  border-bottom: var(--border-strong);
+  border-right: 1px solid gray;
+}
+
+.top_head :first-child {
+  width: 27mm;
+  border: var(--border-strong);
+}
+
+.top_head :last-child {
+  border-right: var(--border-strong);
+}
+
+
+/* left header */
+
+tbody th {
+  border-left: var(--border-strong);
+  border-right: var(--border-strong);
+  border-bottom: 1px solid gray;
+}
+
+tbody>tr:last-child th {
+  border-bottom: var(--border-strong);
+}
+
+
+/* row */
+
+tbody td>div {
+  height: 34mm;
+  overflow: hidden;
+}
+
+.vertical_span_all {
+  font-size: 5mm;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: var(--border-strong);
+}
+
+.vertical_span_all div {
+  height: 10mm;
+}
+
+
+/* td contents */
+
+
+.note {
+  font-size: 3mm;
+}
+
+.note :last-child {
+  float: right;
+}
+
+@page {
+  margin: 5mm;
+}
+.new-page {
+    page-break-before: always;
+  }
+.center
+{
+  text-align: center;
+
+}
+.left
+{
+    text-align: left;
+    margin-left: 6px;
+    /*margin-top: 10px;*/
+}
+.right
+{
+    text-align: right;  margin-right: 4px;
+}
+.teacher
+{
+    margin-left: 4px;
+}
+td{
+  height:175px;
+  width:150px;
+}
+
+
+  </style>
+<body>
+<!-- Heading -->
+    <h1 class="center">CS-3A</h1>
+
+<!-- Table -->
+    <table border="1">
+
+<!-- Day/Periods -->
+        <tr>
+            <td class="center" ><br>
+                <b>Day/Period</b></br>
+            </td>
+            <td class="center" >
+                <b>I</b>
+            </td>
+            <td class="center" >
+                <b>II</b>
+            </td>
+            <td class="center">
+                <b>III</b>
+            </td>
+            <td class="center">
+                <b>1:15-1:45</b>
+            </td>
+            <td class="center" >
+                <b>IV</b>
+            </td>
+            <td class="center" >
+                <b>V</b>
+            </td>
+
+        </tr>
+<!-- Monday -->
+        <tr>
+            <td class="center">
+                <b>Monday</b></td>
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Discrete Structures</p>
+                                    
+                                    <p class = "right">Room #9</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Ahmad</p>
+                        <!-- <p class="left">Discrete_Structures@Room_#9@Dr._Muhammad_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Data Structures</p>
+                                    
+                                    <p class = "right">Room #7</p>
+                            
+                        <p class = "teacher">Muhammad Husnain</p>
+                        <!-- <p class="left">Data_Structures@Room_#7@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Finance & Accounting</p>
+                                    
+                                    <p class = "right">FSM #3</p>
+                            
+                        <p class = "teacher">Agha Mureed Ahmad Khan</p>
+                        <!-- <p class="left">Finance_&_Accounting@FSM_#3@Agha_Mureed_Ahmad_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td rowspan="6" class="center">
+                        <h2>L<br>U<br>N<br>C<br>H</h2>
+                    </td>
+                
+                
+                    <td colspan=1>
+                        <p class="left">Digital Logic Design</p>
+                                    
+                                    <p class = "right">Room #3</p>
+                            
+                        <p class = "teacher">Muhammad Irfan Ishaq</p>
+                        <!-- <p class="left">Digital_Logic_Design@Room_#3@Muhammad_Irfan_Ishaq</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">Room #13</p>
+                            
+                        <p class = "teacher">Muhammad Mohsin Hameed</p>
+                        <!-- <p class="left">Applied_Physics@Room_#13@Muhammad_Mohsin_Hameed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+
+        </tr>
+<!-- Tuesday -->
+        <tr>
+            <td class="center">
+                <b>Tuesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Organization and Assembly Language</p>
+                                    
+                                    <p class = "right">Room #8</p>
+                            
+                        <p class = "teacher">Abdul Qadeer Bilal</p>
+                        <!-- <p class="left">Computer_Organization_and_Assembly_Language@Room_#8@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Object Oriented Programming</p>
+                                    
+                                    <p class = "right">Room #6</p>
+                            
+                        <p class = "teacher">Shoaib Saleem<hr>Differential Equations</p>
+                        <!-- <p class="left">Object_Oriented_Programming@Room_#6@Shoaib_Saleem<hr>Differential_Equations@FSM_#3@Arfan_Shahzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">FSM #3</p>
+                            
+                        <p class = "teacher">Arfan Shahzad</p>
+                        <!-- <p class="left">Object_Oriented_Programming@Room_#6@Shoaib_Saleem<hr>Differential_Equations@FSM_#3@Arfan_Shahzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Discrete Structures</p>
+                                    
+                                    <p class = "right">Room #1</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Ahmad</p>
+                        <!-- <p class="left">Discrete_Structures@Room_#1@Dr._Muhammad_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=2>
+                        <p class="left">Object Oriented Programming - Lab</p>
+                                    
+                                    <p class = "right">FSM Lab</p>
+                            
+                        <p class = "teacher">Muhammad Hannan Farooq</p>
+                        <!-- <p class="left">Object_Oriented_Programming_-_Lab@FSM_Lab@Muhammad_Hannan_Farooq</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+        </tr>
+<!-- Wednesday -->
+        <tr>
+            <td class="center">
+                <b>Wednesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Organization and Assembly Language</p>
+                                    
+                                    <p class = "right">FSM #4</p>
+                            
+                        <p class = "teacher">Abdul Qadeer Bilal</p>
+                        <!-- <p class="left">Computer_Organization_and_Assembly_Language@FSM_#4@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Object Oriented Programming</p>
+                                    
+                                    <p class = "right">Room #1</p>
+                            
+                        <p class = "teacher">Shoaib Saleem<hr>Differential Equations</p>
+                        <!-- <p class="left">Object_Oriented_Programming@Room_#1@Shoaib_Saleem<hr>Differential_Equations@FSM_#3@Arfan_Shahzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">FSM #3</p>
+                            
+                        <p class = "teacher">Arfan Shahzad</p>
+                        <!-- <p class="left">Object_Oriented_Programming@Room_#1@Shoaib_Saleem<hr>Differential_Equations@FSM_#3@Arfan_Shahzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Finance & Accounting</p>
+                                    
+                                    <p class = "right">Room #5</p>
+                            
+                        <p class = "teacher">Agha Mureed Ahmad Khan<hr>Digital Logic Design</p>
+                        <!-- <p class="left">Finance_&_Accounting@Room_#5@Agha_Mureed_Ahmad_Khan<hr>Digital_Logic_Design@Room_#6@Muhammad_Irfan_Ishaq</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">Room #6</p>
+                            
+                        <p class = "teacher">Muhammad Irfan Ishaq</p>
+                        <!-- <p class="left">Finance_&_Accounting@Room_#5@Agha_Mureed_Ahmad_Khan<hr>Digital_Logic_Design@Room_#6@Muhammad_Irfan_Ishaq</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Linear Algebra</p>
+                                    
+                                    <p class = "right">FSM #3</p>
+                            
+                        <p class = "teacher">Ghilmana Sarmad</p>
+                        <!-- <p class="left">Linear_Algebra@FSM_#3@Ghilmana_Sarmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Data Structures</p>
+                                    
+                                    <p class = "right">Room #3</p>
+                            
+                        <p class = "teacher">Muhammad Husnain</p>
+                        <!-- <p class="left">Data_Structures@Room_#3@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=2>
+                        <p class="left">Computer Organization and Assembly Language - Lab</p>
+                                    
+                                    <p class = "right">Lab #4</p>
+                            
+                        <p class = "teacher">Abuzar Ghafari</p>
+                        <!-- <p class="left">Computer_Organization_and_Assembly_Language_-_Lab@Lab_#4@Abuzar_Ghafari</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">Room #10</p>
+                            
+                        <p class = "teacher">Muhammad Mohsin Hameed</p>
+                        <!-- <p class="left">Applied_Physics@Room_#10@Muhammad_Mohsin_Hameed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "right">FSM #4</p>
+                            
+                        <p class = "teacher">Bushra Niaz</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@FSM_#4@Bushra_Niaz</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+
+        </tr>
+<!-- Friday -->
+        <tr>
+            <td class="center">
+                <b>Friday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Linear Algebra</p>
+                                    
+                                    <p class = "right">FSM #3</p>
+                            
+                        <p class = "teacher">Ghilmana Sarmad</p>
+                        <!-- <p class="left">Linear_Algebra@FSM_#3@Ghilmana_Sarmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=2>
+                        <p class="left">Data Structures - Lab</p>
+                                    
+                                    <p class = "right">Lab #5</p>
+                            
+                        <p class = "teacher">Saba Aslam</p>
+                        <!-- <p class="left">Data_Structures_-_Lab@Lab_#5@Saba_Aslam</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "right">Room #2</p>
+                            
+                        <p class = "teacher">Bushra Niaz</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@Room_#2@Bushra_Niaz</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+
+        </tr>
+
+    </table>
+</body>
+<p class = "new-page"></div>
+
+
+</html>
