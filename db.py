@@ -38,5 +38,11 @@ class Database:
         c.execute(sql)
         return c.fetchall()
 
+    def get_all_students(self):
+        sql = "select registered_id, roll_number from tbl_section_students"
+        c = self.db.cursor() 
+        c.execute(sql)
+        return c.fetchall()
+
 
 db = Database() 

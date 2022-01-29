@@ -1,5 +1,5 @@
 import db
-import rooms, courses, sections, teachers
+import rooms, courses, sections, teachers, students
 class Registered_Course:
     def __init__(self, id, section_id, course_id, teacher_id, db_id):
         self.id = id
@@ -8,6 +8,7 @@ class Registered_Course:
         self.teacher_id = teacher_id
         self.db_id = db_id
         self.reg_binary = bin(int(id))[2:].zfill(8)
+        self.students = []
         def __repr__(self) -> str:
             return f'{self.id} {self.section_id} {self.course_id} {self.teacher_id}'
 
@@ -29,6 +30,11 @@ for data in temp:
             section_id = section.id 
             break
     reg_course = Registered_Course(count, section_id, course_id, teacher_id, data[0])
+
+    for student in students.students_data:
+        if data[0] == student.reg_id:
+            reg_course.students.append(student.roll_number)
+
     reg_data.append(reg_course)
     count += 1
 
@@ -38,3 +44,6 @@ for data in temp:
 # for t in reg_data:
 #     print(t.id, " ", sections.sections_data[t.section_id].name, " ", 
 #     courses.courses_data[t.course_id].name, " ", teachers.teachers_data[t.teacher_id].name, " ", t.reg_binary)
+
+# for t in reg_data[1].students:
+#     print(t)

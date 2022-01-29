@@ -1,5 +1,6 @@
 from registered_courses import *
 from time_table import *
+from student_clashes import *
 import random
 
 class Population:
@@ -9,7 +10,7 @@ class Population:
         self.chromosome = chromosome
 
     def __repr__(self):
-        return ('(Population Number: {0}\nFitness: {1}\nChromosome: \n{2})\n'.format(self.number, self.fitness,
+        return ('(Population Number: {0}\Student Clashes: {1}\nChromosome: \n{2})\n'.format(self.number, self.fitness,
                                                                                      self.chromosome))
 
 
@@ -18,7 +19,7 @@ def initial_population():
     
     timetables = [] 
 
-    for z in range(1): # 100 Solutions will be generated. 
+    for z in range(100): # 100 Solutions will be generated. 
         timetable = [] 
         generated_timetable = {} 
         t_sections = {}
@@ -65,12 +66,13 @@ def initial_population():
                     slots.append(Slot(day, slot))
                 lecture = Timetable(reg_course.id, slots)
             timetable.append(lecture)
-        #print(timetable)
-        print(timetable)
-        timetables.append(timetable)
+        clash_count = get_student_clashes(timetable, reg_data)
+        population = Population(z, clash_count, timetable)
+        timetables.append(population)
         #print(timetables)
     return timetables
-
+ 
 pop = initial_population()
-
-#print(pop)
+pop.sort(key=lambda x: x.fitness, reverse=False)
+# f = open("damn_man.txt", "w")
+# f.write(str(pop))

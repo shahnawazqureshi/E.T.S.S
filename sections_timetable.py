@@ -31,9 +31,6 @@ def generate_data():
 
 
 
-
-
-
 def organise_input_data(elements: List[List[str]]) -> List[List]:
     """
     Organises the input data to find double courses for easier use in templates
