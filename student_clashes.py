@@ -1,3 +1,4 @@
+
 #from timetable import *
 #from population import *
 from clashed_courses import get_clashed_courses
@@ -39,7 +40,6 @@ def get_student_clashes(timetable, reg_data):
     clashed_sections = get_clashed_courses(timetable)
 
     count = 0
-    i = 0
     for k, v in clashed_sections.items():
         size_of_classes = len(v)
         for lec in range(0, size_of_classes):
@@ -55,6 +55,5 @@ def get_student_clashes(timetable, reg_data):
                             #       sections[v[x]].id, " ", sections[v[x]].course, " ",
                             #       sections[v[x]].section, " ",
                             #       sections[v[x]].code)
-        i += 1
     return count
     

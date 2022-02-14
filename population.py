@@ -18,8 +18,11 @@ class Population:
         return ('(Population Number: {0}\Student Clashes: {1}\nChromosome: \n{2})\n'.format(self.number, self.fitness,
                                                                                      self.chromosome))
     
-
-
+all_sections = []
+for reg_course in reg_data:
+    i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
+    if (i) not in all_sections:
+        all_sections.append(i)
 
 def initial_population():
     
@@ -27,7 +30,7 @@ def initial_population():
 
     for z in range(100): # 100 Solutions will be generated. 
         timetable = [] 
-        generated_timetable = {} 
+        #generated_timetable = {} 
         t_sections = {}
         #timetables.append(generated_timetable)
         section_slots = {}
@@ -38,7 +41,7 @@ def initial_population():
             if (i) not in t_sections.keys():
                 t_sections[i] = []
                 section_slots[i] = []
-                generated_timetable[i] = [["" for i in range(5)] for j in range(5)]
+                #generated_timetable[i] = [["" for i in range(5)] for j in range(5)]
 
             if courses.courses_data[reg_course.course_id].type == "Lab":
                 day = random.randint(1, 4)
@@ -73,11 +76,10 @@ def initial_population():
                     slots.append(Slot(day, slot))
                 lecture = Timetable(reg_course.id, slots)
             timetable.append(lecture)
-            t_sections[i].append(reg_course.id)
+            t_sections[i].append([reg_course.id, slots])
         clash_count = get_student_clashes(timetable, reg_data)
         population = Population(z, clash_count, timetable, t_sections)
         timetables.append(population)
-        #print(timetables)
     return timetables
  
 
@@ -137,27 +139,45 @@ def apply_crossover(population, length, chromosome_length):
 
             crossovered_timetable1 = [] 
             crossovered_timetable2 = []
-            
-            for k in range(chromosome_length):
-                #print("For K: " + str(k))
-                if k <= int(chromosome_length / 2):
-                    #print("First K: " + str(k))
-                    crossovered_timetable1.append(population[first].chromosome[k])
-                    crossovered_timetable2.append(population[second].chromosome[k])
-                else: 
-                    #print("Second K: " + str(k))
-                    crossovered_timetable1.append(population[second].chromosome[k])
-                    crossovered_timetable2.append(population[first].chromosome[k])
+            crossovered_sections1 = {}
+            crossovered_sections2 = {}
+
+            for k in range(len(all_sections)):
+                if k <= int(len(all_sections) / 2):
+                    for data in population[first].t_sections[all_sections[k]]:
+                        crossovered_timetable1.append(Timetable(data[0], data[1]))
+                    crossovered_sections1[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                    for data in population[second].t_sections[all_sections[k]]:
+                        crossovered_timetable2.append(Timetable(data[0], data[1]))
+                    crossovered_sections2[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                else:
+                    for data in population[second].t_sections[all_sections[k]]:
+                        crossovered_timetable1.append(Timetable(data[0], data[1]))
+                    crossovered_sections2[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                    for data in population[first].t_sections[all_sections[k]]:
+                        crossovered_timetable2.append(Timetable(data[0], data[1]))
+                    crossovered_sections1[all_sections[k]] = population[first].t_sections[all_sections[k]]
+
+            # for k in range(chromosome_length):
+            #     #print("For K: " + str(k))
+            #     if k <= int(chromosome_length / 2):
+            #         #print("First K: " + str(k))
+            #         crossovered_timetable1.append(population[first].chromosome[k])
+            #         crossovered_timetable2.append(population[second].chromosome[k])
+            #     else: 
+            #         #print("Second K: " + str(k))
+            #         crossovered_timetable1.append(population[second].chromosome[k])
+            #         crossovered_timetable2.append(population[first].chromosome[k])
 
             # new_crossovered_exams1 = apply_mutation(crossovered_exams1.copy())
             # new_crossovered_exams2 = apply_mutation(crossovered_exams2.copy())
 
             clash_count = get_student_clashes(crossovered_timetable1, reg_data)
-            pops = Population(j, clash_count, crossovered_timetable1)
+            pops = Population(j, clash_count, crossovered_timetable1, crossovered_sections1)
             crossover_population.append(pops)
 
             clash_count = get_student_clashes(crossovered_timetable2, reg_data)
-            pops = Population(j + 1, clash_count, crossovered_timetable2)
+            pops = Population(j + 1, clash_count, crossovered_timetable2, crossovered_sections2)
             crossover_population.append(pops)
 
             # fitness = calculateFitness(new_crossovered_exams1, courses_data, students_data, teachers_data)
@@ -211,10 +231,11 @@ def apply_mutation(chromosome):
 
 def genetic_algo():
     best_solution = None
-    max_iter = 50
+    max_iter = 100
     population = initial_population()
+    population = parent_selection(population.copy())
     count = 0
-    regen = 1
+    regen = 0
     population.sort(key = lambda x: x.fitness, reverse=False)
     print()
     f = open("Folder/population 0.txt", "w")
@@ -228,6 +249,7 @@ def genetic_algo():
             best_solution = temp_best 
         elif temp_best.fitness < best_solution.fitness:
             best_solution = temp_best 
+            regen = 1
         
         population.sort(key = lambda x: x.fitness, reverse=False)
         f = open("Folder/population " + str(i+1) + ".txt", "w")
@@ -236,10 +258,20 @@ def genetic_algo():
         print("Generation " + str(i) + " Done!.....")
         print("Best Solution Fitness: " + str(best_solution.fitness))
 
+        if regen > 7:
+            print("Re-Generating Population")
+            population1 = initial_population()
+            population = parent_selection(population1.copy())
+            regen = 1
+
 
         count += 1 
+        regen += 1
 
 genetic_algo()
+
+# population = initial_population()
+
 
 # print(pop[0].chromosome[2])
 # print(pop[0])
