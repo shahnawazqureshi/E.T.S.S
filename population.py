@@ -5,7 +5,7 @@ import random
 from numpy import random as rn
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
-mutation_probability = round(rn.uniform(low=0.0, high=0.5), 1)
+mutation_probability = round(rn.uniform(low=0.0, high=0.1), 1)
 
 class Population:
     def __init__(self, number, fitness, chromosome, t_sections):
@@ -144,24 +144,73 @@ def apply_crossover(population, length, chromosome_length):
 
             for k in range(len(all_sections)):
                 if k <= int(len(all_sections) / 2):
-                    for data in population[first].t_sections[all_sections[k]]:
-                        crossovered_timetable1.append(Timetable(data[0], data[1]))
+                    # Getting first half of sections from first Parent
                     crossovered_sections1[all_sections[k]] = population[first].t_sections[all_sections[k]]
-                    for data in population[second].t_sections[all_sections[k]]:
-                        crossovered_timetable2.append(Timetable(data[0], data[1]))
-                    crossovered_sections2[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                    # Applying Mutation on each Gene and appending it to new Timetable
+                    for index in range(0, len(crossovered_sections1[all_sections[k]])):
+                        crossovered_sections1[all_sections[k]] = apply_mutation(
+                            crossovered_sections1[all_sections[k]][index],
+                            crossovered_sections1[all_sections[k]], index)
+                        # Appending the new Slots into the Timetable. 
+                        crossovered_timetable1.append(Timetable(crossovered_sections1[all_sections[k]][index][0],
+                         crossovered_sections1[all_sections[k]][index][1]))
+                        
+                    # Getting first half of sections from second Parent
+                    crossovered_sections2[all_sections[k]] = population[second].t_sections[all_sections[k]]
+                    # Applying Mutation on each Gene and appending it to new Timetable
+                    for index in range(0, len(crossovered_sections2[all_sections[k]])):
+                        crossovered_sections2[all_sections[k]] = apply_mutation(
+                            crossovered_sections2[all_sections[k]][index],
+                            crossovered_sections2[all_sections[k]], index)
+                        # Appending the new Slots into the Timetable. 
+                        crossovered_timetable2.append(Timetable(crossovered_sections2[all_sections[k]][index][0],
+                         crossovered_sections2[all_sections[k]][index][1]))
+
+
+                    # for data in population[first].t_sections[all_sections[k]]:
+                    #     crossovered_timetable1.append(Timetable(data[0], data[1]))
+                    # for data in population[second].t_sections[all_sections[k]]:
+                    #     crossovered_timetable2.append(Timetable(data[0], data[1]))
+                    # crossovered_sections2[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                
+                # If length has exceeded half the sections
                 else:
-                    for data in population[second].t_sections[all_sections[k]]:
-                        crossovered_timetable1.append(Timetable(data[0], data[1]))
+
+                    # Getting second half of sections from second Parent
+                    crossovered_sections1[all_sections[k]] = population[second].t_sections[all_sections[k]]
+                    # Applying Mutation on each Gene and appending it to new Timetable
+                    for index in range(0, len(crossovered_sections1[all_sections[k]])):
+                        crossovered_sections1[all_sections[k]] = apply_mutation(
+                            crossovered_sections1[all_sections[k]][index],
+                            crossovered_sections1[all_sections[k]], index)
+                        # Appending the new Slots into the Timetable. 
+                        crossovered_timetable1.append(Timetable(crossovered_sections1[all_sections[k]][index][0],
+                         crossovered_sections1[all_sections[k]][index][1]))
+
+                    
+                    # Getting second half of sections from second Parent
                     crossovered_sections2[all_sections[k]] = population[first].t_sections[all_sections[k]]
-                    for data in population[first].t_sections[all_sections[k]]:
-                        crossovered_timetable2.append(Timetable(data[0], data[1]))
-                    crossovered_sections1[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                    # Applying Mutation on each Gene and appending it to new Timetable
+                    for index in range(0, len(crossovered_sections2[all_sections[k]])):
+                        crossovered_sections2[all_sections[k]] = apply_mutation(
+                            crossovered_sections2[all_sections[k]][index],
+                            crossovered_sections2[all_sections[k]], index)
+                        # Appending the new Slots into the Timetable. 
+                        crossovered_timetable2.append(Timetable(crossovered_sections2[all_sections[k]][index][0],
+                         crossovered_sections2[all_sections[k]][index][1]))
+
+
+                    # for data in population[second].t_sections[all_sections[k]]:
+                    #     crossovered_timetable1.append(Timetable(data[0], data[1]))
+                    # crossovered_sections2[all_sections[k]] = population[first].t_sections[all_sections[k]]
+                    # for data in population[first].t_sections[all_sections[k]]:
+                    #     crossovered_timetable2.append(Timetable(data[0], data[1]))
+                    # crossovered_sections1[all_sections[k]] = population[first].t_sections[all_sections[k]]
 
             # for k in range(chromosome_length):
             #     #print("For K: " + str(k))
             #     if k <= int(chromosome_length / 2):
-            #         #print("First K: " + str(k))
+            #         #print("First K: " + str(k))  
             #         crossovered_timetable1.append(population[first].chromosome[k])
             #         crossovered_timetable2.append(population[second].chromosome[k])
             #     else: 
@@ -199,33 +248,58 @@ def apply_crossover(population, length, chromosome_length):
 
 
 # Apply Mutation on chromosomes , given Mutation probability
-def apply_mutation(chromosome):
-    # Randomly switch values(Day, Time) of a chromosome
+def apply_mutation(chromosome, t_sections, lec_index):
+        # Check if course or not 
     if random.randint(0, 100) <= mutation_probability * 100:
-        genes = random.randint(0, 3)
-        for i in range(genes):
-            gene = random.randint(0, len(chromosome) - 1)
-            temp = random.randint(0, len(days_data) - 1)
+        if (courses.courses_data[reg_data[chromosome[0]].course_id].type == 'Course'):
+            # Select the Slot (1st/2nd)
+            lecture_index = random.randint(0, 1)
+            # Switch the Day
+            loop_count = 0
+            while True:
+                day_index = random.randint(1, 5)
+                while chromosome[1][(lecture_index + 1) % 2].day == day_index:
+                    day_index = random.randint(1, 5)
+                slot_index = random.randint(1, 5)
+                temp = chromosome
+                temp[1][lecture_index].day = day_index
+                temp[1][lecture_index].slot = slot_index
+                if (get_section_clashes(t_sections, temp, reg_data)):
+                    t_sections[lec_index] = temp
+                    break
+                if loop_count > 15:                    
+                    break
+                loop_count += 1
+    return t_sections
 
-            # Date Switch
-            chromosome[gene].day = days_data[temp].day
-            chromosome[gene].binary_value[4] = days_data[temp].binary_val
 
-            # Time Switch
-            temp = random.randint(0, len(times_data) - 1)
-            chromosome[gene].time = times_data[temp].time
-            chromosome[gene].binary_value[3] = times_data[temp].binary_val
+# def apply_mutation(chromosome):
+#     # Randomly switch values(Day, Time) of a chromosome
+#     if random.randint(0, 100) <= mutation_probability * 100:
+#         genes = random.randint(0, 3)
+#         for i in range(genes):
+#             gene = random.randint(0, len(chromosome) - 1)
+#             temp = random.randint(0, len(days_data) - 1)
 
-            # Room Switch
-            temp = random.randint(0, len(rooms_data) - 1)
-            while rooms_data[temp].num in chromosome[gene].room:
-                temp = random.randint(0, len(rooms_data) - 1)
+#             # Date Switch
+#             chromosome[gene].day = days_data[temp].day
+#             chromosome[gene].binary_value[4] = days_data[temp].binary_val
 
-            temp1 = random.randint(0, len(chromosome[gene].room) - 1)
-            chromosome[gene].room[temp1] = rooms_data[temp].num
-            chromosome[gene].binary_value[1][temp1] = rooms_data[temp].binary_val
+#             # Time Switch
+#             temp = random.randint(0, len(times_data) - 1)
+#             chromosome[gene].time = times_data[temp].time
+#             chromosome[gene].binary_value[3] = times_data[temp].binary_val
 
-    return chromosome
+#             # Room Switch
+#             temp = random.randint(0, len(rooms_data) - 1)
+#             while rooms_data[temp].num in chromosome[gene].room:
+#                 temp = random.randint(0, len(rooms_data) - 1)
+
+#             temp1 = random.randint(0, len(chromosome[gene].room) - 1)
+#             chromosome[gene].room[temp1] = rooms_data[temp].num
+#             chromosome[gene].binary_value[1][temp1] = rooms_data[temp].binary_val
+
+#     return chromosome
 
 
 
@@ -258,11 +332,11 @@ def genetic_algo():
         print("Generation " + str(i) + " Done!.....")
         print("Best Solution Fitness: " + str(best_solution.fitness))
 
-        if regen > 7:
-            print("Re-Generating Population")
-            population1 = initial_population()
-            population = parent_selection(population1.copy())
-            regen = 1
+        # if regen > 7:
+        #     print("Re-Generating Population")
+        #     population1 = initial_population()
+        #     population = parent_selection(population1.copy())
+        #     regen = 1
 
 
         count += 1 

@@ -57,3 +57,13 @@ def get_student_clashes(timetable, reg_data):
                             #       sections[v[x]].code)
     return count
     
+
+def get_section_clashes(t_section, chromosome, reg_data):
+    for index in range(0, len(t_section)):
+        if (chromosome[0] is not t_section[index][0]):
+            for x_student in reg_data[chromosome[0]].students:
+                for y_student in reg_data[t_section[index][0]].students:
+                    if (x_student == y_student):
+                        return False
+    return True
+    
