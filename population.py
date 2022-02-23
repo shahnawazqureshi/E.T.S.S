@@ -358,7 +358,7 @@ def genetic_algo():
     max_iter = 1000
     population = initial_population()
  
-    population = parent_selection(population.copy())
+    #population = parent_selection(population.copy())
     count = 0
     regen = 0
     population.sort(key = lambda x: x.fitness, reverse=False)
