@@ -1,6 +1,8 @@
 
 #from timetable import *
 #from population import *
+from courses import *
+from sections import *
 from clashed_courses import get_clashed_courses
 # clashed_sections = get_clashed_courses()
 
@@ -36,6 +38,7 @@ from clashed_courses import get_clashed_courses
     
 #     return arr, count
 
+f = open("damn_man.txt", "w")
 def get_student_clashes(timetable, reg_data):
     clashed_sections = get_clashed_courses(timetable)
 
@@ -47,8 +50,17 @@ def get_student_clashes(timetable, reg_data):
                 for x in range(lec + 1, size_of_classes):
                     for z in reg_data[v[x]].students:
                         if (student == z):
+                            
                             count += 1
-
+                            f.write(str(count) + " : " + student + " : " + k + "\n" + courses_data[reg_data[v[lec]].course_id].name + " " + sections_data[reg_data[v[lec]].section_id].name + " \n" + 
+                            courses_data[reg_data[v[x]].course_id].name + " " + 
+                            sections_data[reg_data[v[x]].section_id].name + " \n\n")
+                            # print(student, " : ", k, " ", sections[v[lec]].id, " ",
+                            #       sections[v[lec]].course, sections[v[lec]].section,
+                            #       " ", sections[v[lec]].code, " and ",
+                            #       sections[v[x]].id, " ", sections[v[x]].course, " ",
+                            #       sections[v[x]].section, " ",
+                            #       sections[v[x]].code)
                             # print(student, " : ", k, " ", sections[v[lec]].id, " ",
                             #       sections[v[lec]].course, sections[v[lec]].section,
                             #       " ", sections[v[lec]].code, " and ",
@@ -58,12 +70,23 @@ def get_student_clashes(timetable, reg_data):
     return count
     
 
-def get_section_clashes(t_section, chromosome, reg_data):
+def get_section_clashes(t_section, chromosome, reg_data, lec_index):
+    # print("yes")
     for index in range(0, len(t_section)):
         if (chromosome[0] is not t_section[index][0]):
-            for x_student in reg_data[chromosome[0]].students:
-                for y_student in reg_data[t_section[index][0]].students:
-                    if (x_student == y_student):
-                        return False
+            for lecture_slot in range(0, 2):
+                if (chromosome[1][lec_index].day == t_section[index][1][lecture_slot].day) and (chromosome[1][lec_index].slot == t_section[index][1][lecture_slot].slot):
+                    for x_student in reg_data[chromosome[0]].students:
+                        # print(courses_data[reg_data[chromosome[0]].course_id].name)
+                        # print("For X STUDENT ----- " , x_student)
+                        for y_student in reg_data[t_section[index][0]].students:
+                            # print(courses_data[reg_data[t_section[index][0]].course_id].name)
+                            # print("Y Student: ", y_student)
+                            if (x_student == y_student):
+                                return False
+        else: 
+            if (chromosome[1][lec_index].day == t_section[index][1][(lec_index + 1) % 2].day) and (chromosome[1][lec_index].slot == t_section[index][1][(lec_index + 1) % 2].slot):
+                return False
+
     return True
     

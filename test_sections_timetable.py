@@ -86,7 +86,7 @@ def generate_html(template, name: str, elements: List[List]) -> str:
     return rendered
 
 
-def run(input_data):
+def run(input_data, count):
     # Init jinja
     file_loader = FileSystemLoader('.')
     env = Environment(loader=file_loader)
@@ -96,14 +96,14 @@ def run(input_data):
     for name, elements in input_data.items():
         full_text += generate_html(template=template, name=name, elements=elements)
 
-    pdfkit.from_string(full_text, "Sections Timetable.pdf", configuration = wkhtml_path)
+    pdfkit.from_string(full_text, "Sections Timetable# "+str(count)+".pdf", configuration = wkhtml_path)
 
 
 
-def execute_function(data):
+def execute_function(data, count):
 
     sections_timetable = generate_data(data)
     sections_timetable = dict(sorted(sections_timetable.items()))
-    run(sections_timetable)
+    run(sections_timetable, count)
 
 # execute_function()
