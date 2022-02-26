@@ -38,12 +38,11 @@ from clashed_courses import get_clashed_courses
     
 #     return arr, count
 
-f = open("damn_man.txt", "w")
 def get_student_clashes(timetable, reg_data):
     clashed_sections = get_clashed_courses(timetable)
-
+    # f = open("damn_man.txt", "w")
     count = 0
-    for k, v in clashed_sections.items():
+    for _, v in clashed_sections.items():
         size_of_classes = len(v)
         for lec in range(0, size_of_classes):
             for student in reg_data[v[lec]].students:
@@ -52,9 +51,9 @@ def get_student_clashes(timetable, reg_data):
                         if (student == z):
                             
                             count += 1
-                            f.write(str(count) + " : " + student + " : " + k + "\n" + courses_data[reg_data[v[lec]].course_id].name + " " + sections_data[reg_data[v[lec]].section_id].name + " \n" + 
-                            courses_data[reg_data[v[x]].course_id].name + " " + 
-                            sections_data[reg_data[v[x]].section_id].name + " \n\n")
+                            # f.write(str(count) + " : " + student + " : " + k + "\n" + courses_data[reg_data[v[lec]].course_id].name + " " + sections_data[reg_data[v[lec]].section_id].name + " \n" + 
+                            # courses_data[reg_data[v[x]].course_id].name + " " + 
+                            # sections_data[reg_data[v[x]].section_id].name + " \n\n")
                             # print(student, " : ", k, " ", sections[v[lec]].id, " ",
                             #       sections[v[lec]].course, sections[v[lec]].section,
                             #       " ", sections[v[lec]].code, " and ",
@@ -67,8 +66,8 @@ def get_student_clashes(timetable, reg_data):
                             #       sections[v[x]].id, " ", sections[v[x]].course, " ",
                             #       sections[v[x]].section, " ",
                             #       sections[v[x]].code)
+    # f.close()
     return count
-    
 
 def get_section_clashes(t_section, chromosome, reg_data, lec_index):
     # print("yes")

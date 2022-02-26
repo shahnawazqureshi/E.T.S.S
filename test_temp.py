@@ -4,6 +4,8 @@ from time_table import *
 from courses import *
 from student_clashes import *
 import random
+import time
+import copy
 from numpy import random as rn
 from test_sections_timetable import execute_function
 
@@ -153,14 +155,6 @@ def apply_crossover(population, length, chromosome_length):
 
 # def check_fun(pop):
 
-    
-all_sections = []
-for reg_course in reg_data:
-    i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
-    if (i) not in all_sections:
-        all_sections.append(i)
-
-pop = initial_population()
 # execute_function(pop[0].chromosome, 0)
 # print(pop[0].fitness)
 # for k, v in pop[0].t_sections.items():
@@ -206,7 +200,7 @@ def apply_mutation(chromosome, t_sections, lec_index):
             if row_loop_count > 4:
                 break
             slot_index = ran_numbers[row_loop_count][col_loop_count][1]
-            temp = chromosome.copy()
+            temp = copy.deepcopy(chromosome)
             temp[1][lecture_index].day = day_index
             temp[1][lecture_index].slot = slot_index
             if (get_section_clashes(t_sections, temp, reg_data, lecture_index)):
@@ -223,54 +217,95 @@ def apply_mutation(chromosome, t_sections, lec_index):
     # input("Input: ")
     return t_sections
 
-# def get_section_clashes(t_section, chromosome):
-#     for index in range(0, len(t_section)):
-#         if (chromosome[0] is not t_section[index][0]):
-#             for x_student in reg_data[chromosome[0]].students:
-#                 for y_student in reg_data[t_section[index][0]].students:
-#                     if (x_student == y_student):
-#                         return True
-#     return False
 
-chr = {}
-li = []
 
-chr[all_sections[8]] = pop[0].t_sections[all_sections[8]]
-# print(chr[all_sections[0]])
-execute_function(pop[0].chromosome, 0)
-for k in pop[0].t_sections[all_sections[8]]:
-    print(k)
+
+
+
+# chr = {}
+# li = []
+
+# chr[all_sections[8]] = pop[0].t_sections[all_sections[8]]
+# execute_function(pop[0].chromosome, 0)
+# for k in pop[0].t_sections[all_sections[8]]:
+#     print(k)
+# print(pop[0].fitness)
+# for index in range(0, len(chr[all_sections[8]])):
+#     chr[all_sections[8]] = apply_mutation(chr[all_sections[8]][index], chr[all_sections[8]], index)
+#     #print(chr[all_sections[0]][index])
+#     li.append(Timetable(chr[all_sections[8]][index][0], chr[all_sections[8]][index][1]))
+
+# # print(chr[all_sections[0]])
+# # print(li)
+# print(get_student_clashes(pop[0].chromosome, reg_data))
+# execute_function(pop[0].chromosome, 1)
+
+
+
+    
+all_sections = []
+for reg_course in reg_data:
+    i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
+    if (i) not in all_sections:
+        all_sections.append(i)
+
+pop = initial_population()
+best_fitness = pop[0].fitness
+best_solution = copy.deepcopy(pop[0].chromosome)
+print("Actual Fitness Vlaue: ", pop[0].fitness)
+fh = True 
+count = 0
+while fh == True:
+    start = time.perf_counter()
+    pop[0].chromosome = copy.deepcopy(best_solution)
+    fh = False
+    count += 1
+    for index in range(0, len(pop[0].chromosome)):
+        if courses_data[reg_data[pop[0].chromosome[index].id].course_id].type == "Course":
+            # print("Course\tCount: ", count, "\tCourse Index: ", index)
+            for slot in range(0, 2):
+                for i in range(1, 6):
+                    for j in range(1, 6):
+                        temp_timetable = copy.deepcopy(pop[0].chromosome)
+                        #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
+                        temp_timetable[index].slots[slot].day = i
+                        temp_timetable[index].slots[slot].slot = j
+                        fitness_value = get_student_clashes(temp_timetable, reg_data)
+                        # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+                        if (fitness_value < best_fitness):
+                            best_solution = temp_timetable
+                            best_fitness = fitness_value
+                            changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+                            changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+                            fh = True
+        else: 
+            # print("Lab\tCount: ", count, "\tCourse Index: ", index)
+            for i in range(1, 6):
+                for j in range(1, 5):
+                    temp_timetable = copy.deepcopy(pop[0].chromosome)
+                    # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
+                    temp_timetable[index].slots[0].day = i
+                    temp_timetable[index].slots[0].slot = j
+                    temp_timetable[index].slots[1].day = i
+                    temp_timetable[index].slots[1].slot = j+1
+                    fitness_value = get_student_clashes(temp_timetable, reg_data)
+                    # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+                    if (fitness_value < best_fitness):
+                        best_solution = temp_timetable
+                        best_fitness = fitness_value
+                        changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+                        changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+                        print("FITNESS VALUE: ", best_fitness)
+                        fh = True
+    stop = time.perf_counter()                
+    print("Fitness Value Changed to: ", best_fitness)
+    print(changed_course, " \t", changed_section, "\t is changed")
+    print("Finished this Step in ", (round(stop-start), 2), " seconds.")
+
+
 print(pop[0].fitness)
-for index in range(0, len(chr[all_sections[8]])):
-    chr[all_sections[8]] = apply_mutation(chr[all_sections[8]][index], chr[all_sections[8]], index)
-    #print(chr[all_sections[0]][index])
-    li.append(Timetable(chr[all_sections[8]][index][0], chr[all_sections[8]][index][1]))
+print(best_fitness)
+get_student_clashes(best_solution, reg_data)
+execute_function(best_solution, "_Hill_Climbing")
 
-# print(chr[all_sections[0]])
-# print(li)
-print(get_student_clashes(pop[0].chromosome, reg_data))
-execute_function(pop[0].chromosome, 1)
-
-# ran_numbers = random.sample(range(1, 26), 25)
-# print(ran_numbers)
-
-# print(chr)
-
-# print(pop[0].chromosome[0])
-# print("Here")
-# for k in pop:
-#     for b in k.t_sections['CS-1A']:
-#         print(b[0], b[1])
-#         pop[0].chromosome[1] = Timetable(b[0], b[1])
-# print("Here")
-# print(pop[0].chromosome[1])
-
-
-
-# arr = [1, 2, 3, 4]
-
-# for i in range(0, len(arr)):
-#     arr[i] = 6 
-
-# for data in arr:
-#     print(data)
+        

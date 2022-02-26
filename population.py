@@ -6,7 +6,7 @@ from numpy import random as rn
 from test_sections_timetable import execute_function
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
-mutation_probability = round(rn.uniform(low=0.0, high=0.1), 1)
+mutation_probability = round(rn.uniform(low=0.15, high=0.25), 1)
 population_size = 300
 
 class Population:
