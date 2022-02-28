@@ -1,4 +1,6 @@
 from asyncore import loop
+import threading
+import concurrent.futures
 from registered_courses import *
 from time_table import *
 from courses import *
@@ -244,68 +246,205 @@ def apply_mutation(chromosome, t_sections, lec_index):
 
     
 all_sections = []
-for reg_course in reg_data:
-    i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
-    if (i) not in all_sections:
-        all_sections.append(i)
-
+best_solution = None
 pop = initial_population()
-best_fitness = pop[0].fitness
-best_solution = copy.deepcopy(pop[0].chromosome)
-print("Actual Fitness Vlaue: ", pop[0].fitness)
-fh = True 
-count = 0
-while fh == True:
-    start = time.perf_counter()
-    pop[0].chromosome = copy.deepcopy(best_solution)
-    fh = False
-    count += 1
-    for index in range(0, len(pop[0].chromosome)):
-        if courses_data[reg_data[pop[0].chromosome[index].id].course_id].type == "Course":
+def Hill_Climbing(arguments):
+    index, solution, reg_data, best_fitness = arguments
+    best_solution = copy.deepcopy(solution)
+    changed_course = "Nothing"
+    changed_section = "No Section"
+    if courses_data[reg_data[pop[0].chromosome[index].id].course_id].type == "Course":
             # print("Course\tCount: ", count, "\tCourse Index: ", index)
             for slot in range(0, 2):
                 for i in range(1, 6):
                     for j in range(1, 6):
-                        temp_timetable = copy.deepcopy(pop[0].chromosome)
+                        temp_timetable = copy.deepcopy(solution)
                         #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
                         temp_timetable[index].slots[slot].day = i
                         temp_timetable[index].slots[slot].slot = j
                         fitness_value = get_student_clashes(temp_timetable, reg_data)
                         # print("i: ", i, "\tj: ", j, "\t", fitness_value)
                         if (fitness_value < best_fitness):
-                            best_solution = temp_timetable
+                            best_solution = copy.deepcopy(temp_timetable)
                             best_fitness = fitness_value
                             changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
                             changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
-                            fh = True
-        else: 
-            # print("Lab\tCount: ", count, "\tCourse Index: ", index)
-            for i in range(1, 6):
-                for j in range(1, 5):
-                    temp_timetable = copy.deepcopy(pop[0].chromosome)
-                    # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
-                    temp_timetable[index].slots[0].day = i
-                    temp_timetable[index].slots[0].slot = j
-                    temp_timetable[index].slots[1].day = i
-                    temp_timetable[index].slots[1].slot = j+1
-                    fitness_value = get_student_clashes(temp_timetable, reg_data)
-                    # print("i: ", i, "\tj: ", j, "\t", fitness_value)
-                    if (fitness_value < best_fitness):
-                        best_solution = temp_timetable
-                        best_fitness = fitness_value
-                        changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
-                        changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
-                        print("FITNESS VALUE: ", best_fitness)
-                        fh = True
-    stop = time.perf_counter()                
-    print("Fitness Value Changed to: ", best_fitness)
-    print(changed_course, " \t", changed_section, "\t is changed")
-    print("Finished this Step in ", (round(stop-start), 2), " seconds.")
+    else: 
+        # print("Lab\tCount: ", count, "\tCourse Index: ", index)
+        for i in range(1, 6):
+            for j in range(1, 5):
+                temp_timetable = copy.deepcopy(solution)
+                # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
+                temp_timetable[index].slots[0].day = i
+                temp_timetable[index].slots[0].slot = j
+                temp_timetable[index].slots[1].day = i
+                temp_timetable[index].slots[1].slot = j+1
+                fitness_value = get_student_clashes(temp_timetable, reg_data)
+                # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+                if (fitness_value < best_fitness):
+                    best_solution = copy.deepcopy(temp_timetable)
+                    best_fitness = fitness_value
+                    changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+                    changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+                    print("FITNESS VALUE: ", best_fitness)
+    return (best_solution, best_fitness, changed_course, changed_section)
+    # print("-----------------Iteration #", count, " ----------------------")
+    # for index in range(0, len(pop[0].chromosome)):
+    #     if courses_data[reg_data[pop[0].chromosome[index].id].course_id].type == "Course":
+    #         # print("Course\tCount: ", count, "\tCourse Index: ", index)
+    #         for slot in range(0, 2):
+    #             for i in range(1, 6):
+    #                 for j in range(1, 6):
+    #                     temp_timetable = copy.deepcopy(pop[0].chromosome)
+    #                     #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
+    #                     temp_timetable[index].slots[slot].day = i
+    #                     temp_timetable[index].slots[slot].slot = j
+    #                     fitness_value = get_student_clashes(temp_timetable, reg_data)
+    #                     # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+    #                     if (fitness_value < best_fitness):
+    #                         best_solution = copy.deepcopy(temp_timetable)
+    #                         best_fitness = fitness_value
+    #                         changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+    #                         changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+    #                         fh = True
+    #     else: 
+    #         # print("Lab\tCount: ", count, "\tCourse Index: ", index)
+    #         for i in range(1, 6):
+    #             for j in range(1, 5):
+    #                 temp_timetable = copy.deepcopy(pop[0].chromosome)
+    #                 # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
+    #                 temp_timetable[index].slots[0].day = i
+    #                 temp_timetable[index].slots[0].slot = j
+    #                 temp_timetable[index].slots[1].day = i
+    #                 temp_timetable[index].slots[1].slot = j+1
+    #                 fitness_value = get_student_clashes(temp_timetable, reg_data)
+    #                 # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+    #                 if (fitness_value < best_fitness):
+    #                     best_solution = copy.deepcopy(temp_timetable)
+    #                     best_fitness = fitness_value
+    #                     changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+    #                     changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+    #                     print("FITNESS VALUE: ", best_fitness)
+    #                     fh = True
+    # stop = time.perf_counter()                
+    # print("Fitness Value Changed to: ", best_fitness)
+    # print(changed_course, " \t", changed_section, "\t is changed")
+    # print("Finished this Step in ", ((round(stop-start), 2)), " seconds.")
+# fh = True 
+# count = 0
+# while fh == True:
+#     start = time.perf_counter()
+#     pop[0].chromosome = copy.deepcopy(best_solution)
+#     fh = False
+#     count += 1
+#     print("-----------------Iteration #", count, " ----------------------")
+#     for index in range(0, len(pop[0].chromosome)):
+#         if courses_data[reg_data[pop[0].chromosome[index].id].course_id].type == "Course":
+#             # print("Course\tCount: ", count, "\tCourse Index: ", index)
+#             for slot in range(0, 2):
+#                 for i in range(1, 6):
+#                     for j in range(1, 6):
+#                         temp_timetable = copy.deepcopy(pop[0].chromosome)
+#                         #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
+#                         temp_timetable[index].slots[slot].day = i
+#                         temp_timetable[index].slots[slot].slot = j
+#                         fitness_value = get_student_clashes(temp_timetable, reg_data)
+#                         # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+#                         if (fitness_value < best_fitness):
+#                             best_solution = copy.deepcopy(temp_timetable)
+#                             best_fitness = fitness_value
+#                             changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+#                             changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+#                             fh = True
+#         else: 
+#             # print("Lab\tCount: ", count, "\tCourse Index: ", index)
+#             for i in range(1, 6):
+#                 for j in range(1, 5):
+#                     temp_timetable = copy.deepcopy(pop[0].chromosome)
+#                     # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
+#                     temp_timetable[index].slots[0].day = i
+#                     temp_timetable[index].slots[0].slot = j
+#                     temp_timetable[index].slots[1].day = i
+#                     temp_timetable[index].slots[1].slot = j+1
+#                     fitness_value = get_student_clashes(temp_timetable, reg_data)
+#                     # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+#                     if (fitness_value < best_fitness):
+#                         best_solution = copy.deepcopy(temp_timetable)
+#                         best_fitness = fitness_value
+#                         changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
+#                         changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
+#                         print("FITNESS VALUE: ", best_fitness)
+#                         fh = True
+#     stop = time.perf_counter()                
+#     print("Fitness Value Changed to: ", best_fitness)
+#     print(changed_course, " \t", changed_section, "\t is changed")
+#     print("Finished this Step in ", ((round(stop-start), 2)), " seconds.")
 
+def main_fun(best_solution, best_fitness):
+    fh = True 
+    total_time = 0 
+    count = 1
+    while fh == True: 
+        fh = False
+        print("-------------- ITERATION #", count, " ----------------------") 
+        count += 1
+        start = time.perf_counter()
+        with concurrent.futures.ProcessPoolExecutor() as executor: 
+            # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
+            arguments = []
+            for index in range(0, len(best_solution)):
+                arguments.append((index, best_solution, reg_data, best_fitness))
+            results = executor.map(Hill_Climbing, arguments)
+            for chromosome, result, ch_course, ch_section in results:
+                if result < best_fitness:
+                    best_fitness = result 
+                    best_solution = copy.deepcopy(chromosome)
+                    change_in_timetable = ch_course + "\t" + ch_section
+                    fh = True
+        print("--------------- ITERATION OVER! -----------------")
+        print(change_in_timetable, "\tis changed.")
+        print("Fitness Value Changed to ", best_fitness)
+        stop = time.perf_counter()
+        print("Finished this Step in ", (round(((stop-start) / 60), 2)), " minutes.")
+        total_time += ((stop-start) / 60)
+        print("Total Time: ", round(total_time, 2), " minutes")
+    
+    return best_solution, best_fitness
+    
 
-print(pop[0].fitness)
-print(best_fitness)
-get_student_clashes(best_solution, reg_data)
-execute_function(best_solution, "_Hill_Climbing")
+        # for row in range(0, 4):
+        #     results.append(executor.submit(Hill_Climbing(row, pop[0].chromosome, reg_data, pop[0].fitness)))
 
-        
+        # for f in concurrent.futures.as_completed(results):
+        #     print(f)
+
+# allThreads = []
+# for row in range(0, len(pop[0].chromosome)):
+#     thread = threading.Thread(target=Hill_Climbing, args=(row, pop[0].chromosome))
+#     allThreads.append(thread)
+#     thread.start()
+
+# for thread in allThreads:
+#     thread.join()
+
+# for x in solutions:
+#     print("SOLUTION STARTS HERE")
+#     print(x)
+
+# print(pop[0].fitness)
+# get_student_clashes(best_solution, reg_data)
+# execute_function(best_solution, "_Hill_Climbing")
+
+if __name__ == "__main__":
+    for reg_course in reg_data:
+        i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
+        if (i) not in all_sections:
+            all_sections.append(i)
+
+    
+    best_solution = copy.deepcopy(pop[0].chromosome)
+    print("Actual Fitness Value: ", pop[0].fitness)
+    best_solution, best_fitness = main_fun(best_solution, pop[0].fitness)
+    print("\n--------------------------------------\n")
+    print("All Done!!!")
+    print("Final Fitness Value: ", best_fitness)
