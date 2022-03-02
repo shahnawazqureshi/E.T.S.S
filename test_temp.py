@@ -294,6 +294,7 @@ def Hill_Climbing(arguments):
                             if (fitness_value < best_fitness):
                                 best_solution = copy.deepcopy(temp_timetable)
                                 best_fitness = fitness_value
+                                print("Found Better Path (through Course) --- FITNESS VALUE: ", best_fitness)
                                 changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
                                 changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
     else: 
@@ -313,7 +314,7 @@ def Hill_Climbing(arguments):
                     best_fitness = fitness_value
                     changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
                     changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
-                    print("FITNESS VALUE: ", best_fitness)
+                    print("Found Better Path (through Lab) ---FITNESS VALUE: ", best_fitness)
     return (best_solution, best_fitness, changed_course, changed_section)
     # print("-----------------Iteration #", count, " ----------------------")
     # for index in range(0, len(pop[0].chromosome)):
