@@ -1,9 +1,14 @@
-import random 
 
-temp_ran = [[i, j]  for i in range(1, 6) for j in range(1, 5)]
-random.shuffle(temp_ran)
-print(temp_ran)
-print(len(temp_ran))
+arr = "18F-0128"
+email = "f" + arr[0:2] + arr[4:] + "@cfd.nu.edu.pk"
+print(email)
+
+# import random 
+
+# temp_ran = [[i, j]  for i in range(1, 6) for j in range(1, 5)]
+# random.shuffle(temp_ran)
+# print(temp_ran)
+# print(len(temp_ran))
 
 
 # import threading

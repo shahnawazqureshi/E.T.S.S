@@ -422,7 +422,7 @@ def main_fun(best_solution, best_fitness):
         with concurrent.futures.ProcessPoolExecutor() as executor: 
             # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
             arguments = []
-            for index in range(160, len(best_solution)):
+            for index in range(0, len(best_solution)):
                 arguments.append((index, best_solution, reg_data, best_fitness))
             results = executor.map(Hill_Climbing, arguments)
             for chromosome, result, ch_course, ch_section in results:
