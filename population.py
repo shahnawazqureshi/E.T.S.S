@@ -1,3 +1,4 @@
+import copy
 from registered_courses import *
 from time_table import *
 from student_clashes import *
@@ -6,7 +7,7 @@ from numpy import random as rn
 from test_sections_timetable import execute_function
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
-mutation_probability = round(rn.uniform(low=0.15, high=0.25), 1)
+mutation_probability = round(rn.uniform(low=0.3, high=0.4), 1)
 population_size = 300
 
 class Population:
@@ -272,54 +273,76 @@ def apply_mutation(chromosome, t_sections, lec_index):
     # get_section_clashes(t_sections, chromosome)
     # print(t_sections[lec_index])
     # input("")
-    if (courses_data[reg_data[chromosome[0]].course_id].type == 'Course'):
-        # Select the Slot (1st/2nd)
-        lecture_index = random.randint(0, 1)
-        #print(chromosome[1][0].day)
-        # Switch the Day
-        #ran_numbers = random.sample(range(0, 25), 25)
-        #create all combinations of index values
-        temp_ran = [[i, j]  for i in range(1, 6) for j in range(1, 6)]
-        #shuffle the list
-        random.shuffle(temp_ran)
-        #subdivide into chunks
-        ran_numbers = [temp_ran[i:i+5] for i in range(0, 5**2, 5)]
-        # print(ran_numbers)
-        row_loop_count = 0
-        col_loop_count = 0
-        while True:
-            if col_loop_count > 4: 
-                col_loop_count = 0
-                row_loop_count += 1
-            if row_loop_count > 4:                    
-                break
-            day_index = ran_numbers[row_loop_count][col_loop_count][0]
-            while chromosome[1][lecture_index].day == day_index:
-                col_loop_count += 1
+
+    if random.randint(0, 100) <= mutation_probability * 100:
+
+        if (courses_data[reg_data[chromosome[0]].course_id].type == 'Course'):
+            # Select the Slot (1st/2nd)
+            lecture_index = random.randint(0, 1)
+            #print(chromosome[1][0].day)
+            # Switch the Day
+            #ran_numbers = random.sample(range(0, 25), 25)
+            #create all combinations of index values
+            temp_ran = [[i, j]  for i in range(1, 6) for j in range(1, 6)]
+            #shuffle the list
+            random.shuffle(temp_ran)
+            #subdivide into chunks
+            ran_numbers = [temp_ran[i:i+5] for i in range(0, 5**2, 5)]
+            # print(ran_numbers)
+            row_loop_count = 0
+            col_loop_count = 0
+            while True:
                 if col_loop_count > 4: 
                     col_loop_count = 0
                     row_loop_count += 1
-                if row_loop_count > 4:
+                if row_loop_count > 4:                    
                     break
                 day_index = ran_numbers[row_loop_count][col_loop_count][0]
-            if row_loop_count > 4:
-                break
-            slot_index = ran_numbers[row_loop_count][col_loop_count][1]
-            temp = chromosome.copy()
-            temp[1][lecture_index].day = day_index
-            temp[1][lecture_index].slot = slot_index
-            if (get_section_clashes(t_sections, temp, reg_data, lecture_index)):
-                # print(courses_data[reg_data[chromosome[0]].course_id].name, " ", 
-                # temp[1][lecture_index].day, " ", temp[1][lecture_index].slot)
-                t_sections[lec_index] = temp
-                # print("Modified: ", temp)
-                break
-            col_loop_count += 1
-            # print(loop_count)
-    else:
-        return t_sections
-    # print(loop_count)
-    # input("Input: ")
+                while chromosome[1][(lecture_index + 1) % 2].day == day_index:
+                    col_loop_count += 1
+                    if col_loop_count > 4: 
+                        col_loop_count = 0
+                        row_loop_count += 1
+                    if row_loop_count > 4:
+                        break
+                    day_index = ran_numbers[row_loop_count][col_loop_count][0]
+                if row_loop_count > 4:
+                    break
+                slot_index = ran_numbers[row_loop_count][col_loop_count][1]
+                temp = copy.deepcopy(chromosome)
+                temp[1][lecture_index].day = day_index
+                temp[1][lecture_index].slot = slot_index
+                if (get_section_clashes_course(t_sections, temp, reg_data, lecture_index)):
+                    # print(courses_data[reg_data[chromosome[0]].course_id].name, " ", 
+                    # temp[1][lecture_index].day, " ", temp[1][lecture_index].slot)
+                    t_sections[lec_index] = copy.deepcopy(temp)
+                    # print("Modified: ", temp)
+                    break
+                col_loop_count += 1
+                # print(loop_count)
+        else:
+            temp_ran = [[i, j]  for i in range(1, 6) for j in range(1, 5)]
+            random.shuffle(temp_ran)
+            loop_count = 0 
+            while True: 
+                if loop_count > 19:
+                    break 
+                day = temp_ran[loop_count][0]
+                slot = temp_ran[loop_count][1]
+                temp = copy.deepcopy(chromosome)
+                temp[1][0].day = day 
+                temp[1][0].slot = slot 
+                temp[1][1].day = day 
+                temp[1][1].slot = slot + 1
+                if (get_section_clashes_lab(t_sections, temp, reg_data, 0) and get_section_clashes_lab(t_sections, temp, reg_data, 1)):
+                    # print(courses_data[reg_data[chromosome[0]].course_id].name, " ", 
+                    # temp[1][lecture_index].day, " ", temp[1][lecture_index].slot)
+                    t_sections[lec_index] = copy.deepcopy(temp)
+                    # print("Modified: ", temp)
+                    break
+                loop_count += 1
+        # print(loop_count)
+        # input("Input: ")
     return t_sections
 
 

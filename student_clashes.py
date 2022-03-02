@@ -69,7 +69,7 @@ def get_student_clashes(timetable, reg_data):
     # f.close()
     return count
 
-def get_section_clashes(t_section, chromosome, reg_data, lec_index):
+def get_section_clashes_course(t_section, chromosome, reg_data, lec_index):
     # print("yes")
     for index in range(0, len(t_section)):
         if (chromosome[0] is not t_section[index][0]):
@@ -84,6 +84,28 @@ def get_section_clashes(t_section, chromosome, reg_data, lec_index):
                             if (x_student == y_student):
                                 return False
         else: 
+            if (chromosome[1][lec_index].day == t_section[index][1][(lec_index + 1) % 2].day) and (chromosome[1][lec_index].slot == t_section[index][1][(lec_index + 1) % 2].slot):
+                return False
+
+    return True
+
+
+def get_section_clashes_lab(t_section, chromosome, reg_data, lec_index):
+    # print("yes")
+    for index in range(0, len(t_section)):
+        if (chromosome[0] is not t_section[index][0]):
+            for lecture_slot in range(0, 2):
+                if (chromosome[1][lec_index].day == t_section[index][1][lecture_slot].day) and (chromosome[1][lec_index].slot == t_section[index][1][lecture_slot].slot):
+                    for x_student in reg_data[chromosome[0]].students:
+                        # print(courses_data[reg_data[chromosome[0]].course_id].name)
+                        # print("For X STUDENT ----- " , x_student)
+                        for y_student in reg_data[t_section[index][0]].students:
+                            # print(courses_data[reg_data[t_section[index][0]].course_id].name)
+                            # print("Y Student: ", y_student)
+                            if (x_student == y_student):
+                                return False
+        else: 
+            # Making sure that the lecture is not allocated in the same slot of 2nd lecture of same course
             if (chromosome[1][lec_index].day == t_section[index][1][(lec_index + 1) % 2].day) and (chromosome[1][lec_index].slot == t_section[index][1][(lec_index + 1) % 2].slot):
                 return False
 
