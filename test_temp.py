@@ -284,7 +284,7 @@ def Hill_Climbing(arguments):
             for slot in range(0, 2):
                 for i in range(1, 6):
                     for j in range(1, 6):
-                        temp_timetable = copy.deepcopy(best_solution)
+                        temp_timetable = copy.deepcopy(solution)
                         if (i != temp_timetable[index].slots[(slot + 1) % 2].day):
                             #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
                             temp_timetable[index].slots[slot].day = i
@@ -301,7 +301,7 @@ def Hill_Climbing(arguments):
         # print("Lab\tCount: ", count, "\tCourse Index: ", index)
         for i in range(1, 6):
             for j in range(1, 5):
-                temp_timetable = copy.deepcopy(best_solution)
+                temp_timetable = copy.deepcopy(solution)
                 # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
                 temp_timetable[index].slots[0].day = i
                 temp_timetable[index].slots[0].slot = j
@@ -314,7 +314,7 @@ def Hill_Climbing(arguments):
                     best_fitness = fitness_value
                     changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
                     changed_section = sections_data[reg_data[pop[0].chromosome[index].id].section_id].name
-                    print("Found Better Path (through Lab) ---FITNESS VALUE: ", best_fitness)
+                    print("Found Better Path (through Lab) --- FITNESS VALUE: ", best_fitness)
     return (best_solution, best_fitness, changed_course, changed_section)
     # print("-----------------Iteration #", count, " ----------------------")
     # for index in range(0, len(pop[0].chromosome)):
@@ -422,7 +422,7 @@ def main_fun(best_solution, best_fitness):
         with concurrent.futures.ProcessPoolExecutor() as executor: 
             # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
             arguments = []
-            for index in range(0, len(best_solution)):
+            for index in range(160, len(best_solution)):
                 arguments.append((index, best_solution, reg_data, best_fitness))
             results = executor.map(Hill_Climbing, arguments)
             for chromosome, result, ch_course, ch_section in results:
