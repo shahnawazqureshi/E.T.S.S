@@ -4,6 +4,8 @@ from time_table import *
 from student_clashes import *
 import random
 from numpy import random as rn
+import time
+import concurrent.futures
 from test_sections_timetable import execute_function
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
@@ -22,10 +24,7 @@ class Population:
                                                                                      self.chromosome))
     
 all_sections = []
-for reg_course in reg_data:
-    i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
-    if (i) not in all_sections:
-        all_sections.append(i)
+total_time = 0 
 
 def initial_population():
     
@@ -105,7 +104,7 @@ def initial_population():
 # Roulette Wheel Selection 
 def parent_selection(population):
     parents = []
-    total_value = 0  # Total Fitness
+    total_value = 1  # Total Fitness
 
     for individual in population:
         total_value += individual.fitness
@@ -375,24 +374,21 @@ def apply_mutation(chromosome, t_sections, lec_index):
 #     return chromosome
 
 
-
 def genetic_algo():
     best_solution = None
-    max_iter = 1000
+    max_iter = 50
     population = initial_population()
- 
     #population = parent_selection(population.copy())
     count = 0
     regen = 0
     population.sort(key = lambda x: x.fitness, reverse=False)
-    print()
     f = open("Folder/population 0.txt", "w")
     f.write(str(population))
     for i in range(max_iter):
         print("Generation " + str(i) + " going on.....")
         population1 = apply_crossover(population, (len(population) - 1), (len(population[0].chromosome)))
-        population = parent_selection(population1.copy())
-        temp_best, _ = find_fittest(population.copy())
+        population = parent_selection(copy.deepcopy(population1))
+        temp_best, _ = find_fittest(copy.deepcopy(population))
         if best_solution is None:
             best_solution = temp_best 
         elif temp_best.fitness < best_solution.fitness:
@@ -406,7 +402,7 @@ def genetic_algo():
 
         print("Generation " + str(i) + " Done!.....")
         print("Best Solution Fitness: " + str(best_solution.fitness))
-
+        
         # if regen > 7:
         #     print("Re-Generating Population")
         #     population1 = initial_population()
@@ -416,24 +412,103 @@ def genetic_algo():
 
         count += 1 
         regen += 1
-
-genetic_algo()
-
-# population = initial_population()
+    return best_solution
 
 
-# print(pop[0].chromosome[2])
-# print(pop[0])
-# print("\n\n---------------\n\n")
-# print(pop[0].chromosome)
-# print("\n\n----------------\n\n")
-# print(len(pop[0].chromosome))
-#f = open("damn_man.txt", "w")
-#f.write(str(pop))
-#print("First Done")
-#pop = parent_selection(pop)
-# f = open("Folder/damn_man.txt", "w")
-#pop.sort(key=lambda x: x.fitness, reverse=False)
-#pop.sort(key=lambda x: x.fitness, reverse=False)
-# f = open("damn_man.txt", "w")
-# f.write(str(pop))
+
+def main_fun(best_solution, best_fitness):
+    fh = True 
+    
+    count = 11
+    while fh == True: 
+        fh = False
+        execute_function(best_solution, count)
+        print("TimeTable Generated!")
+        print("-------------- ITERATION #", count, " ----------------------") 
+        count += 1
+        start = time.perf_counter()
+        with concurrent.futures.ProcessPoolExecutor() as executor: 
+            # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
+            arguments = []
+            for index in range(0, len(best_solution)):
+                arguments.append((index, best_solution, reg_data, best_fitness))
+            results = executor.map(Hill_Climbing, arguments)
+            for chromosome, result, ch_course, ch_section in results:
+                if result < best_fitness:
+                    best_fitness = result 
+                    best_solution = copy.deepcopy(chromosome)
+                    change_in_timetable = ch_course + "\t" + ch_section
+                    fh = True
+        print("--------------- ITERATION OVER! -----------------")
+        print(change_in_timetable, "\tis changed.")
+        print("Fitness Value Changed to ", best_fitness)
+        stop = time.perf_counter()
+        print("Finished this Step in ", (round(((stop-start) / 60), 2)), " minutes.")
+        total_time += ((stop-start) / 60)
+        print("Total Time: ", round(total_time, 2), " minutes")
+        
+    
+    return best_solution, best_fitness
+
+
+def Hill_Climbing(arguments):
+    index, solution, reg_data, best_fitness = arguments
+    best_solution = copy.deepcopy(solution)
+    changed_course = "Nothing"
+    changed_section = "No Section"
+    if courses_data[reg_data[solution[index].id].course_id].type == "Course":
+            # print("Course\tCount: ", count, "\tCourse Index: ", index)
+            for slot in range(0, 2):
+                for i in range(1, 6):
+                    for j in range(1, 6):
+                        temp_timetable = copy.deepcopy(solution)
+                        if (i != temp_timetable[index].slots[(slot + 1) % 2].day):
+                            #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
+                            temp_timetable[index].slots[slot].day = i
+                            temp_timetable[index].slots[slot].slot = j
+                            fitness_value = get_student_clashes(temp_timetable, reg_data)
+                            # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+                            if (fitness_value < best_fitness):
+                                best_solution = copy.deepcopy(temp_timetable)
+                                best_fitness = fitness_value
+                                # print("Found Better Path (through Course) --- FITNESS VALUE: ", best_fitness)
+                                changed_course = courses_data[reg_data[solution[index].id].course_id].name
+                                changed_section = sections_data[reg_data[solution[index].id].section_id].name
+    else: 
+        # print("Lab\tCount: ", count, "\tCourse Index: ", index)
+        for i in range(1, 6):
+            for j in range(1, 5):
+                temp_timetable = copy.deepcopy(solution)
+                # if (temp_timetable[index].slots[0].day) is not i and (temp_timetable[index].slots[0].slot is not j):
+                temp_timetable[index].slots[0].day = i
+                temp_timetable[index].slots[0].slot = j
+                temp_timetable[index].slots[1].day = i
+                temp_timetable[index].slots[1].slot = j+1
+                fitness_value = get_student_clashes(temp_timetable, reg_data)
+                # print("i: ", i, "\tj: ", j, "\t", fitness_value)
+                if (fitness_value < best_fitness):
+                    best_solution = copy.deepcopy(temp_timetable)
+                    best_fitness = fitness_value
+                    changed_course = courses_data[reg_data[solution[index].id].course_id].name
+                    changed_section = sections_data[reg_data[solution[index].id].section_id].name
+                    # print("Found Better Path (through Lab) --- FITNESS VALUE: ", best_fitness)
+    return (best_solution, best_fitness, changed_course, changed_section)
+
+
+
+
+
+
+if __name__ == "__main__":
+    for reg_course in reg_data:
+        i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
+        if (i) not in all_sections:
+            all_sections.append(i)
+    
+    ga_solution = genetic_algo()
+    best_solution = copy.deepcopy(ga_solution.chromosome)
+    print("Actual Fitness Value: ", ga_solution.fitness)
+    best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
+    print("\n--------------------------------------\n")
+    print("All Done!!!")
+    print("Final Fitness Value: ", best_fitness)
