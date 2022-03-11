@@ -10,6 +10,7 @@ import time
 import copy
 from numpy import random as rn
 from test_sections_timetable import execute_function
+from teacher_clashes import get_teacher_clashes_count
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
 mutation_probability = round(rn.uniform(low=0.0, high=0.5), 1)
@@ -26,6 +27,10 @@ class Population:
                                                                                      self.chromosome))
     
 
+def get_fitness(timetable):
+    teacher_clashes = get_teacher_clashes_count(timetable)
+    student_clashes = get_student_clashes(timetable, reg_data)
+    return [teacher_clashes * 5 + student_clashes * 2.5, (student_clashes, teacher_clashes)]
 
 
 def initial_population():
@@ -96,8 +101,10 @@ def initial_population():
                 continue
             timetable.append(lecture)
             t_sections[i].append([reg_course.id, slots])
-        clash_count = get_student_clashes(timetable, reg_data)
-        population = Population(z, clash_count, timetable, t_sections)
+        fitness_values = get_fitness(timetable)
+
+        # clash_count = get_student_clashes(timetable, reg_data)
+        population = Population(z, fitness_values, timetable, t_sections)
         timetables.append(population)
         #print(timetables)
     return timetables
@@ -289,9 +296,10 @@ def Hill_Climbing(arguments):
                             #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
                             temp_timetable[index].slots[slot].day = i
                             temp_timetable[index].slots[slot].slot = j
-                            fitness_value = get_student_clashes(temp_timetable, reg_data)
+                            fitness_value = get_fitness(temp_timetable)
+                            # fitness_value = get_student_clashes(temp_timetable, reg_data)
                             # print("i: ", i, "\tj: ", j, "\t", fitness_value)
-                            if (fitness_value < best_fitness):
+                            if (fitness_value[0] < best_fitness[0]):
                                 best_solution = copy.deepcopy(temp_timetable)
                                 best_fitness = fitness_value
                                 print("Found Better Path (through Course) --- FITNESS VALUE: ", best_fitness)
@@ -307,9 +315,9 @@ def Hill_Climbing(arguments):
                 temp_timetable[index].slots[0].slot = j
                 temp_timetable[index].slots[1].day = i
                 temp_timetable[index].slots[1].slot = j+1
-                fitness_value = get_student_clashes(temp_timetable, reg_data)
+                fitness_value = get_fitness(temp_timetable)
                 # print("i: ", i, "\tj: ", j, "\t", fitness_value)
-                if (fitness_value < best_fitness):
+                if (fitness_value[0] < best_fitness[0]):
                     best_solution = copy.deepcopy(temp_timetable)
                     best_fitness = fitness_value
                     changed_course = courses_data[reg_data[pop[0].chromosome[index].id].course_id].name
@@ -419,6 +427,7 @@ def main_fun(best_solution, best_fitness):
         print("-------------- ITERATION #", count, " ----------------------") 
         count += 1
         start = time.perf_counter()
+
         with concurrent.futures.ProcessPoolExecutor() as executor: 
             # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
             arguments = []
@@ -426,7 +435,7 @@ def main_fun(best_solution, best_fitness):
                 arguments.append((index, best_solution, reg_data, best_fitness))
             results = executor.map(Hill_Climbing, arguments)
             for chromosome, result, ch_course, ch_section in results:
-                if result < best_fitness:
+                if result[0] < best_fitness[0]:
                     best_fitness = result 
                     best_solution = copy.deepcopy(chromosome)
                     change_in_timetable = ch_course + "\t" + ch_section

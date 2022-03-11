@@ -1,5 +1,6 @@
 import copy
 from registered_courses import *
+from teacher_clashes import get_teacher_clashes_count
 from time_table import *
 from student_clashes import *
 import random
@@ -24,6 +25,11 @@ class Population:
                                                                                      self.chromosome))
     
 all_sections = []
+
+def get_fitness(timetable):
+    teacher_clashes = get_teacher_clashes_count(timetable)
+    student_clashes = get_student_clashes(timetable, reg_data)
+    return [teacher_clashes * 5 + student_clashes * 2.5, (student_clashes, teacher_clashes)]
 
 def initial_population():
     
@@ -93,8 +99,9 @@ def initial_population():
                 continue
             timetable.append(lecture)
             t_sections[i].append([reg_course.id, slots])
-        clash_count = get_student_clashes(timetable, reg_data)
-        population = Population(z, clash_count, timetable, t_sections)
+        fitness = get_fitness(timetable)
+        # clash_count = get_student_clashes(timetable, reg_data)
+        population = Population(z, fitness, timetable, t_sections)
         timetables.append(population)
     return timetables
  
@@ -104,16 +111,15 @@ def initial_population():
 def parent_selection(population):
     parents = []
     total_value = 1  # Total Fitness
-
     for individual in population:
-        total_value += individual.fitness
+        total_value += individual.fitness[0]
     # Applying Roulette Wheel
     # Check Total sum value of fittest individuals
     while len(parents) < population_size:
         # Finding  probability of all chromosomes
         probability_arr = []
         for i in range(0, len(population)):
-            s = (round((population[i].fitness / total_value), 2), i)
+            s = (round((population[i].fitness[0] / total_value), 2), i)
             probability_arr.append(s)
 
         # sorting the array having the probabilities
@@ -137,7 +143,7 @@ def parent_selection(population):
 
 
 def find_fittest(population):
-    population.sort(key=lambda val: val.fitness, reverse=False)
+    population.sort(key=lambda val: val.fitness[0], reverse=False)
 
     return population[0],population[1]
 
@@ -237,12 +243,12 @@ def apply_crossover(population, length, chromosome_length):
             # new_crossovered_exams1 = apply_mutation(crossovered_exams1.copy())
             # new_crossovered_exams2 = apply_mutation(crossovered_exams2.copy())
 
-            clash_count = get_student_clashes(crossovered_timetable1, reg_data)
-            pops = Population(j, clash_count, crossovered_timetable1, crossovered_sections1)
+            fitness_value = get_fitness(crossovered_timetable1)
+            pops = Population(j, fitness_value, crossovered_timetable1, crossovered_sections1)
             crossover_population.append(pops)
 
-            clash_count = get_student_clashes(crossovered_timetable2, reg_data)
-            pops = Population(j + 1, clash_count, crossovered_timetable2, crossovered_sections2)
+            fitness_value = get_fitness(crossovered_timetable2)
+            pops = Population(j + 1, fitness_value, crossovered_timetable2, crossovered_sections2)
             crossover_population.append(pops)
 
             # fitness = calculateFitness(new_crossovered_exams1, courses_data, students_data, teachers_data)
@@ -375,12 +381,12 @@ def apply_mutation(chromosome, t_sections, lec_index):
 
 def genetic_algo():
     best_solution = None
-    max_iter = 50
+    max_iter = 5
     population = initial_population()
     #population = parent_selection(population.copy())
     count = 0
     regen = 0
-    population.sort(key = lambda x: x.fitness, reverse=False)
+    population.sort(key = lambda x: x.fitness[0], reverse=False)
     f = open("Folder/population 0.txt", "w")
     f.write(str(population))
     for i in range(max_iter):
@@ -390,11 +396,11 @@ def genetic_algo():
         temp_best, _ = find_fittest(copy.deepcopy(population))
         if best_solution is None:
             best_solution = temp_best 
-        elif temp_best.fitness < best_solution.fitness:
+        elif temp_best.fitness[0] < best_solution.fitness[0]:
             best_solution = temp_best 
             regen = 1
         
-        population.sort(key = lambda x: x.fitness, reverse=False)
+        population.sort(key = lambda x: x.fitness[0], reverse=False)
         f = open("Folder/population " + str(i+1) + ".txt", "w")
         f.write(str(population))
         execute_function(population[0].chromosome, i)
@@ -429,11 +435,11 @@ def main_fun(best_solution, best_fitness):
         with concurrent.futures.ProcessPoolExecutor() as executor: 
             # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
             arguments = []
-            for index in range(195, len(best_solution)):
+            for index in range(0, len(best_solution)):
                 arguments.append((index, best_solution, reg_data, best_fitness))
             results = executor.map(Hill_Climbing, arguments)
             for chromosome, result, ch_course, ch_section in results:
-                if result < best_fitness:
+                if result[0] < best_fitness[0]:
                     best_fitness = result 
                     best_solution = copy.deepcopy(chromosome)
                     change_in_timetable = ch_course + "\t" + ch_section
@@ -465,9 +471,10 @@ def Hill_Climbing(arguments):
                             #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
                             temp_timetable[index].slots[slot].day = i
                             temp_timetable[index].slots[slot].slot = j
-                            fitness_value = get_student_clashes(temp_timetable, reg_data)
+                            fitness_value = get_fitness(temp_timetable)
+                            # fitness_value = get_student_clashes(temp_timetable, reg_data)
                             # print("i: ", i, "\tj: ", j, "\t", fitness_value)
-                            if (fitness_value < best_fitness):
+                            if (fitness_value[0] < best_fitness[0]):
                                 best_solution = copy.deepcopy(temp_timetable)
                                 best_fitness = fitness_value
                                 # print("Found Better Path (through Course) --- FITNESS VALUE: ", best_fitness)
@@ -483,9 +490,10 @@ def Hill_Climbing(arguments):
                 temp_timetable[index].slots[0].slot = j
                 temp_timetable[index].slots[1].day = i
                 temp_timetable[index].slots[1].slot = j+1
-                fitness_value = get_student_clashes(temp_timetable, reg_data)
+                # fitness_value = get_student_clashes(temp_timetable, reg_data)
+                fitness_value = get_fitness(temp_timetable)
                 # print("i: ", i, "\tj: ", j, "\t", fitness_value)
-                if (fitness_value < best_fitness):
+                if (fitness_value[0] < best_fitness[0]):
                     best_solution = copy.deepcopy(temp_timetable)
                     best_fitness = fitness_value
                     changed_course = courses_data[reg_data[solution[index].id].course_id].name
