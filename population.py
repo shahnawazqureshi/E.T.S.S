@@ -1,6 +1,6 @@
 import copy
 from registered_courses import *
-from teacher_clashes import get_teacher_clashes_count
+from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
 from time_table import *
 from student_clashes import *
 import random
@@ -516,6 +516,10 @@ if __name__ == "__main__":
     best_solution = copy.deepcopy(ga_solution.chromosome)
     print("Actual Fitness Value: ", ga_solution.fitness)
     best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
+    get_student_clashes_data(best_solution, reg_data)
+    get_teacher_clashes_data(best_solution)
+    execute_function(best_solution, 1000)
+    store_new_timetable(best_solution)
     print("\n--------------------------------------\n")
     print("All Done!!!")
     print("Final Fitness Value: ", best_fitness)

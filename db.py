@@ -44,5 +44,19 @@ class Database:
         c.execute(sql)
         return c.fetchall()
 
+    def delete_timetable(self):
+        sql = "delete from tbl_timetable"
+        c = self.db.cursor()
+        c.execute(sql)
+        self.db.commit()
+        return True
+
+    def insert_reg_course_timetable(self, reg_id, day, slot, room):
+        sql = "Insert into tbl_timetable (registered_id, day, slot, room) VALUES (%s, %s, %s, %s)"
+        val = (reg_id, day, slot, 7)
+        c = self.db.cursor()
+        c.execute(sql, val)
+        self.db.commit()
+
 
 db = Database() 

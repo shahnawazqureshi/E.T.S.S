@@ -1,17 +1,23 @@
 from logging import LogRecord
-from timetable import *
+# from timetable import *
+from data import *
 from clashed_courses import get_clashed_courses
 
 
-def get_teacher_clashes():
+def get_teacher_clashes_data(timetable):
+    clashed_sections = get_clashed_courses(timetable)
     arr = [[None for i in range(5)] for j in range(5)]
     count = 0
     i = 0
+    f = open("teacher_final_clashes.txt", "w")
     for k, v in clashed_sections.items():
         row = int(k[0])
         col = int(k[2])
         arr[row-1][col-1] = []
         size_of_classes = len(v)
+        print("For ", k)
+        for r in v: 
+            print(sections[r].course, "\t", sections[r].section)
         for lec in range(0, size_of_classes):
             for x in range(lec + 1, size_of_classes):
                 # print(sections[v[x]].course, " ", sections[v[x]].section, " ", sections[v[x]].instructor)
@@ -22,8 +28,15 @@ def get_teacher_clashes():
                     arr[row-1][col-1].append((sections[v[lec]].instructor, 
                     sections[v[lec]].course, sections[v[lec]].section,
                     sections[v[x]].course, sections[v[x]].section))
-            #         print(sections[v[lec]].id, " ", sections[v[lec]].instructor, " ", sections[v[lec]].course, " ", sections[v[lec]].section, " ",
-            #         sections[v[x]].id, " ", sections[v[x]].instructor, " ", sections[v[x]].course, " ", sections[v[x]].section)
+
+                    f.write(str(count) + ": " + k + "\n" + sections[v[lec]].instructor + 
+                    "\n" + sections[v[lec]].course + "\t" + sections[v[lec]].section + "\n" + 
+                    sections[v[x]].course + "\t" + sections[v[x]].section + "\n")
+
+                    # print(sections[v[lec]].id, " ", sections[v[lec]].instructor, " ", sections[v[lec]].course, " ", sections[v[lec]].section, " ",
+                    # sections[v[x]].id, " ", sections[v[x]].instructor, " ", sections[v[x]].course, " ", sections[v[x]].section)
+            
+
             # # for student in sections[v[lec]].students:
             #     for x in range(lec + 1, size_of_classes):
             #         for z in sections[v[x]].students:
@@ -33,7 +46,7 @@ def get_teacher_clashes():
             #                 sections[v[x]].course, sections[v[x]].section))
                             
         i += 1
-    
+    f.close()
     return arr, count
 
 def get_teacher_clashes_count(timetable):

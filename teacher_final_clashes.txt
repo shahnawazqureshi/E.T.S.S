@@ -1,0 +1,128 @@
+1: 1 1
+Dr. Affan Rauf
+Software Construction and Development	SE-5B
+Software Construction and Development	SE-5A
+2: 1 1
+Rida Akram
+English Composition and Comprehension - Lab	CS-1C2
+English Composition and Comprehension	SE-1B1
+3: 1 2
+Haris Khurram
+Probability and Statistics	CS-5C
+Probability and Statistics	SE-5A
+4: 1 2
+Farah Iqbal
+English Composition and Comprehension	CS-1E1
+English Composition and Comprehension - Lab	CS-1B1
+5: 1 2
+Mughees Ismail
+Programming Fundamentals - Lab	CS-1A
+Data Structures - Lab	CS-3C
+6: 1 3
+Dr. Shahnawaz Qureshi
+Artificial Intelligence	CS-7A
+Human Computer Interaction	SE-3A
+7: 1 4
+Muhammad Usman Joyia
+Computer Architecture	CS-9A
+Data Structures	SE-3A
+8: 1 4
+Muhammad Usman Joyia
+Computer Architecture	CS-9A
+Data Structures	CS-3D
+9: 1 4
+Dr. Hashim Yasin
+Data Structures	CS-3C
+Applied Machine Learning	CS-7D
+10: 1 4
+Muhammad Usman Joyia
+Data Structures	SE-3A
+Data Structures	CS-3D
+11: 2 1
+Ayesha Liaqat
+Programming Fundamentals - Lab	CS-1C
+Computer Networks - Lab	CS-5A
+12: 2 4
+Junaid Shahid
+English Composition and Comprehension	CS-1A1
+English Composition and Comprehension	CS-1B1
+13: 2 5
+Hafiz M.Zeeshan Raza
+Marketing Management	SE-3A
+Marketing Management	CS-5B
+14: 3 1
+Dr. Danish Shehzad
+Programming Fundamentals	CS-1E
+Information Security	CS-7A
+15: 3 3
+Muhammad Shahrose Khan
+Web Programming	CS-5B
+Web Programming	CS-5A
+16: 3 3
+Sadia Ashfaq
+English Composition and Comprehension	CS-1F2
+English Composition and Comprehension	CS-1D2
+17: 3 3
+Muhammad Nouman Iftikhar
+Technical and Business Writing	SE-5A
+Technical and Business Writing	SE-5B
+18: 3 4
+Usman Ghous
+Discrete Structures	CS-5D
+Operating System	CS-5D
+19: 3 4
+Muhammad Shahrose Khan
+Web Programming	CS-5B
+Web Programming	CS-5A
+20: 3 4
+Muhammad Ammar
+English Composition and Comprehension	CS-1B2
+English Composition and Comprehension	CS-1C2
+21: 4 1
+Arfan Shahzad
+Differential Equations	CS-3B
+Differential Equations	CS-3C
+22: 4 2
+Arfan Shahzad
+Differential Equations	CS-3B
+Differential Equations	CS-3C
+23: 4 2
+Waheed Ahmad
+Applied Physics	CS-1E
+Applied Physics	CS-1F
+24: 4 4
+Rizwan ul Haq
+Programming Fundamentals	CS-1A
+Professional Practices in IT	CS-7A
+25: 4 4
+Ehtasham-Ul-Haq
+English Composition and Comprehension - Lab	CS-1F2
+English Composition and Comprehension - Lab	SE-1A1
+26: 4 5
+Ehtasham-Ul-Haq
+English Composition and Comprehension - Lab	CS-1F2
+English Composition and Comprehension - Lab	SE-1A1
+27: 4 5
+Sadia Ashfaq
+English Composition and Comprehension	CS-1D2
+English Composition and Comprehension	SE-1A2
+28: 5 1
+Numan Shafi
+Theory of Automata	CS-5C
+Theory of Automata	CS-5E
+29: 5 2
+Muhammad Ammar
+English Composition and Comprehension	CS-1B2
+English Composition and Comprehension	CS-1C2
+30: 5 3
+Ghilmana Sarmad
+Linear Algebra	CS-3A
+Linear Algebra	SE-3B
+31: 5 3
+Rida Akram
+English Composition and Comprehension - Lab	CS-1C2
+English Composition and Comprehension - Lab	CS-1D1
+32: 5 5
+Umar Naseer
+Introduction to Information and Communication Technology - Lab	SE-1A
+Programming Fundamentals - Lab	CS-1F

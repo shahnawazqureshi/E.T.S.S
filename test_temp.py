@@ -10,7 +10,7 @@ import time
 import copy
 from numpy import random as rn
 from test_sections_timetable import execute_function
-from teacher_clashes import get_teacher_clashes_count
+from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
 mutation_probability = round(rn.uniform(low=0.0, high=0.5), 1)
@@ -481,10 +481,14 @@ if __name__ == "__main__":
         if (i) not in all_sections:
             all_sections.append(i)
 
-    
     best_solution = copy.deepcopy(pop[0].chromosome)
+    arr, count = get_teacher_clashes_data(best_solution)
+    execute_function(best_solution, 1)
+    store_new_timetable(best_solution)
     print("Actual Fitness Value: ", pop[0].fitness)
-    best_solution, best_fitness = main_fun(best_solution, pop[0].fitness)
-    print("\n--------------------------------------\n")
-    print("All Done!!!")
-    print("Final Fitness Value: ", best_fitness)
+    
+
+    # best_solution, best_fitness = main_fun(best_solution, pop[0].fitness)
+    # print("\n--------------------------------------\n")
+    # print("All Done!!!")
+    # print("Final Fitness Value: ", best_fitness)
