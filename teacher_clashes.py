@@ -1,10 +1,13 @@
 from logging import LogRecord
 # from timetable import *
-from data import *
+from teachers import *
+from sections import * 
+from courses import * 
+
 from clashed_courses import get_clashed_courses
 
 
-def get_teacher_clashes_data(timetable):
+def get_teacher_clashes_data(timetable, reg_data):
     clashed_sections = get_clashed_courses(timetable)
     arr = [[None for i in range(5)] for j in range(5)]
     count = 0
@@ -15,23 +18,34 @@ def get_teacher_clashes_data(timetable):
         col = int(k[2])
         arr[row-1][col-1] = []
         size_of_classes = len(v)
-        print("For ", k)
-        for r in v: 
-            print(sections[r].course, "\t", sections[r].section)
         for lec in range(0, size_of_classes):
             for x in range(lec + 1, size_of_classes):
                 # print(sections[v[x]].course, " ", sections[v[x]].section, " ", sections[v[x]].instructor)
                 # print(sections[v[lec]].course, " ", sections[v[lec]].section, " ", sections[v[lec]].instructor)
                 # print()
-                if (sections[v[x]].instructor == sections[v[lec]].instructor):
+                if (teachers_data[reg_data[v[lec]].teacher_id].name == teachers_data[reg_data[v[x]].teacher_id].name):
                     count += 1
-                    arr[row-1][col-1].append((sections[v[lec]].instructor, 
-                    sections[v[lec]].course, sections[v[lec]].section,
-                    sections[v[x]].course, sections[v[x]].section))
+                    arr[row-1][col-1].append((teachers_data[reg_data[v[lec]].teacher_id].name, 
+                    courses_data[reg_data[v[lec]].course_id].name, 
+                    sections_data[reg_data[v[lec]].section_id].name,
+                    courses_data[reg_data[v[x]].course_id].name, 
+                    sections_data[reg_data[v[x]].section_id].name))
 
-                    f.write(str(count) + ": " + k + "\n" + sections[v[lec]].instructor + 
-                    "\n" + sections[v[lec]].course + "\t" + sections[v[lec]].section + "\n" + 
-                    sections[v[x]].course + "\t" + sections[v[x]].section + "\n")
+                    f.write(str(count) + ": " + k + "\n" + teachers_data[reg_data[v[lec]].teacher_id].name + 
+                    "\n" + courses_data[reg_data[v[lec]].course_id].name + "\t" + 
+                    sections_data[reg_data[v[lec]].section_id].name + "\n" + 
+                    courses_data[reg_data[v[x]].course_id].name + "\t" + 
+                    sections_data[reg_data[v[x]].section_id].name + "\n")
+
+                # if (sections[v[x]].instructor == sections[v[lec]].instructor):
+                #     count += 1
+                #     arr[row-1][col-1].append((sections[v[lec]].instructor, 
+                #     sections[v[lec]].course, sections[v[lec]].section,
+                #     sections[v[x]].course, sections[v[x]].section))
+
+                #     f.write(str(count) + ": " + k + "\n" + sections[v[lec]].instructor + 
+                #     "\n" + sections[v[lec]].course + "\t" + sections[v[lec]].section + "\n" + 
+                #     sections[v[x]].course + "\t" + sections[v[x]].section + "\n")
 
                     # print(sections[v[lec]].id, " ", sections[v[lec]].instructor, " ", sections[v[lec]].course, " ", sections[v[lec]].section, " ",
                     # sections[v[x]].id, " ", sections[v[x]].instructor, " ", sections[v[x]].course, " ", sections[v[x]].section)
@@ -49,7 +63,7 @@ def get_teacher_clashes_data(timetable):
     f.close()
     return arr, count
 
-def get_teacher_clashes_count(timetable):
+def get_teacher_clashes_count(timetable, reg_data):
     clashed_sections = get_clashed_courses(timetable)
     count = 0
     i = 0
@@ -60,7 +74,7 @@ def get_teacher_clashes_count(timetable):
                 # print(sections[v[x]].course, " ", sections[v[x]].section, " ", sections[v[x]].instructor)
                 # print(sections[v[lec]].course, " ", sections[v[lec]].section, " ", sections[v[lec]].instructor)
                 # print()
-                if (sections[v[x]].instructor == sections[v[lec]].instructor):
+                if (teachers_data[reg_data[v[lec]].teacher_id].name == teachers_data[reg_data[v[x]].teacher_id].name):
                     count += 1
             #         print(sections[v[lec]].id, " ", sections[v[lec]].instructor, " ", sections[v[lec]].course, " ", sections[v[lec]].section, " ",
             #         sections[v[x]].id, " ", sections[v[x]].instructor, " ", sections[v[x]].course, " ", sections[v[x]].section)

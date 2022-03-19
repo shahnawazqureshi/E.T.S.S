@@ -11,6 +11,9 @@ import copy
 from numpy import random as rn
 from test_sections_timetable import execute_function
 from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
+from clashed_courses import get_clashed_courses
+
+
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
 mutation_probability = round(rn.uniform(low=0.0, high=0.5), 1)
@@ -28,7 +31,7 @@ class Population:
     
 
 def get_fitness(timetable):
-    teacher_clashes = get_teacher_clashes_count(timetable)
+    teacher_clashes = get_teacher_clashes_count(timetable, reg_data)
     student_clashes = get_student_clashes(timetable, reg_data)
     return [teacher_clashes * 5 + student_clashes * 2.5, (student_clashes, teacher_clashes)]
 
@@ -482,7 +485,13 @@ if __name__ == "__main__":
             all_sections.append(i)
 
     best_solution = copy.deepcopy(pop[0].chromosome)
-    arr, count = get_teacher_clashes_data(best_solution)
+    clashed_ccc = get_clashed_courses(best_solution)
+    for k, v in clashed_ccc.items():
+        print("For######## ", k)
+        for r in v: 
+            print(courses_data[reg_data[r].course_id].name, "\t", sections_data[reg_data[r].section_id].name)
+    print("\n\n\n-----------------HERE!!!!--------------\n\n\n")
+    arr, count = get_teacher_clashes_data(best_solution, reg_data)
     execute_function(best_solution, 1)
     store_new_timetable(best_solution)
     print("Actual Fitness Value: ", pop[0].fitness)
