@@ -15,7 +15,7 @@ class Database:
         return c.fetchall()
 
     def get_all_courses(self):
-        sql = "select course_id, course_name, course_code, course_type from tbl_course"
+        sql = "select course_id, course_name, course_code, course_type, course_for from tbl_course"
         c = self.db.cursor() 
         c.execute(sql)
         return c.fetchall()
@@ -52,8 +52,12 @@ class Database:
         return True
 
     def insert_reg_course_timetable(self, reg_id, day, slot, room):
+        try:
+            self.db = mc.connect(host="localhost", user="root", password="", database="timetable_manager")
+        except mc.Error as e:
+            print("Error")
         sql = "Insert into tbl_timetable (registered_id, day, slot, room) VALUES (%s, %s, %s, %s)"
-        val = (reg_id, day, slot, 7)
+        val = (reg_id, day, slot, room)
         c = self.db.cursor()
         c.execute(sql, val)
         self.db.commit()

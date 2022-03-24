@@ -4,6 +4,7 @@ import concurrent.futures
 from registered_courses import *
 from time_table import *
 from courses import *
+from rooms import *
 from student_clashes import *
 import random
 import time
@@ -485,15 +486,18 @@ if __name__ == "__main__":
             all_sections.append(i)
 
     best_solution = copy.deepcopy(pop[0].chromosome)
-    clashed_ccc = get_clashed_courses(best_solution)
-    for k, v in clashed_ccc.items():
-        print("For######## ", k)
-        for r in v: 
-            print(courses_data[reg_data[r].course_id].name, "\t", sections_data[reg_data[r].section_id].name)
-    print("\n\n\n-----------------HERE!!!!--------------\n\n\n")
-    arr, count = get_teacher_clashes_data(best_solution, reg_data)
+    best_solution = assign_rooms(best_solution, reg_data)
     execute_function(best_solution, 1)
     store_new_timetable(best_solution)
+    # clashed_ccc = get_clashed_courses(best_solution)
+    # for k, v in clashed_ccc.items():
+    #     print("For######## ", k)
+    #     for r in v: 
+    #         print(courses_data[reg_data[r].course_id].name, "\t", sections_data[reg_data[r].section_id].name)
+    # # print("\n\n\n-----------------HERE!!!!--------------\n\n\n")
+    # arr, count = get_teacher_clashes_data(best_solution, reg_data)
+    # execute_function(best_solution, 1)
+    # store_new_timetable(best_solution)
     print("Actual Fitness Value: ", pop[0].fitness)
     
 

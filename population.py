@@ -2,6 +2,7 @@ import copy
 from registered_courses import *
 from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
 from time_table import *
+from rooms import *
 from student_clashes import *
 import random
 from numpy import random as rn
@@ -381,7 +382,7 @@ def apply_mutation(chromosome, t_sections, lec_index):
 
 def genetic_algo():
     best_solution = None
-    max_iter = 5
+    max_iter = 50
     population = initial_population()
     #population = parent_selection(population.copy())
     count = 0
@@ -513,12 +514,15 @@ if __name__ == "__main__":
             all_sections.append(i)
     
     ga_solution = genetic_algo()
+    
     best_solution = copy.deepcopy(ga_solution.chromosome)
     print("Actual Fitness Value: ", ga_solution.fitness)
     best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
+    best_solution = assign_rooms(best_solution, reg_data)
     get_student_clashes_data(best_solution, reg_data)
     get_teacher_clashes_data(best_solution, reg_data)
     execute_function(best_solution, 1000)
+
     store_new_timetable(best_solution)
     print("\n--------------------------------------\n")
     print("All Done!!!")

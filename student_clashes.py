@@ -1,4 +1,3 @@
-
 #from timetable import *
 #from population import *
 from courses import *

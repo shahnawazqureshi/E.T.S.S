@@ -1,4 +1,5 @@
 from db import *
+from rooms import rooms_data
 class Timetable:
     def __init__(self,id,slots):
         self.id = id
@@ -24,5 +25,10 @@ def store_new_timetable(timetable):
     if db.delete_timetable():
         for reg_course in timetable:
             for slot_num in range(0, 2):
+                room_id = 0
+                for room in rooms_data:
+                    if room.name == reg_course.slots[slot_num].room:
+                        room_id = room.db_id
+                        break
                 db.insert_reg_course_timetable(reg_course.id, reg_course.slots[slot_num].day,
-                                            reg_course.slots[slot_num].slot, reg_course.slots[slot_num].room)    
+                                            reg_course.slots[slot_num].slot, room_id)
