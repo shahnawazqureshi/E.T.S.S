@@ -52,10 +52,6 @@ class Database:
         return True
 
     def insert_reg_course_timetable(self, reg_id, day, slot, room):
-        try:
-            self.db = mc.connect(host="localhost", user="root", password="", database="timetable_manager")
-        except mc.Error as e:
-            print("Error")
         sql = "Insert into tbl_timetable (registered_id, day, slot, room) VALUES (%s, %s, %s, %s)"
         val = (reg_id, day, slot, 7)
         c = self.db.cursor()
