@@ -45,6 +45,10 @@ class Database:
         return c.fetchall()
 
     def delete_timetable(self):
+        try:
+            self.db = mc.connect(host="localhost", user="root", password="", database="timetable_manager")
+        except mc.Error as e:
+            print("Error")
         sql = "delete from tbl_timetable"
         c = self.db.cursor()
         c.execute(sql)
