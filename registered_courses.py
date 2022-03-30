@@ -46,4 +46,4 @@ for data in temp:
 #     courses.courses_data[t.course_id].name, " ", teachers.teachers_data[t.teacher_id].name, " ", t.reg_binary)
 
 # for t in reg_data[1].students:
-#     print(t)
+#     print(t) 

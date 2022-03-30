@@ -44,6 +44,12 @@ class Database:
         c.execute(sql)
         return c.fetchall()
 
+    def get_timetable(self):
+        sql = "select registered_id, day, slot, room from tbl_timetable"
+        c = self.db.cursor() 
+        c.execute(sql)
+        return c.fetchall()
+        
     def delete_timetable(self):
         try:
             self.db = mc.connect(host="localhost", user="root", password="", database="timetable_manager")

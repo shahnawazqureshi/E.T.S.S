@@ -485,10 +485,14 @@ if __name__ == "__main__":
         if (i) not in all_sections:
             all_sections.append(i)
 
-    best_solution = copy.deepcopy(pop[0].chromosome)
-    best_solution = assign_rooms(best_solution, reg_data)
-    execute_function(best_solution, 1)
-    store_new_timetable(best_solution)
+
+    dddd = read_timetable(reg_data)
+    # for r in dddd:
+    #     print(r)
+    # best_solution = copy.deepcopy(pop[0].chromosome)
+    # best_solution = assign_rooms(best_solution, reg_data)
+    # execute_function(best_solution, 1)
+    # store_new_timetable(best_solution)
     # clashed_ccc = get_clashed_courses(best_solution)
     # for k, v in clashed_ccc.items():
     #     print("For######## ", k)
@@ -498,7 +502,7 @@ if __name__ == "__main__":
     # arr, count = get_teacher_clashes_data(best_solution, reg_data)
     # execute_function(best_solution, 1)
     # store_new_timetable(best_solution)
-    print("Actual Fitness Value: ", pop[0].fitness)
+    # print("Actual Fitness Value: ", pop[0].fitness)
     
 
     # best_solution, best_fitness = main_fun(best_solution, pop[0].fitness)

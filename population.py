@@ -30,7 +30,7 @@ all_sections = []
 def get_fitness(timetable):
     teacher_clashes = get_teacher_clashes_count(timetable, reg_data)
     student_clashes = get_student_clashes(timetable, reg_data)
-    return [teacher_clashes * 5 + student_clashes * 2.5, (student_clashes, teacher_clashes)]
+    return [teacher_clashes * 8 + student_clashes * 2.5, (student_clashes, teacher_clashes)]
 
 def initial_population():
     

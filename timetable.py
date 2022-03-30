@@ -59,4 +59,3 @@ for row in sections:
         timetable.append(Timetable(row.id, list))
 
 mycursor.close()
-

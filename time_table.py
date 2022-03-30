@@ -20,6 +20,24 @@ class Slot:
     def __repr__(self) -> str:
         return f'{self.day} {self.slot} {self.room}'
 
+
+def read_timetable(reg_data):
+    timetable = []
+    timetable_data = db.get_timetable()
+    for i in timetable_data:
+        print(i[0])
+    for reg_course in reg_data:
+        list = []
+        for i in timetable_data:
+            if (i[0] == reg_course.db_id):
+                slot = Slot(i[1], i[2], i[3])
+                list.append(slot)
+                print(i[0], " ", reg_course.db_id)
+        if list:
+            timetable.append(Timetable(reg_course.id, list))
+    return timetable
+
+
 def store_new_timetable(timetable):
     # Deleting Previous Timetable
     if db.delete_timetable():
@@ -30,5 +48,7 @@ def store_new_timetable(timetable):
                     if room.name == reg_course.slots[slot_num].room:
                         room_id = room.db_id
                         break
-                db.insert_reg_course_timetable(reg_course.id, reg_course.slots[slot_num].day,
+                db.insert_reg_course_timetable(reg_course.db_id, reg_course.slots[slot_num].day,
                                             reg_course.slots[slot_num].slot, room_id)
+
+
