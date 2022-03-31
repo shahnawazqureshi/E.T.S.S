@@ -49,3 +49,16 @@ def get_clashed_courses(timetable):
                         clashed_sections[str(day) + " " + str(slot)].append(i.id)
                         break
     return clashed_sections
+
+
+def get_clashed_rooms(timetable):
+    clashed_sections = {}
+    for day in range(1, 6):
+        for slot in range(1, 6):
+            clashed_sections[str(day) + " " + str(slot)] = []
+            for i in timetable:
+                for s in i.slots:
+                    if s.day == day and s.slot == slot:
+                        clashed_sections[str(day) + " " + str(slot)].append([i.id, s.room])
+                        break
+    return clashed_sections

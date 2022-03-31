@@ -2,6 +2,7 @@ from asyncore import loop
 import threading
 import concurrent.futures
 from registered_courses import *
+from room_clashes import get_room_clashes_count, get_room_clashes_data
 from time_table import *
 from courses import *
 from rooms import *
@@ -486,9 +487,10 @@ if __name__ == "__main__":
             all_sections.append(i)
 
 
-    dddd = read_timetable(reg_data)
-    # for r in dddd:
-    #     print(r)
+    timetable = read_timetable(reg_data)
+    get_room_clashes_count(timetable, reg_data)
+    # get_student_clashes_data(timetable, reg_data)
+    # get_teacher_clashes_data(timetable, reg_data)
     # best_solution = copy.deepcopy(pop[0].chromosome)
     # best_solution = assign_rooms(best_solution, reg_data)
     # execute_function(best_solution, 1)

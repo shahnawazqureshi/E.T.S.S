@@ -2,7 +2,8 @@
 import sys
 import os
 from PyQt5.sip import delete
-import iconify as ico
+from PySide2 import shiboken2
+# import iconify as ico
 from iconify.qt import QtGui as IconQtGui, QtWidgets as IconQtWidgets
 import PySide2
 import mysql.connector as mc
@@ -10,6 +11,7 @@ from qt_material import *
 from PyQt5 import QtWidgets, uic, QtGui
 from functools import partial
 from PyQt5.QtCore import Qt
+from registered_courses import reg_data
 from add_section_page import Ui_Add_Section_Window
 from edit_section_page import Ui_Edit_Section_Window
 from add_course_page import Ui_Add_Course_Window
@@ -27,11 +29,15 @@ from add_slot_preferences import Ui_Add_Slot_PReferences_Teacher_Window
 import sections_timetable
 import rooms_timetable
 import teachers_timetable
+from time_table import *
 from student_clashes import *
 from teacher_clashes import *
 from room_clashes import *
 from stylesheet import *
 from util import *
+
+timetable = read_timetable(reg_data)
+
 #####################################
 
 # Import GUI File
@@ -1738,7 +1744,7 @@ class MainWindow(QMainWindow):
         self.display_student_clashes_data()
     
     def display_student_clashes_data(self):
-        arr, count = get_student_clashes()
+        arr, count = get_student_clashes_data(timetable, reg_data)
         self.ui.total_student_clashes.setText("Total Clashes: " + str(count))
 
         # Deleting Previously stored widgets in layouts
@@ -1848,7 +1854,7 @@ class MainWindow(QMainWindow):
         self.display_teacher_clashes_data()
     
     def display_teacher_clashes_data(self):
-        arr, count = get_teacher_clashes()
+        arr, count = get_teacher_clashes_data(timetable, reg_data)
         self.ui.total_teacher_clashes.setText("Total Clashes: " + str(count))
         
         clash_row = 1
@@ -1949,7 +1955,7 @@ class MainWindow(QMainWindow):
         self.display_room_clashes_data()
     
     def display_room_clashes_data(self):
-        arr, count = get_room_clashes()
+        arr, count = get_room_clashes_data(timetable, reg_data)
         self.ui.total_room_clashes.setText("Total Clashes: " + str(count))
         
         clash_row = 1

@@ -24,15 +24,16 @@ class Slot:
 def read_timetable(reg_data):
     timetable = []
     timetable_data = db.get_timetable()
-    for i in timetable_data:
-        print(i[0])
     for reg_course in reg_data:
         list = []
         for i in timetable_data:
-            if (i[0] == reg_course.db_id):
-                slot = Slot(i[1], i[2], i[3])
+            if (i[0] == reg_course.id):
+                for room in rooms_data: # Getting actual Room ID 
+                    if room.db_id == i[3]:
+                        room_id = room.id
+                        break
+                slot = Slot(i[1], i[2], room_id)
                 list.append(slot)
-                print(i[0], " ", reg_course.db_id)
         if list:
             timetable.append(Timetable(reg_course.id, list))
     return timetable
