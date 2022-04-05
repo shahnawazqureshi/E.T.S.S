@@ -39,7 +39,7 @@ def read_timetable(reg_data):
     return timetable
 
 
-def store_new_timetable(timetable):
+def store_new_timetable(timetable, reg_data):
     # Deleting Previous Timetable
     if db.delete_timetable():
         for reg_course in timetable:
@@ -49,7 +49,6 @@ def store_new_timetable(timetable):
                     if room.name == reg_course.slots[slot_num].room:
                         room_id = room.db_id
                         break
-                db.insert_reg_course_timetable(reg_course.db_id, reg_course.slots[slot_num].day,
+                db.insert_reg_course_timetable(reg_data[reg_course.id].db_id, reg_course.slots[slot_num].day,
                                             reg_course.slots[slot_num].slot, room_id)
-
 

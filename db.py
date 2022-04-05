@@ -44,6 +44,12 @@ class Database:
         c.execute(sql)
         return c.fetchall()
 
+    def get_all_teacher_slot_preferences(self):
+        sql = "select id, teacher_id, day_id, slot_id from junc_slot_preferences"
+        c = self.db.cursor()
+        c.execute(sql)
+        return c.fetchall()
+
     def get_timetable(self):
         sql = "select registered_id, day, slot, room from tbl_timetable"
         c = self.db.cursor() 
