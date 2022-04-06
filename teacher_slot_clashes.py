@@ -1,7 +1,6 @@
 from logging import LogRecord
 # from timetable import *
 from teachers import *
-from util import get_day_and_slot
 
 def get_teacher_slot_violations_count(timetable, reg_data):
     count = 0 

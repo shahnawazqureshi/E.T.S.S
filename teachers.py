@@ -16,7 +16,7 @@ class Slot_Preference:
         self.teacher_id = teacher_id 
         self.day = day 
         self.slot = slot
-
+        
 temp = db.db.get_all_teachers()
 teachers_data = []
 count = 0

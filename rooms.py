@@ -1,5 +1,6 @@
 import db
 from courses import *
+from teachers import * 
 class Room:
     def __init__(self, id, name, type, department, db_id):
         self.id = id
@@ -11,6 +12,11 @@ class Room:
         def __repr__(self) -> str:
             return f'{self.id} {self.name} {self.type} {self.department}'
 
+class Room_Preference:
+    def __init__(self, id, teacher_id, room_id):
+        self.id = id 
+        self.teacher_id = teacher_id 
+        self.room_id = room_id
 
 temp = db.db.get_all_rooms()
 rooms_data = []
@@ -24,6 +30,27 @@ for data in temp:
 #     print(data.id, "\t", data.name, "\t", data.department, "\t", data.type)
 
 
+
+temp = db.db.get_all_teacher_room_preferences()
+teachers_room_preferences = {}
+count = 0 
+for data in temp:
+    for teacher in teachers_data:
+        if teacher.db_id == data[1]:
+            teacher_id = teacher.id
+            break
+    for room in rooms_data:
+        if room.db_id == data[2]:
+            room_id = room.id
+    room_preference = Room_Preference(count, teacher_id, room_id)
+    if teacher_id not in teachers_room_preferences.keys():
+        teachers_room_preferences[teacher_id] = []
+    teachers_room_preferences[teacher_id].append(room_preference)
+    count += 1 
+
+
+
+
 def assign_rooms(best_solution, reg_data):
     total_slots = {}
     for day in range(1, 6):
@@ -32,13 +59,24 @@ def assign_rooms(best_solution, reg_data):
     for lec in best_solution:
         if (courses_data[reg_data[lec.id].course_id].type == "Course"):
             for slot in lec.slots:
-                for room in rooms_data:
-                    if (room.type == "Course" 
-                    and courses_data[reg_data[lec.id].course_id].course_for == room.department):
-                        if (room.id not in total_slots[str(slot.day)+str(slot.slot)]):
-                            slot.room = room.name
-                            total_slots[str(slot.day)+str(slot.slot)].append(room.id)
-                            break
+                assigned = False
+                if reg_data[lec.id].teacher_id in teachers_room_preferences.keys():
+                    for preference in teachers_room_preferences[reg_data[lec.id].teacher_id]:
+                        if (rooms_data[preference.room_id].type == "Course" 
+                        and courses_data[reg_data[lec.id].course_id].course_for == rooms_data[preference.room_id].department):
+                            if (preference.room_id not in total_slots[str(slot.day)+str(slot.slot)]):
+                                slot.room = rooms_data[preference.room_id].name
+                                total_slots[str(slot.day)+str(slot.slot)].append(preference.room_id)
+                                assigned = True
+                                break
+                if assigned == False:
+                    for room in rooms_data:
+                        if (room.type == "Course" 
+                        and courses_data[reg_data[lec.id].course_id].course_for == room.department):
+                            if (room.id not in total_slots[str(slot.day)+str(slot.slot)]):
+                                slot.room = room.name
+                                total_slots[str(slot.day)+str(slot.slot)].append(room.id)
+                                break
         else:
             fh = False
             for room in rooms_data:
