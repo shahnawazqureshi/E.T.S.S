@@ -1,0 +1,65 @@
+Clash #1	1 1
+Lab #1
+Computer Networks - Lab	CS-5C
+Programming Fundamentals - Lab	CS-1A
+
+Clash #2	1 1
+Cal Lab
+English Composition and Comprehension - Lab	CS-1B1
+English Composition and Comprehension - Lab	CS-1E1
+
+Clash #3	1 1
+Cal Lab
+English Composition and Comprehension - Lab	CS-1B1
+English Composition and Comprehension - Lab	SE-1B2
+
+Clash #4	1 1
+Cal Lab
+English Composition and Comprehension - Lab	CS-1E1
+English Composition and Comprehension - Lab	SE-1B2
+
+Clash #5	1 2
+Lab #1
+Computer Networks - Lab	CS-5C
+Programming Fundamentals - Lab	CS-1A
+
+Clash #6	1 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1B1
+English Composition and Comprehension - Lab	CS-1E1
+
+Clash #7	1 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1B1
+English Composition and Comprehension - Lab	CS-1F1
+
+Clash #8	1 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1B1
+English Composition and Comprehension - Lab	SE-1B2
+
+Clash #9	1 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1E1
+English Composition and Comprehension - Lab	CS-1F1
+
+Clash #10	1 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1E1
+English Composition and Comprehension - Lab	SE-1B2
+
+Clash #11	1 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1F1
+English Composition and Comprehension - Lab	SE-1B2
+
+Clash #12	2 1
+Cal Lab
+English Composition and Comprehension - Lab	CS-1A1
+English Composition and Comprehension - Lab	SE-1B1
+
+Clash #13	2 2
+Cal Lab
+English Composition and Comprehension - Lab	CS-1A1
+English Composition and Comprehension - Lab	SE-1B1
+

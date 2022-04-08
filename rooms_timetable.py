@@ -1,5 +1,8 @@
 from data import *
 from timetable import * 
+from sections import sections_data
+from courses import courses_data
+from teachers import teachers_data
 from typing import List
 import pdfkit
 from pdfkit.api import configuration
@@ -7,20 +10,20 @@ from jinja2 import FileSystemLoader, Environment
 wkhtml_path = pdfkit.configuration(wkhtmltopdf = "C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")  #by using configuration you can add path value.
 
 
-def generate_data():
+def generate_data(timetable, reg_data):
 
     rooms_timetable = {}
 
-    for time in timetable_rooms: 
+    for time in timetable: 
         for r in time.slots: 
             i = r.room 
             if (i) not in rooms_timetable.keys():
                 rooms_timetable[i] = [["" for y in range(5)] for z in range(5)]
-            for sec in sections:
+            for sec in reg_data:
                 if time.id == sec.id:
-                    t_sec = sec.section.replace(" ", "_")
-                    t_course = sec.course.replace(" ", "_")
-                    t_instructor = sec.instructor.replace(" ", "_")
+                    t_sec = sections_data[sec.section_id].name.replace(" ", "_")
+                    t_course = courses_data[sec.course_id].name.replace(" ", "_")
+                    t_instructor = teachers_data[sec.teacher_id].name.replace(" ", "_")
                     rooms_timetable[i][r.day-1][r.slot-1] += t_course + "@" + t_sec + "@" + t_instructor + " "
 
     return rooms_timetable
@@ -84,8 +87,8 @@ def run(input_data):
     pdfkit.from_string(full_text, "Rooms Timetable.pdf", configuration = wkhtml_path)
 
 
-def execute_function():
-    rooms_timetable = generate_data()
+def generate_rooms_timetable(timetable, reg_data):
+    rooms_timetable = generate_data(timetable, reg_data)
     rooms_timetable = dict(sorted(rooms_timetable.items()))
 
     run(rooms_timetable)

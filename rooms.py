@@ -79,26 +79,41 @@ def assign_rooms(best_solution, reg_data):
                                 break
         else:
             fh = False
-            for room in rooms_data:
-                if (room.type == "Lab" and 
-                courses_data[reg_data[lec.id].course_id].course_for == room.department):
-                    if (room.id not in total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)] and 
-                    room.id not in total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)]):
-                        lec.slots[0].room = room.name
-                        lec.slots[1].room = room.name 
-                        total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)].append(room.id)
-                        total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(room.id)
-                        fh = True
-                        break
-            if (fh == False):
+            assigned = False
+            if reg_data[lec.id].teacher_id in teachers_room_preferences.keys():
+                for preference in teachers_room_preferences[reg_data[lec.id].teacher_id]:
+                    if (rooms_data[preference.room_id].type == "Lab" and 
+                    courses_data[reg_data[lec.id].course_id].course_for == rooms_data[preference.room_id].department):
+                        if (rooms_data[preference.room_id].id not in total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)] and 
+                        rooms_data[preference.room_id].id not in total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)]):
+                            lec.slots[0].room = rooms_data[preference.room_id].name
+                            lec.slots[1].room = rooms_data[preference.room_id].name 
+                            total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)].append(rooms_data[preference.room_id].id)
+                            total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(rooms_data[preference.room_id].id)
+                            assigned = True
+                            fh = True
+                            break
+            if assigned == False:
                 for room in rooms_data:
                     if (room.type == "Lab" and 
                     courses_data[reg_data[lec.id].course_id].course_for == room.department):
-                        lec.slots[0].room = room.name
-                        lec.slots[1].room = room.name 
-                        total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)].append(room.id)
-                        total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(room.id)
-                        break
+                        if (room.id not in total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)] and 
+                        room.id not in total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)]):
+                            lec.slots[0].room = room.name
+                            lec.slots[1].room = room.name 
+                            total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)].append(room.id)
+                            total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(room.id)
+                            fh = True
+                            break
+                if (fh == False):
+                    for room in rooms_data:
+                        if (room.type == "Lab" and 
+                        courses_data[reg_data[lec.id].course_id].course_for == room.department):
+                            lec.slots[0].room = room.name
+                            lec.slots[1].room = room.name 
+                            total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)].append(room.id)
+                            total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(room.id)
+                            break
 
                     
 

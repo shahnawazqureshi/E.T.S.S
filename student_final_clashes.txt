@@ -1,180 +1,2888 @@
-1 : 18F-0358 : 1 1
-Computer Networks - Lab CS-5B 
-Probability and Statistics CS-5C 
+1 : 19F-0111 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-2 : 18F-0376 : 1 1
-Computer Networks - Lab CS-5B 
-Probability and Statistics CS-5C 
+2 : 19F-0121 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-3 : 18F-0191 : 1 1
-Information Security CS-7D 
-Technical and Business Writing SE-5A 
+3 : 19F-0128 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-4 : 18F-0358 : 1 2
-Computer Networks - Lab CS-5B 
-Design and Analysis of Algorithms CS-5E 
+4 : 19F-0129 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-5 : 18F-0376 : 1 2
-Computer Networks - Lab CS-5B 
-Design and Analysis of Algorithms CS-5E 
+5 : 19F-0142 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-6 : 18F-0397 : 1 3
-Data Structures - Lab CS-3A 
-Professional Practices in IT CS-7C 
+6 : 19F-0211 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-7 : 20F-1129 : 1 3
-Digital Logic Design CS-3A 
-Discrete Structures CS-3B 
+7 : 19F-0233 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-8 : 16F-8057 : 1 4
-Computer Networks - Lab CS-5A 
-Software Testing CS-7F 
+8 : 19F-0268 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-9 : 17F-8002 : 1 4
-Computer Networks - Lab CS-5A 
-Software Testing CS-7F 
+9 : 19F-0269 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-10 : 18F-0260 : 1 4
-Computer Networks - Lab CS-5A 
-Operating Systems - Lab SE-5A 
+10 : 19F-0308 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-11 : 19F-0342 : 1 5
-Marketing Management CS-3D 
-Theory of Automata CS-5B 
+11 : 19F-0309 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-12 : 19F-0384 : 1 5
-Marketing Management CS-3D 
-Theory of Automata CS-5B 
+12 : 19F-0311 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-13 : 17F-9429 : 2 1
-Data Science CS-7B 
-Linear Algebra SE-3A 
+13 : 19F-0321 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
 
-14 : 18F-0328 : 2 2
-Database Systems SE-5A 
+14 : 19F-0328 : 1 1
+Computer Networks - Lab CS-5C 
+Theory of Automata CS-5E 
+
+15 : 20F-0432 : 1 1
+English Composition and Comprehension - Lab SE-1B2 
+Data Structures SE-3A 
+
+16 : 20F-0337 : 1 1
+Introduction to Information and Communication Technology - Lab CS-1A 
+Islamic Studies/Ethics CS-1B 
+
+17 : 20F-1130 : 1 1
+Introduction to Information and Communication Technology - Lab CS-1A 
+Discrete Structures CS-3A 
+
+18 : 19F-0901 : 1 1
+Software Construction and Development - Lab SE-5A 
+Data Structures SE-3A 
+
+19 : 19F-0911 : 1 1
+Software Construction and Development - Lab SE-5A 
+Data Structures SE-3A 
+
+20 : 19F-0944 : 1 1
+Software Construction and Development - Lab SE-5A 
+Data Structures SE-3A 
+
+21 : 19F-0976 : 1 1
+Software Construction and Development - Lab SE-5A 
+Data Structures SE-3A 
+
+22 : 20F-0405 : 1 1
+Applied Physics CS-1D 
+Islamic Studies/Ethics CS-1B 
+
+23 : 16F-8312 : 1 2
+Computer Networks - Lab CS-5C 
 Software Engineering CS-7B 
 
-15 : 17F-8131 : 2 2
-Finance & Accounting CS-3E 
-Islamic Studies/Ethics CS-1C 
+24 : 17F-8202 : 1 2
+Computer Networks - Lab CS-5C 
+Software Engineering CS-7A 
 
-16 : 17F-8072 : 2 3
-Differential Equations CS-3D 
-Fundamentals of Software Project Management CS-7E 
+25 : 17F-8321 : 1 2
+Computer Networks - Lab CS-5C 
+Software Engineering CS-7A 
 
-17 : 18F-0293 : 2 4
-Artificial Intelligence - Lab CS-7A 
-Linear Algebra CS-3A 
+26 : 20F-1130 : 1 2
+Digital Logic Design - Lab CS-1B 
+Introduction to Information and Communication Technology - Lab CS-1A 
 
-18 : 18F-0376 : 2 4
-Artificial Intelligence - Lab CS-7A 
-Operating Systems - Lab CS-5E 
+27 : 20F-1130 : 1 2
+Digital Logic Design - Lab CS-1B 
+Data Structures CS-3A 
 
-19 : 18F-0215 : 2 5
-Artificial Intelligence - Lab CS-7A 
-Theory of Automata CS-5D 
+28 : 20F-0432 : 1 2
+English Composition and Comprehension - Lab SE-1B2 
+Human Computer Interaction SE-3A 
 
-20 : 18F-0222 : 2 5
-Artificial Intelligence - Lab CS-7A 
-Psychology CS-5E 
+29 : 20F-1130 : 1 2
+Introduction to Information and Communication Technology - Lab CS-1A 
+Data Structures CS-3A 
 
-21 : 18F-0251 : 2 5
-Artificial Intelligence - Lab CS-7A 
-Psychology CS-5E 
+30 : 19F-0903 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
 
-22 : 18F-0444 : 2 5
-Artificial Intelligence - Lab CS-7A 
-Psychology CS-5E 
+31 : 19F-0910 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
 
-23 : 18F-0215 : 3 1
-Artificial Intelligence CS-7A 
-Theory of Automata CS-5D 
+32 : 19F-0915 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
 
-24 : 16F-8006 : 3 1
-Finance & Accounting CS-3E 
-Theory of Automata CS-5D 
+33 : 19F-0916 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
 
-25 : 18F-0222 : 3 3
-Psychology CS-5E 
-Theory of Automata CS-5B 
+34 : 19F-0927 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
 
-26 : 18F-0251 : 3 3
-Psychology CS-5E 
-Theory of Automata CS-5B 
+35 : 19F-0930 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
 
-27 : 18F-0281 : 4 1
-Calculus and Analytical Geometry CS-3A 
+36 : 19F-0941 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+37 : 19F-0946 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+38 : 19F-0965 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+39 : 19F-0985 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+40 : 19F-0987 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+41 : 19F-0991 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+42 : 19F-1011 : 1 2
+Software Construction and Development - Lab SE-5A 
+Data Structures SE-3B 
+
+43 : 19F-1011 : 1 2
+Software Construction and Development - Lab SE-5A 
+Operation Research SE-5B 
+
+44 : 19F-0924 : 1 2
+Data Structures SE-3B 
+Operation Research SE-5B 
+
+45 : 19F-1011 : 1 2
+Data Structures SE-3B 
+Operation Research SE-5B 
+
+46 : 19F-0947 : 1 2
+Human Computer Interaction SE-3A 
+Operation Research SE-5B 
+
+47 : 17F-8115 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7A 
+
+48 : 18F-0111 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7A 
+
+49 : 18F-0194 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7B 
+
+50 : 18F-0206 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7B 
+
+51 : 18F-0218 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7B 
+
+52 : 18F-0227 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7B 
+
+53 : 18F-0241 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7B 
+
+54 : 18F-0295 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7B 
+
+55 : 18F-0296 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7A 
+
+56 : 18F-0365 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7A 
+
+57 : 18F-0435 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7A 
+
+58 : 18F-0474 : 1 2
+Professional Practices in IT CS-7E 
+Software Engineering CS-7A 
+
+59 : 18F-0147 : 1 2
 Professional Practices in IT CS-7C 
+Software Engineering CS-7B 
 
-28 : 20F-1130 : 4 1
-Digital Logic Design - Lab CS-1B 
-Introduction to Information and Communication Technology - Lab CS-1A 
-
-29 : 19F-0231 : 4 1
-Introduction to Information and Communication Technology - Lab CS-1A 
-Operating System CS-5D 
-
-30 : 17F-9431 : 4 2
-Computer Networks CS-5B 
-Computer Networks - Lab CS-5C 
-
-31 : 17F-8115 : 4 2
-Data Science CS-7A 
-Database Systems - Lab CS-5D 
-
-32 : 19F-0231 : 4 2
-Database Systems - Lab CS-5D 
-Introduction to Information and Communication Technology - Lab CS-1A 
-
-33 : 20F-1130 : 4 2
-Digital Logic Design - Lab CS-1B 
-Introduction to Information and Communication Technology - Lab CS-1A 
-
-34 : 16F-8312 : 4 3
-Computer Networks - Lab CS-5C 
-Computer Orgnaization and Assembly Language - Lab CS-3C 
-
-35 : 18F-0176 : 4 3
-Database Systems - Lab CS-5D 
-Information Security CS-7D 
-
-36 : 17F-8321 : 4 4
-Fundamentals of Software Project Management CS-7E 
+60 : 18F-0228 : 1 2
+Professional Practices in IT CS-7C 
 Software Engineering CS-7A 
 
-37 : 18F-0111 : 4 4
+61 : 18F-0252 : 1 2
+Professional Practices in IT CS-7C 
 Software Engineering CS-7A 
-Software Testing CS-7F 
 
-38 : 18F-0384 : 4 5
+62 : 18F-0311 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7B 
+
+63 : 18F-0314 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7B 
+
+64 : 18F-0383 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7A 
+
+65 : 18F-0389 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7A 
+
+66 : 18F-0414 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7A 
+
+67 : 18F-0428 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7B 
+
+68 : 18F-0432 : 1 2
+Professional Practices in IT CS-7C 
+Software Engineering CS-7A 
+
+69 : 18F-0282 : 1 3
+Data Structures - Lab SE-3B 
+Discrete Structures CS-3B 
+
+70 : 19F-0924 : 1 3
+Data Structures - Lab SE-3B 
+Probability and Statistics SE-5B 
+
+71 : 19F-0953 : 1 3
+Data Structures - Lab SE-3B 
+Probability and Statistics SE-5B 
+
+72 : 18F-0442 : 1 3
+Design and Analysis of Algorithms CS-5D 
+Probability and Statistics SE-5B 
+
+73 : 18F-0282 : 1 4
+Data Structures - Lab SE-3B 
+Information Security CS-7B 
+
+74 : 19F-0924 : 1 4
+Data Structures - Lab SE-3B 
+Technical and Business Writing SE-5B 
+
+75 : 18F-0248 : 1 4
+Database Systems - Lab SE-5A 
+Design and Analysis of Algorithms CS-5E 
+
+76 : 19F-0908 : 1 4
+Database Systems - Lab SE-5A 
+Technical and Business Writing SE-5B 
+
+77 : 19F-0913 : 1 4
+Database Systems - Lab SE-5A 
+Technical and Business Writing SE-5B 
+
+78 : 19F-0919 : 1 4
+Database Systems - Lab SE-5A 
+Technical and Business Writing SE-5B 
+
+79 : 19F-0945 : 1 4
+Database Systems - Lab SE-5A 
+Technical and Business Writing SE-5B 
+
+80 : 17F-8069 : 1 4
+Operating Systems - Lab CS-5D 
+Marketing Management CS-3C 
+
+81 : 19F-0219 : 1 4
+Operating Systems - Lab CS-5D 
+Technical and Business Writing SE-5B 
+
+82 : 19F-0237 : 1 4
+Operating Systems - Lab CS-5D 
+Technical and Business Writing SE-5B 
+
+83 : 19F-0242 : 1 4
+Operating Systems - Lab CS-5D 
+Technical and Business Writing SE-5B 
+
+84 : 19F-0264 : 1 4
+Operating Systems - Lab CS-5D 
+Technical and Business Writing SE-5B 
+
+85 : 19F-0283 : 1 4
+Operating Systems - Lab CS-5D 
+Technical and Business Writing SE-5B 
+
+86 : 18F-0203 : 1 4
+Computer Organization and Assembly Language CS-3A 
+Data Mining CS-7A 
+
+87 : 18F-0396 : 1 4
+Computer Organization and Assembly Language CS-3A 
+Data Mining CS-7A 
+
+88 : 18F-0169 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+89 : 18F-0353 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+90 : 18F-0360 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+91 : 18F-0366 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+92 : 18F-0401 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+93 : 18F-0429 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+94 : 18L-0976 : 1 4
+Data Mining CS-7A 
+Information Security CS-7B 
+
+95 : 18F-0436 : 1 4
+Information Security CS-7B 
+Technical and Business Writing SE-5B 
+
+96 : 17F-8069 : 1 5
+Operating Systems - Lab CS-5D 
+Computer Architecture CS-9A 
+
+97 : 20F-0201 : 1 5
+Programming Fundamentals - Lab CS-1F 
+Digital Logic Design CS-3A 
+
+98 : 20F-0399 : 1 5
+Programming Fundamentals - Lab CS-1F 
+Digital Logic Design CS-3A 
+
+99 : 17F-8101 : 2 1
+Database Systems - Lab CS-5D 
+Professional Practices in IT CS-7B 
+
+100 : 17F-8101 : 2 1
+Database Systems - Lab CS-5D 
+Software Engineering CS-7A 
+
+101 : 17F-8115 : 2 1
+Database Systems - Lab CS-5D 
+Software Engineering CS-7A 
+
+102 : 18F-0176 : 2 1
+Database Systems - Lab CS-5D 
+Professional Practices in IT CS-7D 
+
+103 : 18F-0176 : 2 1
+Database Systems - Lab CS-5D 
+Software Engineering CS-7A 
+
+104 : 18F-0414 : 2 1
+Database Systems - Lab CS-5D 
+Applied Machine Learning CS-7C 
+
+105 : 18F-0414 : 2 1
+Database Systems - Lab CS-5D 
+Software Engineering CS-7A 
+
+106 : 19F-0391 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Calculus and Analytical Geometry CS-3A 
+
+107 : 20F-0139 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Calculus and Analytical Geometry CS-3A 
+
+108 : 20F-0139 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+109 : 20F-0171 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+110 : 20F-0214 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+111 : 20F-0248 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+112 : 20F-0254 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+113 : 20F-0306 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+114 : 20F-0331 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+115 : 20F-0338 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+116 : 20F-0344 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+117 : 20F-0359 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+118 : 20F-0374 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+119 : 20F-0383 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+120 : 20F-0443 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+121 : 20F-0447 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+122 : 20F-1016 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+123 : 20F-1021 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Calculus and Analytical Geometry CS-3A 
+
+124 : 20F-1028 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+125 : 20F-1081 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+126 : 20F-1113 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+127 : 20F-1127 : 2 1
+Object Oriented Programming - Lab CS-3B 
+Marketing Management CS-3D 
+
+128 : 17F-8045 : 2 1
+Operating Systems - Lab SE-5A 
+Professional Practices in IT CS-7B 
+
+129 : 17F-8045 : 2 1
+Operating Systems - Lab SE-5A 
+Software Engineering CS-7A 
+
+130 : 18F-0200 : 2 1
+Operating Systems - Lab SE-5A 
+Professional Practices in IT CS-7D 
+
+131 : 18F-0200 : 2 1
+Operating Systems - Lab SE-5A 
+Software Engineering CS-7A 
+
+132 : 18F-0220 : 2 1
+Operating Systems - Lab SE-5A 
+Calculus and Analytical Geometry CS-3A 
+
+133 : 18F-0260 : 2 1
+Operating Systems - Lab SE-5A 
+Software Engineering CS-7A 
+
+134 : 17F-8202 : 2 1
+Applied Machine Learning CS-7C 
+Software Engineering CS-7A 
+
+135 : 17F-9404 : 2 1
+Applied Machine Learning CS-7C 
+Marketing Management CS-3D 
+
+136 : 18F-0138 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+137 : 18F-0152 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+138 : 18F-0182 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+139 : 18F-0188 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+140 : 18F-0213 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+141 : 18F-0268 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+142 : 18F-0315 : 2 1
+Applied Machine Learning CS-7C 
+Software Engineering CS-7A 
+
+143 : 18F-0384 : 2 1
 Applied Machine Learning CS-7C 
 Professional Practices in IT CS-7D 
 
-39 : 20F-1062 : 4 5
-Programming Fundamentals - Lab SE-1A 
-Software Requirement Engineering SE-3A 
+144 : 18F-0414 : 2 1
+Applied Machine Learning CS-7C 
+Software Engineering CS-7A 
 
-40 : 17F-8065 : 5 1
-Data Mining CS-7B 
+145 : 18F-0418 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+146 : 18F-0432 : 2 1
+Applied Machine Learning CS-7C 
+Software Engineering CS-7A 
+
+147 : 18F-0482 : 2 1
+Applied Machine Learning CS-7C 
+Professional Practices in IT CS-7B 
+
+148 : 16F-8312 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Computer Networks CS-5C 
+
+149 : 19F-0102 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Psychology CS-5E 
+
+150 : 19F-0222 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+151 : 19F-0374 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Psychology CS-5E 
+
+152 : 19F-0396 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+153 : 20F-0139 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+154 : 20F-0173 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+155 : 20F-0243 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+156 : 20F-0269 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+157 : 20F-0336 : 2 1
+Calculus and Analytical Geometry CS-3A 
+Marketing Management CS-3D 
+
+158 : 19F-0111 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+159 : 19F-0121 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+160 : 19F-0121 : 2 1
+Computer Networks CS-5C 
+Web Programming CS-5A 
+
+161 : 19F-0128 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+162 : 19F-0129 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+163 : 19F-0142 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+164 : 19F-0211 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+165 : 19F-0233 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+166 : 19F-0268 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+167 : 19F-0269 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+168 : 19F-0272 : 2 1
+Computer Networks CS-5C 
+Web Programming CS-5A 
+
+169 : 19F-0308 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+170 : 19F-0309 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+171 : 19F-0309 : 2 1
+Computer Networks CS-5C 
+Web Programming CS-5A 
+
+172 : 19F-0311 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+173 : 19F-0311 : 2 1
+Computer Networks CS-5C 
+Web Programming CS-5A 
+
+174 : 19F-0321 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+175 : 19F-0321 : 2 1
+Computer Networks CS-5C 
+Web Programming CS-5A 
+
+176 : 19F-0328 : 2 1
+Computer Networks CS-5C 
+Psychology CS-5E 
+
+177 : 19F-0328 : 2 1
+Computer Networks CS-5C 
+Web Programming CS-5A 
+
+178 : 17F-8034 : 2 1
+Marketing Management CS-3D 
+Software Engineering CS-7A 
+
+179 : 17F-8216 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+180 : 18F-0124 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+181 : 18F-0161 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+182 : 18F-0162 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+183 : 18F-0176 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+184 : 18F-0184 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+185 : 18F-0200 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+186 : 18F-0279 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+187 : 18F-0379 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+188 : 18F-0419 : 2 1
+Professional Practices in IT CS-7D 
+Software Engineering CS-7A 
+
+189 : 17F-8045 : 2 1
+Professional Practices in IT CS-7B 
+Software Engineering CS-7A 
+
+190 : 17F-8101 : 2 1
+Professional Practices in IT CS-7B 
+Software Engineering CS-7A 
+
+191 : 18F-0166 : 2 1
+Professional Practices in IT CS-7B 
+Software Engineering CS-7A 
+
+192 : 18F-0191 : 2 1
+Professional Practices in IT CS-7B 
+Software Engineering CS-7A 
+
+193 : 18F-0277 : 2 1
+Professional Practices in IT CS-7B 
+Psychology CS-5E 
+
+194 : 18F-0351 : 2 1
+Professional Practices in IT CS-7B 
+Software Engineering CS-7A 
+
+195 : 19F-0121 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+196 : 19F-0151 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+197 : 19F-0170 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+198 : 19F-0179 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+199 : 19F-0228 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+200 : 19F-0245 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+201 : 19F-0271 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+202 : 19F-0280 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+203 : 19F-0309 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+204 : 19F-0311 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+205 : 19F-0321 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+206 : 19F-0328 : 2 1
+Psychology CS-5E 
+Web Programming CS-5A 
+
+207 : 18F-0143 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+208 : 18F-0143 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Finance & Accounting CS-3A 
+
+209 : 19F-0330 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+210 : 19F-0389 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+211 : 20F-0171 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+212 : 20F-0214 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+213 : 20F-0248 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+214 : 20F-0254 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+215 : 20F-0306 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+216 : 20F-0331 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+217 : 20F-0338 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+218 : 20F-0344 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+219 : 20F-0359 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+220 : 20F-0374 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+221 : 20F-0383 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+222 : 20F-0443 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+223 : 20F-0447 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+224 : 20F-1016 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+225 : 20F-1028 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+226 : 20F-1081 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+227 : 20F-1113 : 2 2
+Object Oriented Programming - Lab CS-3B 
+Differential Equations CS-3D 
+
+228 : 18F-0248 : 2 2
+Operating Systems - Lab SE-5A 
+Design and Analysis of Algorithms CS-5E 
+
+229 : 19F-0988 : 2 2
+Operating Systems - Lab SE-5A 
+Software Requirement Engineering SE-3B 
+
+230 : 20F-0180 : 2 2
+Programming Fundamentals - Lab CS-1E 
+Differential Equations CS-3D 
+
+231 : 18F-0215 : 2 2
+Data Mining CS-7A 
+Software Design and Analysis CS-5A 
+
+232 : 18F-0306 : 2 2
+Design and Analysis of Algorithms CS-5E 
+Finance & Accounting CS-3A 
+
+233 : 18F-0143 : 2 2
+Differential Equations CS-3D 
+Finance & Accounting CS-3A 
+
+234 : 19F-0151 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+235 : 19F-0170 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+236 : 19F-0179 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+237 : 19F-0193 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5D 
+
+238 : 19F-0204 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5D 
+
+239 : 19F-0213 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5D 
+
+240 : 19F-0217 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5D 
+
+241 : 19F-0228 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+242 : 19F-0245 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+243 : 19F-0271 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+244 : 19F-0280 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5E 
+
+245 : 19F-0364 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5D 
+
+246 : 19F-0382 : 2 3
+Computer Networks - Lab CS-5A 
+Theory of Automata CS-5D 
+
+247 : 19F-0177 : 2 3
+Data Structures - Lab SE-3A 
+Differential Equations CS-3E 
+
+248 : 19F-0923 : 2 3
+Data Structures - Lab SE-3A 
+Software Quality Engineering SE-5B 
+
+249 : 19F-0934 : 2 3
+Data Structures - Lab SE-3A 
+Software Quality Engineering SE-5B 
+
+250 : 19F-0978 : 2 3
+Data Structures - Lab SE-3A 
+Probability and Statistics SE-5A 
+
+251 : 16F-8303 : 2 3
+Data Science CS-7B 
+Theory of Automata CS-5D 
+
+252 : 18F-0183 : 2 3
+Data Science CS-7B 
+Professional Practices in IT CS-7A 
+
+253 : 19F-0160 : 2 3
+Differential Equations CS-3E 
+Theory of Automata CS-5E 
+
+254 : 20F-0120 : 2 3
+Differential Equations CS-3E 
+Digital Logic Design CS-3A 
+
+255 : 20F-0228 : 2 3
+Differential Equations CS-3E 
+Digital Logic Design CS-3A 
+
+256 : 20F-0292 : 2 3
+Differential Equations CS-3E 
+Digital Logic Design CS-3A 
+
+257 : 20F-0292 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+258 : 20F-0297 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+259 : 20F-0302 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+260 : 20F-0329 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+261 : 20F-0440 : 2 3
+Differential Equations CS-3E 
+Digital Logic Design CS-3A 
+
+262 : 20F-0440 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+263 : 20F-1104 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+264 : 20F-1107 : 2 3
+Differential Equations CS-3E 
+Digital Logic Design CS-3A 
+
+265 : 20F-1107 : 2 3
+Differential Equations CS-3E 
+Object Oriented Programming CS-3B 
+
+266 : 20F-0292 : 2 3
+Digital Logic Design CS-3A 
+Object Oriented Programming CS-3B 
+
+267 : 20F-0440 : 2 3
+Digital Logic Design CS-3A 
+Object Oriented Programming CS-3B 
+
+268 : 20F-1021 : 2 3
+Digital Logic Design CS-3A 
+Object Oriented Programming CS-3B 
+
+269 : 20F-1107 : 2 3
+Digital Logic Design CS-3A 
+Object Oriented Programming CS-3B 
+
+270 : 16F-8006 : 2 4
+Computer Networks - Lab CS-5B 
+Finance & Accounting CS-3E 
+
+271 : 16F-8207 : 2 4
+Computer Networks - Lab CS-5B 
+Theory of Automata CS-5C 
+
+272 : 18F-0232 : 2 4
+Data Structures - Lab CS-3D 
+Finance & Accounting CS-3E 
+
+273 : 18F-0232 : 2 4
+Data Structures - Lab CS-3D 
+Theory of Automata CS-5C 
+
+274 : 19F-0194 : 2 4
+Data Structures - Lab CS-3D 
+Theory of Automata CS-5C 
+
+275 : 19F-0195 : 2 4
+Data Structures - Lab CS-3D 
+Theory of Automata CS-5C 
+
+276 : 20F-0120 : 2 4
+Data Structures - Lab CS-3D 
+Finance & Accounting CS-3E 
+
+277 : 20F-0228 : 2 4
+Data Structures - Lab CS-3D 
+Finance & Accounting CS-3E 
+
+278 : 19F-0361 : 2 4
+Data Structures - Lab CS-3A 
+Finance & Accounting SE-3B 
+
+279 : 19F-0361 : 2 4
+Data Structures - Lab CS-3A 
+Theory of Automata CS-5C 
+
+280 : 20F-1130 : 2 4
+Data Structures - Lab CS-3A 
+Finance & Accounting CS-3E 
+
+281 : 18F-0232 : 2 4
+Finance & Accounting CS-3E 
+Theory of Automata CS-5C 
+
+282 : 19F-0145 : 2 4
+Finance & Accounting SE-3B 
+Theory of Automata CS-5C 
+
+283 : 19F-0361 : 2 4
+Finance & Accounting SE-3B 
+Theory of Automata CS-5C 
+
+284 : 20F-0106 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+285 : 20F-0133 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+286 : 20F-0176 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+287 : 20F-0229 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+288 : 20F-0321 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+289 : 20F-0325 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+290 : 20F-0353 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+291 : 20F-0365 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+292 : 20F-0389 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+293 : 20F-0397 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+294 : 20F-0410 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+295 : 20F-0414 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+296 : 20F-0424 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+297 : 20F-1014 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+298 : 20F-1061 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+299 : 20F-1065 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+300 : 20F-1088 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+301 : 20F-1103 : 2 4
+Finance & Accounting SE-3B 
+Object Oriented Programming SE-3A 
+
+302 : 19F-0361 : 2 5
+Data Structures - Lab CS-3A 
+Probability and Statistics CS-5A 
+
+303 : 18F-0282 : 2 5
+Information Security CS-7B 
+Linear Algebra SE-3B 
+
+304 : 18F-0248 : 3 1
+Artificial Intelligence CS-7A 
+Database Systems SE-5A 
+
+305 : 18F-0293 : 3 1
+Artificial Intelligence CS-7A 
+Database Systems SE-5A 
+
+306 : 18F-0328 : 3 1
+Artificial Intelligence CS-7A 
+Database Systems SE-5A 
+
+307 : 18F-0397 : 3 1
+Artificial Intelligence CS-7A 
+Probability and Statistics SE-5B 
+
+308 : 18F-0220 : 3 1
+Database Systems SE-5A 
+Probability and Statistics SE-5B 
+
+309 : 19F-0921 : 3 1
+Database Systems SE-5A 
+Probability and Statistics SE-5B 
+
+310 : 19F-0922 : 3 1
+Database Systems SE-5A 
+Probability and Statistics SE-5B 
+
+311 : 20F-1130 : 3 1
+Digital Logic Design CS-1B 
+Finance & Accounting CS-3E 
+
+312 : 19F-0134 : 3 1
+English Composition and Comprehension CS-1D2 
+Finance & Accounting CS-3E 
+
+313 : 18F-0215 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Theory of Automata CS-5D 
+
+314 : 18F-0222 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Theory of Automata CS-5B 
+
+315 : 18F-0251 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Theory of Automata CS-5B 
+
+316 : 18F-0256 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Fundamentals of Software Project Management CS-7E 
+
+317 : 18F-0293 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Theory of Automata CS-5A 
+
+318 : 18F-0375 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Software for Mobile Devices - Lab CS-7D 
+
+319 : 18F-0397 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Theory of Automata CS-5B 
+
+320 : 18F-0419 : 3 2
+Artificial Intelligence - Lab CS-7A 
+Differential Equations CS-3B 
+
+321 : 17F-8148 : 3 2
+Software for Mobile Devices - Lab CS-7D 
+Fundamentals of Software Project Management CS-7E 
+
+322 : 17F-8184 : 3 2
+Applied Machine Learning CS-7C 
+Fundamentals of Software Project Management CS-7E 
+
+323 : 18F-0298 : 3 2
+Applied Machine Learning CS-7C 
+Fundamentals of Software Project Management CS-7E 
+
+324 : 18F-0385 : 3 2
+Applied Machine Learning CS-7C 
+Fundamentals of Software Project Management CS-7E 
+
+325 : 17F-8315 : 3 2
+Differential Equations CS-3E 
+Fundamentals of Software Project Management CS-7E 
+
+326 : 19F-0177 : 3 2
+Differential Equations CS-3E 
+Theory of Automata CS-5C 
+
+327 : 19F-0195 : 3 2
+Differential Equations CS-3E 
+Theory of Automata CS-5C 
+
+328 : 19F-0393 : 3 2
+Differential Equations CS-3E 
+Theory of Automata CS-5B 
+
+329 : 16F-8247 : 3 2
+Fundamentals of Software Project Management CS-7E 
+Theory of Automata CS-5C 
+
+330 : 16F-8303 : 3 2
+Fundamentals of Software Project Management CS-7E 
+Theory of Automata CS-5D 
+
+331 : 18F-0191 : 3 3
+Artificial Intelligence - Lab CS-7A 
+Professional Practices in IT CS-7B 
+
+332 : 18F-0217 : 3 3
+Artificial Intelligence - Lab CS-7A 
+Professional Practices in IT CS-7B 
+
+333 : 18F-0323 : 3 3
+Artificial Intelligence - Lab CS-7A 
+Professional Practices in IT CS-7B 
+
+334 : 18F-0375 : 3 3
+Artificial Intelligence - Lab CS-7A 
+Software for Mobile Devices - Lab CS-7D 
+
+335 : 18F-0376 : 3 3
+Artificial Intelligence - Lab CS-7A 
+Operating Systems - Lab CS-5E 
+
+336 : 17F-8101 : 3 3
+Operating Systems - Lab CS-5E 
+Professional Practices in IT CS-7B 
+
+337 : 18F-0122 : 3 3
+Operating Systems - Lab CS-5E 
+Professional Practices in IT CS-7B 
+
+338 : 18F-0159 : 3 3
+Operating Systems - Lab CS-5E 
+Professional Practices in IT CS-7B 
+
+339 : 18F-0297 : 3 3
+Operating Systems - Lab CS-5E 
+Professional Practices in IT CS-7B 
+
+340 : 19F-0152 : 3 3
+Operating Systems - Lab CS-5E 
+Psychology CS-5D 
+
+341 : 19F-0322 : 3 3
+Operating Systems - Lab CS-5E 
+Psychology CS-5D 
+
+342 : 19F-0325 : 3 3
+Operating Systems - Lab CS-5E 
+Psychology CS-5D 
+
+343 : 18F-0117 : 3 3
+Software for Mobile Devices - Lab CS-7D 
+Professional Practices in IT CS-7B 
+
+344 : 18F-0167 : 3 3
+Software for Mobile Devices - Lab CS-7D 
+Professional Practices in IT CS-7B 
+
+345 : 18F-0179 : 3 3
+Software for Mobile Devices - Lab CS-7D 
+Professional Practices in IT CS-7B 
+
+346 : 18F-0219 : 3 3
+Software for Mobile Devices - Lab CS-7D 
+Professional Practices in IT CS-7B 
+
+347 : 18F-0282 : 3 3
+Linear Algebra SE-3B 
+Professional Practices in IT CS-7B 
+
+348 : 19F-0103 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+349 : 19F-0166 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+350 : 19F-0185 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+351 : 19F-0193 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+352 : 19F-0220 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+353 : 19F-0305 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+354 : 19F-0364 : 3 3
+Psychology CS-5D 
+Software Design and Analysis CS-5C 
+
+355 : 17F-8349 : 3 4
+Operating Systems - Lab CS-5E 
+Remote Sensing and GIS CS-7F 
+
+356 : 18F-0376 : 3 4
+Operating Systems - Lab CS-5E 
+Computer Networks CS-5B 
+
+357 : 16F-8286 : 3 4
+Advanced Programming CS-5C 
 Data Science CS-7A 
 
-41 : 18F-0323 : 5 2
-Applied Machine Learning CS-7D 
-Artificial Intelligence CS-7A 
+358 : 16F-8286 : 3 4
+Advanced Programming CS-5C 
+Remote Sensing and GIS CS-7F 
 
-42 : 17F-8285 : 5 2
-Artificial Intelligence CS-7A 
-Theory of Automata CS-5C 
+359 : 16F-8303 : 3 4
+Advanced Programming CS-5C 
+Differential Equations CS-3A 
 
-43 : 19F-0145 : 5 2
-Data Structures - Lab SE-3A 
-Theory of Automata CS-5C 
+360 : 16F-8303 : 3 4
+Advanced Programming CS-5C 
+Remote Sensing and GIS CS-7F 
 
-44 : 19F-0177 : 5 2
-Data Structures - Lab SE-3A 
-Theory of Automata CS-5C 
+361 : 17F-8036 : 3 4
+Advanced Programming CS-5C 
+Data Science CS-7A 
 
-45 : 18F-0281 : 5 4
+362 : 17F-8036 : 3 4
+Advanced Programming CS-5C 
+Remote Sensing and GIS CS-7F 
+
+363 : 17F-8075 : 3 4
+Advanced Programming CS-5C 
+Remote Sensing and GIS CS-7F 
+
+364 : 17F-8098 : 3 4
+Advanced Programming CS-5C 
+Remote Sensing and GIS CS-7F 
+
+365 : 17F-8123 : 3 4
+Advanced Programming CS-5C 
+Remote Sensing and GIS CS-7F 
+
+366 : 19F-0209 : 3 4
+Advanced Programming CS-5C 
+Computer Networks CS-5B 
+
+367 : 19F-0382 : 3 4
+Advanced Programming CS-5C 
+Computer Networks CS-5A 
+
+368 : 19F-0404 : 3 4
+Advanced Programming CS-5C 
+Computer Networks CS-5A 
+
+369 : 16F-8057 : 3 4
+Computer Networks CS-5B 
+Remote Sensing and GIS CS-7F 
+
+370 : 17F-8002 : 3 4
+Computer Networks CS-5B 
+Remote Sensing and GIS CS-7F 
+
+371 : 16F-8066 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+372 : 16F-8274 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+373 : 16F-8286 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+374 : 17F-8021 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+375 : 17F-8036 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+376 : 17F-8063 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+377 : 17F-8106 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+378 : 17F-8170 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+379 : 17F-8177 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+380 : 17F-8220 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+381 : 17F-8225 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+382 : 17F-9432 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+383 : 17F-9434 : 3 4
+Data Science CS-7A 
+Remote Sensing and GIS CS-7F 
+
+384 : 19F-0901 : 3 4
+Data Structures SE-3A 
+Technical and Business Writing SE-5A 
+
+385 : 19F-0911 : 3 4
+Data Structures SE-3A 
+Technical and Business Writing SE-5A 
+
+386 : 19F-0923 : 3 4
+Data Structures SE-3A 
+Software Construction and Development SE-5B 
+
+387 : 19F-0934 : 3 4
+Data Structures SE-3A 
+Software Construction and Development SE-5B 
+
+388 : 19F-0953 : 3 4
+Data Structures SE-3A 
+Software Construction and Development SE-5B 
+
+389 : 19F-0976 : 3 4
+Data Structures SE-3A 
+Technical and Business Writing SE-5A 
+
+390 : 19F-0978 : 3 4
+Data Structures SE-3A 
+Technical and Business Writing SE-5A 
+
+391 : 19F-0990 : 3 4
+Data Structures SE-3A 
+Islamic Studies/Ethics CS-1C 
+
+392 : 19F-0990 : 3 4
+Data Structures SE-3A 
+Technical and Business Writing SE-5A 
+
+393 : 19F-0175 : 3 4
+Data Structures CS-3D 
+Islamic Studies/Ethics CS-1C 
+
+394 : 16F-8303 : 3 4
+Differential Equations CS-3A 
+Remote Sensing and GIS CS-7F 
+
+395 : 17F-8131 : 3 4
+Islamic Studies/Ethics CS-1C 
+Remote Sensing and GIS CS-7F 
+
+396 : 19F-0990 : 3 4
+Islamic Studies/Ethics CS-1C 
+Technical and Business Writing SE-5A 
+
+397 : 20F-1130 : 3 5
+English Composition and Comprehension - Lab CS-1A2 
+Data Structures CS-3A 
+
+398 : 19F-0124 : 3 5
+Database Systems CS-5D 
+Probability and Statistics CS-5C 
+
+399 : 19F-0133 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+400 : 19F-0154 : 3 5
+Database Systems CS-5D 
+Probability and Statistics CS-5C 
+
+401 : 19F-0173 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+402 : 19F-0180 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+403 : 19F-0182 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+404 : 19F-0190 : 3 5
+Database Systems CS-5D 
+Probability and Statistics CS-5C 
+
+405 : 19F-0227 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+406 : 19F-0284 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+407 : 19F-0287 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+408 : 19F-0304 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+409 : 19F-0312 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+410 : 19F-0348 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+411 : 19F-0353 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+412 : 19F-0359 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+413 : 19F-0360 : 3 5
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+414 : 19F-0968 : 3 5
+Linear Algebra SE-3A 
+Object Oriented Programming CS-3B 
+
+415 : 18F-0143 : 3 5
+Object Oriented Programming CS-3B 
+Probability and Statistics CS-5C 
+
+416 : 18F-0195 : 3 5
+Probability and Statistics CS-5C 
+Software Engineering CS-7B 
+
+417 : 18F-0358 : 3 5
+Probability and Statistics CS-5C 
+Software Engineering CS-7B 
+
+418 : 18F-0376 : 3 5
+Probability and Statistics CS-5C 
+Software Engineering CS-7B 
+
+419 : 18F-0222 : 3 5
+Psychology CS-5E 
+Software Engineering CS-7B 
+
+420 : 18F-0251 : 3 5
+Psychology CS-5E 
+Software Engineering CS-7B 
+
+421 : 18F-0277 : 3 5
+Psychology CS-5E 
+Software Engineering CS-7B 
+
+422 : 19F-0134 : 4 1
+English Composition and Comprehension - Lab CS-1D2 
 Calculus and Analytical Geometry CS-3A 
+
+423 : 19F-0289 : 4 1
+Programming Fundamentals - Lab CS-1A 
+Pakistan Studies CS-1E 
+
+424 : 18F-0281 : 4 1
+Calculus and Analytical Geometry CS-3A 
+Information Security CS-7C 
+
+425 : 19F-0293 : 4 1
+Calculus and Analytical Geometry CS-3A 
+Pakistan Studies CS-1E 
+
+426 : 19F-0374 : 4 1
+Calculus and Analytical Geometry CS-3A 
+Data Structures CS-3D 
+
+427 : 19F-0396 : 4 1
+Calculus and Analytical Geometry CS-3A 
+Data Structures CS-3D 
+
+428 : 20F-0173 : 4 1
+Calculus and Analytical Geometry CS-3A 
+Data Structures CS-3D 
+
+429 : 20F-0336 : 4 1
+Calculus and Analytical Geometry CS-3A 
+Data Structures CS-3D 
+
+430 : 17F-8011 : 4 1
+Data Mining CS-7B 
+Software Testing CS-7F 
+
+431 : 17F-8330 : 4 1
+Data Mining CS-7B 
+Software Testing CS-7F 
+
+432 : 17K-3943 : 4 1
+Data Mining CS-7B 
+Software Testing CS-7F 
+
+433 : 18F-0106 : 4 1
+Data Mining CS-7B 
+Information Security CS-7C 
+
+434 : 18F-0121 : 4 1
+Data Mining CS-7B 
+Information Security CS-7C 
+
+435 : 18F-0174 : 4 1
+Data Mining CS-7B 
+Information Security CS-7C 
+
+436 : 18F-0174 : 4 1
+Data Mining CS-7B 
+Software Testing CS-7F 
+
+437 : 18F-0338 : 4 1
+Data Mining CS-7B 
+Software Testing CS-7F 
+
+438 : 19F-0250 : 4 1
+Data Structures CS-3D 
+Theory of Automata CS-5B 
+
+439 : 19F-0342 : 4 1
+Data Structures CS-3D 
+Theory of Automata CS-5B 
+
+440 : 19F-0358 : 4 1
+Data Structures CS-3D 
+Theory of Automata CS-5B 
+
+441 : 19F-0384 : 4 1
+Data Structures CS-3D 
+Theory of Automata CS-5B 
+
+442 : 19F-0393 : 4 1
+Data Structures CS-3D 
+Theory of Automata CS-5B 
+
+443 : 18F-0134 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+444 : 18F-0151 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+445 : 18F-0173 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+446 : 18F-0174 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+447 : 18F-0187 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+448 : 18F-0204 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+449 : 18F-0211 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+450 : 18F-0221 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+451 : 18F-0250 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+452 : 18F-0330 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+453 : 18F-0348 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+454 : 18F-0415 : 4 1
+Information Security CS-7C 
+Software Testing CS-7F 
+
+455 : 19F-0121 : 4 1
+Software Design and Analysis CS-5C 
+Web Programming CS-5A 
+
+456 : 19F-0272 : 4 1
+Software Design and Analysis CS-5C 
+Web Programming CS-5A 
+
+457 : 19F-0309 : 4 1
+Software Design and Analysis CS-5C 
+Web Programming CS-5A 
+
+458 : 19F-0311 : 4 1
+Software Design and Analysis CS-5C 
+Web Programming CS-5A 
+
+459 : 19F-0321 : 4 1
+Software Design and Analysis CS-5C 
+Web Programming CS-5A 
+
+460 : 19F-0328 : 4 1
+Software Design and Analysis CS-5C 
+Web Programming CS-5A 
+
+461 : 19F-0249 : 4 1
+Theory of Automata CS-5B 
+Web Programming CS-5A 
+
+462 : 19F-0290 : 4 1
+Theory of Automata CS-5B 
+Web Programming CS-5A 
+
+463 : 18F-0279 : 4 2
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Linear Algebra CS-3A 
+
+464 : 19F-0405 : 4 2
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Data Structures - Lab CS-3C 
+
+465 : 19F-0405 : 4 2
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Discrete Structures CS-3D 
+
+466 : 20F-1119 : 4 2
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Linear Algebra CS-3A 
+
+467 : 20F-1124 : 4 2
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Linear Algebra CS-3A 
+
+468 : 20F-1126 : 4 2
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Linear Algebra CS-3A 
+
+469 : 19F-0405 : 4 2
+Data Structures - Lab CS-3C 
+Discrete Structures CS-3D 
+
+470 : 20F-1117 : 4 2
+Data Structures - Lab CS-3C 
+Linear Algebra CS-3A 
+
+471 : 20F-1121 : 4 2
+Data Structures - Lab CS-3C 
+Linear Algebra CS-3A 
+
+472 : 19F-0289 : 4 2
+Programming Fundamentals - Lab CS-1A 
+Linear Algebra CS-3A 
+
+473 : 20F-1125 : 4 2
+Programming Fundamentals - Lab CS-1A 
+Discrete Structures CS-3D 
+
+474 : 20F-1125 : 4 2
+Programming Fundamentals - Lab CS-1A 
+Linear Algebra CS-3A 
+
+475 : 16F-8420 : 4 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+476 : 18F-0170 : 4 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+477 : 18F-0362 : 4 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+478 : 18F-0363 : 4 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+479 : 19F-0119 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+480 : 20F-0293 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+481 : 20F-1115 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+482 : 20F-1118 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+483 : 20F-1122 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+484 : 20F-1123 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+485 : 20F-1125 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+486 : 20F-1127 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+487 : 20I-0623 : 4 2
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+488 : 19F-0405 : 4 3
+Computer Orgnaization and Assembly Language - Lab CS-3B 
+Data Structures - Lab CS-3C 
+
+489 : 19F-0282 : 4 3
+Object Oriented Programming - Lab CS-3A 
+Differential Equations CS-3D 
+
+490 : 19F-0298 : 4 3
+Object Oriented Programming - Lab CS-3A 
+Differential Equations CS-3D 
+
+491 : 20F-0431 : 4 3
+Object Oriented Programming - Lab CS-3A 
+Differential Equations CS-3D 
+
+492 : 20F-1108 : 4 3
+Object Oriented Programming - Lab CS-3A 
+Differential Equations CS-3D 
+
+493 : 20I-0623 : 4 3
+Object Oriented Programming - Lab CS-3A 
+Differential Equations CS-3D 
+
+494 : 17F-8101 : 4 3
+Artificial Intelligence CS-7A 
+Database Systems CS-5D 
+
+495 : 17F-8289 : 4 3
+Artificial Intelligence CS-7A 
+Professional Practices in IT CS-7C 
+
+496 : 17F-8333 : 4 3
+Artificial Intelligence CS-7A 
+Professional Practices in IT CS-7C 
+
+497 : 18F-0195 : 4 3
+Artificial Intelligence CS-7A 
+Probability and Statistics CS-5C 
+
+498 : 18F-0256 : 4 3
+Artificial Intelligence CS-7A 
+Probability and Statistics CS-5C 
+
+499 : 18F-0358 : 4 3
+Artificial Intelligence CS-7A 
+Probability and Statistics CS-5C 
+
+500 : 18F-0376 : 4 3
+Artificial Intelligence CS-7A 
+Probability and Statistics CS-5C 
+
+501 : 18F-0383 : 4 3
+Artificial Intelligence CS-7A 
+Professional Practices in IT CS-7C 
+
+502 : 18F-0397 : 4 3
+Artificial Intelligence CS-7A 
+Professional Practices in IT CS-7C 
+
+503 : 19F-0124 : 4 3
+Database Systems CS-5D 
+Probability and Statistics CS-5C 
+
+504 : 19F-0133 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+505 : 19F-0154 : 4 3
+Database Systems CS-5D 
+Probability and Statistics CS-5C 
+
+506 : 19F-0173 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+507 : 19F-0180 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+508 : 19F-0182 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+509 : 19F-0190 : 4 3
+Database Systems CS-5D 
+Probability and Statistics CS-5C 
+
+510 : 19F-0227 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+511 : 19F-0284 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+512 : 19F-0287 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+513 : 19F-0304 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+514 : 19F-0312 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+515 : 19F-0348 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+516 : 19F-0353 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+517 : 19F-0359 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+518 : 19F-0360 : 4 3
+Database Systems CS-5D 
+Marketing Management CS-5B 
+
+519 : 18F-0143 : 4 3
+Differential Equations CS-3D 
+Probability and Statistics CS-5C 
+
+520 : 20F-0106 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+521 : 20F-0133 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+522 : 20F-0229 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+523 : 20F-0321 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+524 : 20F-0353 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+525 : 20F-0365 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+526 : 20F-0366 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+527 : 20F-0389 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+528 : 20F-0397 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+529 : 20F-0410 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+530 : 20F-0414 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+531 : 20F-0424 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+532 : 20F-1014 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+533 : 20F-1061 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+534 : 20F-1065 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+535 : 20F-1088 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+536 : 20F-1103 : 4 3
+Human Computer Interaction SE-3B 
+Object Oriented Programming SE-3A 
+
+537 : 18F-0287 : 4 3
+Islamic Studies/Ethics CS-1D 
+Probability and Statistics CS-5C 
+
+538 : 18F-0414 : 4 3
+Linear Algebra CS-1B 
+Professional Practices in IT CS-7C 
+
+539 : 18F-0252 : 4 3
+Marketing Management CS-5B 
+Professional Practices in IT CS-7C 
+
+540 : 19F-0282 : 4 4
+Computer Orgnaization and Assembly Language - Lab CS-3D 
+Object Oriented Programming - Lab CS-3A 
+
+541 : 19F-0298 : 4 4
+Computer Orgnaization and Assembly Language - Lab CS-3D 
+Object Oriented Programming - Lab CS-3A 
+
+542 : 20F-0243 : 4 4
+Computer Orgnaization and Assembly Language - Lab CS-3D 
+Object Oriented Programming - Lab CS-3A 
+
+543 : 20F-0431 : 4 4
+Computer Orgnaization and Assembly Language - Lab CS-3D 
+Object Oriented Programming - Lab CS-3A 
+
+544 : 20F-1108 : 4 4
+Computer Orgnaization and Assembly Language - Lab CS-3D 
+Object Oriented Programming - Lab CS-3A 
+
+545 : 19F-0925 : 4 4
+Object Oriented Programming - Lab CS-3A 
+Software Requirement Engineering SE-3B 
+
+546 : 20F-0405 : 4 4
+Programming Fundamentals - Lab CS-1B 
+Applied Physics CS-1D 
+
+547 : 19F-0908 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+548 : 19F-0913 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+549 : 19F-0919 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+550 : 19F-0921 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+551 : 19F-0922 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+552 : 19F-0926 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+553 : 19F-0936 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+554 : 19F-0937 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+555 : 19F-0945 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+556 : 19F-0962 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+557 : 19F-0972 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+558 : 19F-1001 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+559 : 19F-1009 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+560 : 19F-1014 : 4 4
+Software Construction and Development - Lab SE-5B 
+Operating Systems SE-5A 
+
+561 : 17F-9426 : 4 4
 Software for Mobile Devices - Lab CS-9A 
+Fundamentals of Software Project Management CS-7E 
+
+562 : 18F-0336 : 4 4
+Software for Mobile Devices - Lab CS-9A 
+Fundamentals of Software Project Management CS-7E 
+
+563 : 18F-0383 : 4 4
+Software for Mobile Devices - Lab CS-9A 
+Data Science CS-7B 
+
+564 : 17F-8039 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+565 : 17F-8287 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+566 : 17F-9431 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+567 : 17F-9431 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Fundamentals of Software Project Management CS-7E 
+
+568 : 18F-0114 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+569 : 18F-0149 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+570 : 18F-0183 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+571 : 18F-0421 : 4 4
+Software for Mobile Devices - Lab CS-7C 
+Data Science CS-7B 
+
+572 : 16F-8303 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+573 : 17F-8072 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+574 : 17F-8088 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+575 : 17F-8098 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+576 : 17F-8184 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+577 : 17F-8188 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+578 : 17F-8191 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+579 : 17F-8217 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+580 : 17F-8321 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+581 : 17F-8335 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+582 : 17F-9431 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+583 : 17F-9438 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+584 : 17F-9440 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+585 : 18F-0262 : 4 4
+Data Science CS-7B 
+Fundamentals of Software Project Management CS-7E 
+
+586 : 19F-0125 : 4 4
+Design and Analysis of Algorithms CS-5D 
+Probability and Statistics CS-5A 
+
+587 : 19F-0214 : 4 4
+Design and Analysis of Algorithms CS-5D 
+Probability and Statistics CS-5A 
+
+588 : 19F-0231 : 4 4
+Design and Analysis of Algorithms CS-5D 
+Probability and Statistics CS-5A 
+
+589 : 19F-0988 : 4 4
+Operating Systems SE-5A 
+Software Requirement Engineering SE-3B 
+
+590 : 20F-1009 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+591 : 20F-1062 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Human Computer Interaction SE-3A 
+
+592 : 21F-9509 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+593 : 21F-9510 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+594 : 21F-9512 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+595 : 21F-9514 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+596 : 21F-9515 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+597 : 21F-9516 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+598 : 21F-9519 : 4 5
+Programming Fundamentals - Lab SE-1A 
+Applied Physics CS-3A 
+
+599 : 20F-0305 : 4 5
+Programming Fundamentals - Lab SE-1B 
+Applied Physics CS-3A 
+
+600 : 20F-0104 : 4 5
+Programming Fundamentals - Lab CS-1B 
+Applied Physics CS-3A 
+
+601 : 20F-0104 : 4 5
+Programming Fundamentals - Lab CS-1B 
+Programming Fundamentals CS-1F 
+
+602 : 20F-1095 : 4 5
+Programming Fundamentals - Lab CS-1B 
+Programming Fundamentals CS-1E 
+
+603 : 20F-0104 : 4 5
+Applied Physics CS-3A 
+Programming Fundamentals CS-1F 
+
+604 : 20F-0402 : 4 5
+Human Computer Interaction SE-3A 
+Programming Fundamentals CS-1A 
+
+605 : 20F-1009 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+606 : 21F-9509 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+607 : 21F-9510 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+608 : 21F-9512 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+609 : 21F-9514 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+610 : 21F-9515 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+611 : 21F-9516 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+612 : 21F-9519 : 5 1
+Applied Physics CS-3A 
+Programming Fundamentals SE-1A 
+
+613 : 19F-0903 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+614 : 19F-0907 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+615 : 19F-0910 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+616 : 19F-0915 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+617 : 19F-0916 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+618 : 19F-0927 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+619 : 19F-0930 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+620 : 19F-0941 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+621 : 19F-0946 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+622 : 19F-0965 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+623 : 19F-0978 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+624 : 19F-0979 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+625 : 19F-0985 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+626 : 19F-0987 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+627 : 19F-0991 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+628 : 19F-1011 : 5 1
+Operation Research SE-5B 
+Software Quality Engineering SE-5A 
+
+629 : 16F-8286 : 5 2
+Advanced Programming CS-5C 
+Data Science CS-7A 
+
+630 : 16F-8286 : 5 2
+Advanced Programming CS-5C 
+Software Testing CS-7F 
+
+631 : 17F-8036 : 5 2
+Advanced Programming CS-5C 
+Data Science CS-7A 
+
+632 : 17F-8036 : 5 2
+Advanced Programming CS-5C 
+Software Testing CS-7F 
+
+633 : 17F-8075 : 5 2
+Advanced Programming CS-5C 
+Software Testing CS-7F 
+
+634 : 17F-9442 : 5 2
+Advanced Programming CS-5C 
+Software Testing CS-7F 
+
+635 : 16F-8420 : 5 2
+Applied Machine Learning CS-7D 
+Finance & Accounting CS-3A 
+
+636 : 16F-8420 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+637 : 17F-8121 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7F 
+
+638 : 17F-9412 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7F 
+
+639 : 18F-0170 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+640 : 18F-0290 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7F 
+
+641 : 18F-0362 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+642 : 18F-0363 : 5 2
+Applied Machine Learning CS-7D 
+Software Testing CS-7E 
+
+643 : 16F-8066 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+644 : 16F-8286 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+645 : 17F-8013 : 5 2
+Data Science CS-7A 
+Software Testing CS-7E 
+
+646 : 17F-8021 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+647 : 17F-8036 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+648 : 17F-8063 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+649 : 17F-8120 : 5 2
+Data Science CS-7A 
+Software Testing CS-7E 
+
+650 : 17F-8170 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+651 : 17F-8220 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+652 : 17F-8225 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+653 : 17F-8240 : 5 2
+Data Science CS-7A 
+Software Testing CS-7E 
+
+654 : 17F-8306 : 5 2
+Data Science CS-7A 
+Software Testing CS-7E 
+
+655 : 17F-9432 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+656 : 17F-9434 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+657 : 18F-0242 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+658 : 18F-0330 : 5 2
+Data Science CS-7A 
+Software Testing CS-7F 
+
+659 : 18F-0293 : 5 2
+Database Systems SE-5A 
+Technical and Business Writing SE-5B 
+
+660 : 19F-0400 : 5 2
+Database Systems SE-5A 
+Differential Equations CS-3C 
+
+661 : 19F-0400 : 5 2
+Database Systems SE-5A 
+English Composition and Comprehension CS-1B2 
+
+662 : 19F-0908 : 5 2
+Database Systems SE-5A 
+Technical and Business Writing SE-5B 
+
+663 : 19F-0913 : 5 2
+Database Systems SE-5A 
+Technical and Business Writing SE-5B 
+
+664 : 19F-0919 : 5 2
+Database Systems SE-5A 
+Technical and Business Writing SE-5B 
+
+665 : 19F-0945 : 5 2
+Database Systems SE-5A 
+Technical and Business Writing SE-5B 
+
+666 : 19F-0400 : 5 2
+Differential Equations CS-3C 
+English Composition and Comprehension CS-1B2 
+
+667 : 16F-8420 : 5 2
+Finance & Accounting CS-3A 
+Software Testing CS-7E 
+
+668 : 19F-0955 : 5 2
+Software Requirement Engineering SE-3A 
+Technical and Business Writing SE-5B 
+
+669 : 19F-0959 : 5 2
+Software Requirement Engineering SE-3A 
+Technical and Business Writing SE-5B 
+
+670 : 18F-0282 : 5 3
+Data Structures SE-3B 
+Discrete Structures CS-3B 
+
+671 : 19F-1011 : 5 3
+Data Structures SE-3B 
+Probability and Statistics SE-5A 
+
+672 : 20F-1120 : 5 3
+Discrete Structures CS-3B 
+Linear Algebra SE-3A 
+
+673 : 17F-8021 : 5 4
+Computer Architecture CS-9A 
+Marketing Management CS-3D 
+
+674 : 17F-8021 : 5 4
+Computer Architecture CS-9A 
+Remote Sensing and GIS CS-7F 
+
+675 : 17F-8043 : 5 4
+Computer Architecture CS-9A 
+Finance & Accounting SE-3B 
+
+676 : 17F-8069 : 5 4
+Computer Architecture CS-9A 
+Marketing Management CS-3C 
+
+677 : 17F-8069 : 5 4
+Computer Architecture CS-9A 
+Operating System CS-5D 
+
+678 : 17F-8161 : 5 4
+Computer Architecture CS-9A 
+Finance & Accounting SE-3B 
+
+679 : 17F-8168 : 5 4
+Computer Architecture CS-9A 
+Remote Sensing and GIS CS-7F 
+
+680 : 17F-8191 : 5 4
+Computer Architecture CS-9A 
+Remote Sensing and GIS CS-7F 
+
+681 : 17F-8193 : 5 4
+Computer Architecture CS-9A 
+Technical and Business Writing SE-5A 
+
+682 : 17F-8330 : 5 4
+Computer Architecture CS-9A 
+Remote Sensing and GIS CS-7F 
+
+683 : 17F-8349 : 5 4
+Computer Architecture CS-9A 
+Remote Sensing and GIS CS-7F 
+
+684 : 17F-8170 : 5 4
+Finance & Accounting SE-3B 
+Remote Sensing and GIS CS-7F 
+
+685 : 17F-8131 : 5 4
+Islamic Studies/Ethics CS-1C 
+Remote Sensing and GIS CS-7F 
+
+686 : 19F-0990 : 5 4
+Islamic Studies/Ethics CS-1C 
+Technical and Business Writing SE-5A 
+
+687 : 17F-8069 : 5 4
+Marketing Management CS-3C 
+Operating System CS-5D 
+
+688 : 17F-8011 : 5 4
+Marketing Management CS-3D 
+Remote Sensing and GIS CS-7F 
+
+689 : 17F-8021 : 5 4
+Marketing Management CS-3D 
+Remote Sensing and GIS CS-7F 
+
+690 : 17F-8036 : 5 4
+Marketing Management CS-3D 
+Remote Sensing and GIS CS-7F 
+
+691 : 17F-9432 : 5 4
+Marketing Management CS-3D 
+Remote Sensing and GIS CS-7F 
+
+692 : 17F-9434 : 5 4
+Marketing Management CS-3D 
+Remote Sensing and GIS CS-7F 
+
+693 : 17K-3943 : 5 4
+Marketing Management CS-3D 
+Remote Sensing and GIS CS-7F 
+
+694 : 19F-0119 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+695 : 19F-0222 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+696 : 19F-0298 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+697 : 20F-0243 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+698 : 20F-0269 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+699 : 20F-0423 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+700 : 20F-0431 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+701 : 20F-1108 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+702 : 20F-1127 : 5 4
+Marketing Management CS-3D 
+Object Oriented Programming CS-3A 
+
+703 : 19F-0391 : 5 4
+Object Oriented Programming CS-3A 
+Technical and Business Writing SE-5A 
+
+704 : 16F-8145 : 5 4
+Operating System CS-5D 
+Remote Sensing and GIS CS-7F 
+
+705 : 20F-1119 : 5 5
+Computer Organization and Assembly Language CS-3B 
+Linear Algebra CS-3A 
+
+706 : 20F-1124 : 5 5
+Computer Organization and Assembly Language CS-3B 
+Linear Algebra CS-3A 
+
+707 : 20F-1126 : 5 5
+Computer Organization and Assembly Language CS-3B 
+Linear Algebra CS-3A 
+
+708 : 19F-0405 : 5 5
+Data Structures CS-3C 
+Discrete Structures CS-3D 
+
+709 : 19F-0119 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+710 : 20F-0293 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+711 : 20F-0308 : 5 5
+Discrete Structures CS-3D 
+Marketing Management SE-3A 
+
+712 : 20F-0349 : 5 5
+Discrete Structures CS-3D 
+Marketing Management SE-3A 
+
+713 : 20F-1115 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+714 : 20F-1118 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+715 : 20F-1122 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+716 : 20F-1123 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+717 : 20F-1125 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+718 : 20F-1127 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+719 : 20I-0623 : 5 5
+Discrete Structures CS-3D 
+Linear Algebra CS-3A 
+
+720 : 18F-0293 : 5 5
+Linear Algebra CS-3A 
+Theory of Automata CS-5A 
+
+721 : 18F-0368 : 5 5
+Linear Algebra CS-3A 
+Professional Practices in IT CS-7A 
+
+722 : 19F-0289 : 5 5
+Linear Algebra CS-3A 
+Pakistan Studies CS-1E 
 
