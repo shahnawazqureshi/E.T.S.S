@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+:root {
+  --border-strong: 3px solid #777;
+  --border-normal: 1px solid gray;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table>caption {
+  font-size: 6mm;
+  font-weight: bolder;
+  letter-spacing: 1mm;
+}
+
+
+/* 210 x 297 mm */
+
+table {
+  width: 297mm;
+  height: 210mm;
+  border-collapse: collapse;
+}
+
+td {
+  border: var(--border-normal);
+  position: relative;
+  font-size: 2.6mm;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+tbody tr:last-child {
+  border-bottom: var(--border-strong);
+}
+
+tbody tr> :last-child {
+  border-right: var(--border-strong);
+}
+
+
+/* top header */
+
+.top_head>th {
+  width: 54mm;
+  height: 10mm;
+  vertical-align: bottom;
+  border-top: var(--border-strong);
+  border-bottom: var(--border-strong);
+  border-right: 1px solid gray;
+}
+
+.top_head :first-child {
+  width: 27mm;
+  border: var(--border-strong);
+}
+
+.top_head :last-child {
+  border-right: var(--border-strong);
+}
+
+
+/* left header */
+
+tbody th {
+  border-left: var(--border-strong);
+  border-right: var(--border-strong);
+  border-bottom: 1px solid gray;
+}
+
+tbody>tr:last-child th {
+  border-bottom: var(--border-strong);
+}
+
+
+/* row */
+
+tbody td>div {
+  height: 34mm;
+  overflow: hidden;
+}
+
+.vertical_span_all {
+  font-size: 5mm;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: var(--border-strong);
+}
+
+.vertical_span_all div {
+  height: 10mm;
+}
+
+
+/* td contents */
+
+
+.note {
+  font-size: 3mm;
+}
+
+.note :last-child {
+  float: right;
+}
+
+@page {
+  margin: 5mm;
+}
+.new-page {
+    page-break-before: always;
+  }
+.center
+{
+  text-align: center;
+
+}
+.left
+{
+    text-align: left;
+    margin-left: 6px;
+    /*margin-top: 10px;*/
+}
+.right
+{
+    text-align: right;  margin-right: 4px;
+}
+.teacher
+{
+    margin-left: 4px;
+}
+td{
+  height:175px;
+  width:150px;
+}
+
+
+  </style>
+<body>
+<!-- Heading -->
+    <h1 class="center">1</h1>
+
+<!-- Table -->
+    <table border="1">
+
+<!-- Day/Periods -->
+        <tr>
+            <td class="center" ><br>
+                <b>Day/Period</b></br>
+            </td>
+            <td class="center" >
+                <b>I</b>
+            </td>
+            <td class="center" >
+                <b>II</b>
+            </td>
+            <td class="center">
+                <b>III</b>
+            </td>
+            <td class="center">
+                <b>1:15-1:45</b>
+            </td>
+            <td class="center" >
+                <b>IV</b>
+            </td>
+            <td class="center" >
+                <b>V</b>
+            </td>
+
+        </tr>
+<!-- Monday -->
+        <tr>
+            <td class="center">
+                <b>Monday</b></td>
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Applied Physics</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Applied_Physics@CS-1F@Waheed_Ahmad<hr>Applied_Physics@SE-1A@Waheed_Ahmad<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Applied Physics</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Applied_Physics@CS-1F@Waheed_Ahmad<hr>Applied_Physics@SE-1A@Waheed_Ahmad<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1A</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Differential Equations</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Applied_Physics@CS-1F@Waheed_Ahmad<hr>Applied_Physics@SE-1A@Waheed_Ahmad<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3E</p>
+                            
+                        <p class = "teacher">Hayat Ali<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Applied_Physics@CS-1F@Waheed_Ahmad<hr>Applied_Physics@SE-1A@Waheed_Ahmad<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1E2</p>
+                            
+                        <p class = "teacher">Muhammad Iqbal<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Applied_Physics@CS-1F@Waheed_Ahmad<hr>Applied_Physics@SE-1A@Waheed_Ahmad<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Dr. Arslan Ahmed Amin<hr>Calculus and Analytical Geometry</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Theory_of_Automata@CS-5C@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Dr.Mushtaq Ahmad<hr>Database Systems</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Theory_of_Automata@CS-5C@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Nasreen Akhtar<hr>Theory of Automata</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Theory_of_Automata@CS-5C@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5C</p>
+                            
+                        <p class = "teacher">Numan Shafi</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Theory_of_Automata@CS-5C@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">English Composition and Comprehension</p>
+                                    
+                                    <p class = "right">CS-1E1</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@SE-5B@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F1</p>
+                            
+                        <p class = "teacher">Muhammad Iqbal<hr>Fundamentals of Management</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@SE-5B@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Muhammad Tayyeb Riaz<hr>Operation Research</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@SE-5B@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Imran Babar<hr>Probability and Statistics</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@SE-5B@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5B</p>
+                            
+                        <p class = "teacher">Haris Khurram</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@SE-5B@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td rowspan="6" class="center">
+                        <h2>L<br>U<br>N<br>C<br>H</h2>
+                    </td>
+                
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-1E</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Computer Networks</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5C</p>
+                            
+                        <p class = "teacher">Dr. Bilal Khan<hr>Digital Logic Design</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Muhammad Irfan Ishaq<hr>Finance & Accounting</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-3B</p>
+                            
+                        <p class = "teacher">Muhammad Nasif<hr>Object Oriented Programming</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Dr Usman Habib<hr>Professional Practices in IT</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Database Systems</p>
+                                    
+                                    <p class = "right">CS-5E</p>
+                            
+                        <p class = "teacher">Aliza Saeed<hr>Discrete Structures</p>
+                        <!-- <p class="left">Database_Systems@CS-5E@Aliza_Saeed<hr>Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Pakistan_Studies@CS-1E@Asif_Naveed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Ahmad<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Database_Systems@CS-5E@Aliza_Saeed<hr>Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Pakistan_Studies@CS-1E@Asif_Naveed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1D2</p>
+                            
+                        <p class = "teacher">Sadia Ashfaq<hr>Marketing Management</p>
+                        <!-- <p class="left">Database_Systems@CS-5E@Aliza_Saeed<hr>Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Pakistan_Studies@CS-1E@Asif_Naveed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3C</p>
+                            
+                        <p class = "teacher">Syed Zeeshan Haider<hr>Pakistan Studies</p>
+                        <!-- <p class="left">Database_Systems@CS-5E@Aliza_Saeed<hr>Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Pakistan_Studies@CS-1E@Asif_Naveed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1E</p>
+                            
+                        <p class = "teacher">Asif Naveed</p>
+                        <!-- <p class="left">Database_Systems@CS-5E@Aliza_Saeed<hr>Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Pakistan_Studies@CS-1E@Asif_Naveed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+
+        </tr>
+<!-- Tuesday -->
+        <tr>
+            <td class="center">
+                <b>Tuesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Networks</p>
+                                    
+                                    <p class = "right">CS-5B</p>
+                            
+                        <p class = "teacher">Dr. Bilal Khan<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Probability_and_Statistics@SE-5A@Haris_Khurram<hr>Probability_and_Statistics@SE-5B@Haris_Khurram<hr>Software_Engineering@CS-7B@Awais_Azam<hr>Theory_of_Automata@CS-5C@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A2</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Probability_and_Statistics@SE-5A@Haris_Khurram<hr>Probability_and_Statistics@SE-5B@Haris_Khurram<hr>Software_Engineering@CS-7B@Awais_Azam<hr>Theory_of_Automata@CS-5C@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B1</p>
+                            
+                        <p class = "teacher">Junaid Shahid<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Probability_and_Statistics@SE-5A@Haris_Khurram<hr>Probability_and_Statistics@SE-5B@Haris_Khurram<hr>Software_Engineering@CS-7B@Awais_Azam<hr>Theory_of_Automata@CS-5C@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1A2</p>
+                            
+                        <p class = "teacher">Sadia Ashfaq<hr>Probability and Statistics</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Probability_and_Statistics@SE-5A@Haris_Khurram<hr>Probability_and_Statistics@SE-5B@Haris_Khurram<hr>Software_Engineering@CS-7B@Awais_Azam<hr>Theory_of_Automata@CS-5C@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Haris Khurram<hr>Probability and Statistics</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Probability_and_Statistics@SE-5A@Haris_Khurram<hr>Probability_and_Statistics@SE-5B@Haris_Khurram<hr>Software_Engineering@CS-7B@Awais_Azam<hr>Theory_of_Automata@CS-5C@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Digital Logic Design</p>
+                                    
+                                    <p class = "right">CS-1B</p>
+                            
+                        <p class = "teacher">Muhammad Sajid Iqbal<hr>Discrete Structures</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Theory_of_Automata@CS-5D@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3D</p>
+                            
+                        <p class = "teacher">Usman Ghous<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Theory_of_Automata@CS-5D@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C1</p>
+                            
+                        <p class = "teacher">Junaid Shahid<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Theory_of_Automata@CS-5D@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1E1</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>Operation Research</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Theory_of_Automata@CS-5D@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5B</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Imran Babar<hr>Probability and Statistics</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1E1@Farah_Iqbal<hr>Operation_Research@SE-5B@Dr._Muhammad_Imran_Babar<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Theory_of_Automata@CS-5D@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">SE-1A</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Data Structures</p>
+                        <!-- <p class="left">Applied_Physics@SE-1A@Waheed_Ahmad<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Muhammad Husnain<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Applied_Physics@SE-1A@Waheed_Ahmad<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1E2</p>
+                            
+                        <p class = "teacher">Muhammad Iqbal<hr>Finance & Accounting</p>
+                        <!-- <p class="left">Applied_Physics@SE-1A@Waheed_Ahmad<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-3B</p>
+                            
+                        <p class = "teacher">Muhammad Nasif<hr>Programming Fundamentals</p>
+                        <!-- <p class="left">Applied_Physics@SE-1A@Waheed_Ahmad<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B</p>
+                            
+                        <p class = "teacher">Rizwan ul Haq<hr>Technical and Business Writing</p>
+                        <!-- <p class="left">Applied_Physics@SE-1A@Waheed_Ahmad<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>English_Composition_and_Comprehension@CS-1E2@Muhammad_Iqbal<hr>Finance_&_Accounting@SE-3B@Muhammad_Nasif<hr>Programming_Fundamentals@CS-1B@Rizwan_ul_Haq<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Digital Logic Design</p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Muhammad Irfan Ishaq<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A1</p>
+                            
+                        <p class = "teacher">Junaid Shahid<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1B1</p>
+                            
+                        <p class = "teacher">Rida Akram<hr>Marketing Management</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-3A</p>
+                            
+                        <p class = "teacher">Hafiz M.Zeeshan Raza<hr>Programming Fundamentals</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F</p>
+                            
+                        <p class = "teacher">Saqib Hayat<hr>Theory of Automata</p>
+                        <!-- <p class="left">Digital_Logic_Design@CS-3A@Muhammad_Irfan_Ishaq<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Theory_of_Automata@CS-5E@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Dr. Arslan Ahmed Amin<hr>Applied Physics</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Pakistan_Studies@CS-1E@Asif_Naveed<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Muhammad Mohsin Hameed<hr>Differential Equations</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Pakistan_Studies@CS-1E@Asif_Naveed<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3D</p>
+                            
+                        <p class = "teacher">Muhammad Waqas Javed<hr>Object Oriented Programming</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Pakistan_Studies@CS-1E@Asif_Naveed<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Dr Usman Habib<hr>Pakistan Studies</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Pakistan_Studies@CS-1E@Asif_Naveed<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1E</p>
+                            
+                        <p class = "teacher">Asif Naveed<hr>Pakistan Studies</p>
+                        <!-- <p class="left">Applied_Physics@SE-1B@Dr._Arslan_Ahmed_Amin<hr>Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>Object_Oriented_Programming@CS-3B@Dr_Usman_Habib<hr>Pakistan_Studies@CS-1E@Asif_Naveed<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+        </tr>
+<!-- Wednesday -->
+        <tr>
+            <td class="center">
+                <b>Wednesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Discrete Structures</p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Ahmad<hr>Information Security</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>Information_Security@CS-7B@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7B</p>
+                            
+                        <p class = "teacher">Dr. Danish Shehzad<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>Information_Security@CS-7B@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Zia Ahmad<hr>Pakistan Studies</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>Information_Security@CS-7B@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F</p>
+                            
+                        <p class = "teacher">Asif Naveed<hr>Programming Fundamentals</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>Information_Security@CS-7B@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1E</p>
+                            
+                        <p class = "teacher">Dr. Danish Shehzad</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>Information_Security@CS-7B@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Data Mining</p>
+                                    
+                                    <p class = "right">CS-7B</p>
+                            
+                        <p class = "teacher">Nasreen Akhtar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F1</p>
+                            
+                        <p class = "teacher">Muhammad Iqbal<hr>Information Security</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7A</p>
+                            
+                        <p class = "teacher">Dr. Danish Shehzad<hr>Object Oriented Programming</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-3A</p>
+                            
+                        <p class = "teacher">Dr Usman Habib<hr>Software Testing</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7F</p>
+                            
+                        <p class = "teacher">Dr. Uzair Iqbal</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Muhammad Mohsin Hameed<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C1</p>
+                            
+                        <p class = "teacher">Junaid Shahid<hr>Operation Research</p>
+                        <!-- <p class="left">Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Imran Babar<hr>Programming Fundamentals</p>
+                        <!-- <p class="left">Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Aliza Saeed</p>
+                        <!-- <p class="left">Applied_Physics@CS-3A@Muhammad_Mohsin_Hameed<hr>English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid<hr>Operation_Research@SE-5A@Dr._Muhammad_Imran_Babar<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Differential Equations</p>
+                                    
+                                    <p class = "right">CS-3D</p>
+                            
+                        <p class = "teacher">Muhammad Waqas Javed<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C2</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1B2</p>
+                            
+                        <p class = "teacher">Muhammad Iqbal<hr>Probability and Statistics</p>
+                        <!-- <p class="left">Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5A</p>
+                            
+                        <p class = "teacher">Haris Khurram</p>
+                        <!-- <p class="left">Differential_Equations@CS-3D@Muhammad_Waqas_Javed<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-1F</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Information Security</p>
+                        <!-- <p class="left">Applied_Physics@CS-1F@Waheed_Ahmad<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Professional_Practices_in_IT@CS-7B@Masood_Habib<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7C</p>
+                            
+                        <p class = "teacher">Dr. Irfan ul Haq<hr>Pakistan Studies</p>
+                        <!-- <p class="left">Applied_Physics@CS-1F@Waheed_Ahmad<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Professional_Practices_in_IT@CS-7B@Masood_Habib<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Zainab Javeed<hr>Professional Practices in IT</p>
+                        <!-- <p class="left">Applied_Physics@CS-1F@Waheed_Ahmad<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Professional_Practices_in_IT@CS-7B@Masood_Habib<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7B</p>
+                            
+                        <p class = "teacher">Masood Habib<hr>Programming Fundamentals</p>
+                        <!-- <p class="left">Applied_Physics@CS-1F@Waheed_Ahmad<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Professional_Practices_in_IT@CS-7B@Masood_Habib<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A</p>
+                            
+                        <p class = "teacher">Rizwan ul Haq<hr>Web Programming</p>
+                        <!-- <p class="left">Applied_Physics@CS-1F@Waheed_Ahmad<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Professional_Practices_in_IT@CS-7B@Masood_Habib<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Web_Programming@CS-5B@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-1E</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Fundamentals of Management</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar<hr>Theory_of_Automata@CS-5D@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Muhammad Tayyeb Riaz<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar<hr>Theory_of_Automata@CS-5D@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B</p>
+                            
+                        <p class = "teacher">Rizwanullah<hr>Programming Fundamentals</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar<hr>Theory_of_Automata@CS-5D@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1A</p>
+                            
+                        <p class = "teacher">Sumaira Mustafa<hr>Technical and Business Writing</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar<hr>Theory_of_Automata@CS-5D@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5B</p>
+                            
+                        <p class = "teacher">Muhammad Nouman Iftikhar<hr>Theory of Automata</p>
+                        <!-- <p class="left">Applied_Physics@CS-1E@Waheed_Ahmad<hr>Fundamentals_of_Management@CS-3B@Muhammad_Tayyeb_Riaz<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa<hr>Technical_and_Business_Writing@SE-5B@Muhammad_Nouman_Iftikhar<hr>Theory_of_Automata@CS-5D@Numan_Shafi<hr>Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">English Composition and Comprehension</p>
+                                    
+                                    <p class = "right">CS-1D1</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operating_System@CS-5D@Usman_Ghous<hr>Operating_Systems@SE-5A@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1A1</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>Marketing Management</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operating_System@CS-5D@Usman_Ghous<hr>Operating_Systems@SE-5A@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-3A</p>
+                            
+                        <p class = "teacher">Hafiz M.Zeeshan Raza<hr>Marketing Management</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operating_System@CS-5D@Usman_Ghous<hr>Operating_Systems@SE-5A@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5B</p>
+                            
+                        <p class = "teacher">Hafiz M.Zeeshan Raza<hr>Operating System</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operating_System@CS-5D@Usman_Ghous<hr>Operating_Systems@SE-5A@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5D</p>
+                            
+                        <p class = "teacher">Usman Ghous<hr>Operating Systems</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Marketing_Management@SE-3A@Hafiz_M.Zeeshan_Raza<hr>Marketing_Management@CS-5B@Hafiz_M.Zeeshan_Raza<hr>Operating_System@CS-5D@Usman_Ghous<hr>Operating_Systems@SE-5A@Muhammad_Husnain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Networks</p>
+                                    
+                                    <p class = "right">CS-5C</p>
+                            
+                        <p class = "teacher">Dr. Bilal Khan<hr>Discrete Structures</p>
+                        <!-- <p class="left">Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5D</p>
+                            
+                        <p class = "teacher">Usman Ghous<hr>Marketing Management</p>
+                        <!-- <p class="left">Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3D</p>
+                            
+                        <p class = "teacher">Syed Zeeshan Haider<hr>Probability and Statistics</p>
+                        <!-- <p class="left">Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5A</p>
+                            
+                        <p class = "teacher">Haris Khurram</p>
+                        <!-- <p class="left">Computer_Networks@CS-5C@Dr._Bilal_Khan<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Waheed Ahmad<hr>Digital Logic Design</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C</p>
+                            
+                        <p class = "teacher">Dr. Adil Zulfiqar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B2</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>Information Security</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7A</p>
+                            
+                        <p class = "teacher">Dr. Danish Shehzad<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A</p>
+                            
+                        <p class = "teacher">Rizwanullah<hr>Pakistan Studies</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>Information_Security@CS-7A@Dr._Danish_Shehzad<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Pakistan_Studies@SE-1A@Asma_Yaqoob<hr>Programming_Fundamentals@SE-1B@Aliza_Saeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Dr.Mushtaq Ahmad<hr>Database Systems</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@CS-5D@Saqib_Hayat<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Information_Security@CS-7B@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5D</p>
+                            
+                        <p class = "teacher">Saqib Hayat<hr>Differential Equations</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@CS-5D@Saqib_Hayat<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Information_Security@CS-7B@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3E</p>
+                            
+                        <p class = "teacher">Hayat Ali<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@CS-5D@Saqib_Hayat<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Information_Security@CS-7B@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A2</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@CS-5D@Saqib_Hayat<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Information_Security@CS-7B@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F2</p>
+                            
+                        <p class = "teacher">Sadia Ashfaq<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1D@Dr.Mushtaq_Ahmad<hr>Database_Systems@CS-5D@Saqib_Hayat<hr>Differential_Equations@CS-3E@Hayat_Ali<hr>English_Composition_and_Comprehension@CS-1A2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B2@Muhammad_Iqbal<hr>Information_Security@CS-7B@Dr._Danish_Shehzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+
+        </tr>
+<!-- Friday -->
+        <tr>
+            <td class="center">
+                <b>Friday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Discrete Structures</p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Ahmad<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B2</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C2</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1F2</p>
+                            
+                        <p class = "teacher">Sadia Ashfaq<hr>Information Security</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-7C</p>
+                            
+                        <p class = "teacher">Dr. Irfan ul Haq<hr>Marketing Management</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad<hr>English_Composition_and_Comprehension@CS-1B2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1C2@Muhammad_Ammar<hr>English_Composition_and_Comprehension@CS-1F2@Sadia_Ashfaq<hr>Information_Security@CS-7C@Dr._Irfan_ul_Haq<hr>Marketing_Management@CS-3C@Syed_Zeeshan_Haider<hr>Programming_Fundamentals@CS-1E@Dr._Danish_Shehzad<hr>Technical_and_Business_Writing@SE-5A@Muhammad_Nouman_Iftikhar</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Networks</p>
+                                    
+                                    <p class = "right">CS-5B</p>
+                            
+                        <p class = "teacher">Dr. Bilal Khan<hr>Data Structures</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>Database_Systems@CS-5E@Aliza_Saeed<hr>English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Operating_System@CS-5D@Usman_Ghous<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Probability_and_Statistics@SE-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Muhammad Husnain<hr>Database Systems</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>Database_Systems@CS-5E@Aliza_Saeed<hr>English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Operating_System@CS-5D@Usman_Ghous<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Probability_and_Statistics@SE-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5E</p>
+                            
+                        <p class = "teacher">Aliza Saeed<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>Database_Systems@CS-5E@Aliza_Saeed<hr>English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Operating_System@CS-5D@Usman_Ghous<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Probability_and_Statistics@SE-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1D1</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>Database_Systems@CS-5E@Aliza_Saeed<hr>English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Operating_System@CS-5D@Usman_Ghous<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Probability_and_Statistics@SE-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1A1</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Computer_Networks@CS-5B@Dr._Bilal_Khan<hr>Data_Structures@CS-3A@Muhammad_Husnain<hr>Database_Systems@CS-5E@Aliza_Saeed<hr>English_Composition_and_Comprehension@CS-1D1@Farah_Iqbal<hr>English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal<hr>Islamic_Studies/Ethics@CS-1B@Rizwanullah<hr>Marketing_Management@CS-3D@Syed_Zeeshan_Haider<hr>Operating_System@CS-5D@Usman_Ghous<hr>Pakistan_Studies@CS-1F@Asif_Naveed<hr>Pakistan_Studies@SE-1B@Zainab_Javeed<hr>Probability_and_Statistics@SE-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Discrete Structures</p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Ahmad<hr>Discrete Structures</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-5D</p>
+                            
+                        <p class = "teacher">Usman Ghous<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1D2</p>
+                            
+                        <p class = "teacher">Sadia Ashfaq<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-1B1</p>
+                            
+                        <p class = "teacher">Rida Akram<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A</p>
+                            
+                        <p class = "teacher">Rizwanullah<hr>Object Oriented Programming</p>
+                        <!-- <p class="left">Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad<hr>Discrete_Structures@CS-5D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1D2@Sadia_Ashfaq<hr>English_Composition_and_Comprehension@SE-1B1@Rida_Akram<hr>Islamic_Studies/Ethics@CS-1A@Rizwanullah<hr>Object_Oriented_Programming@SE-3A@Dr_Usman_Habib<hr>Professional_Practices_in_IT@CS-7A@Rizwan_ul_Haq<hr>Programming_Fundamentals@CS-1F@Saqib_Hayat<hr>Programming_Fundamentals@SE-1A@Sumaira_Mustafa</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Database Systems</p>
+                                    
+                                    <p class = "right">CS-5D</p>
+                            
+                        <p class = "teacher">Saqib Hayat<hr>Digital Logic Design</p>
+                        <!-- <p class="left">Database_Systems@CS-5D@Saqib_Hayat<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Operating_Systems@SE-5A@Muhammad_Husnain<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C</p>
+                            
+                        <p class = "teacher">Dr. Adil Zulfiqar<hr>Discrete Structures</p>
+                        <!-- <p class="left">Database_Systems@CS-5D@Saqib_Hayat<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Operating_Systems@SE-5A@Muhammad_Husnain<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3D</p>
+                            
+                        <p class = "teacher">Usman Ghous<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Database_Systems@CS-5D@Saqib_Hayat<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Operating_Systems@SE-5A@Muhammad_Husnain<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1A1</p>
+                            
+                        <p class = "teacher">Junaid Shahid<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Database_Systems@CS-5D@Saqib_Hayat<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Operating_Systems@SE-5A@Muhammad_Husnain<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B1</p>
+                            
+                        <p class = "teacher">Junaid Shahid<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">Database_Systems@CS-5D@Saqib_Hayat<hr>Digital_Logic_Design@CS-1C@Dr._Adil_Zulfiqar<hr>Discrete_Structures@CS-3D@Usman_Ghous<hr>English_Composition_and_Comprehension@CS-1A1@Junaid_Shahid<hr>English_Composition_and_Comprehension@CS-1B1@Junaid_Shahid<hr>English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq<hr>Operating_Systems@SE-5A@Muhammad_Husnain<hr>Probability_and_Statistics@CS-5C@Haris_Khurram<hr>Software_Testing@CS-7F@Dr._Uzair_Iqbal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Data Mining</p>
+                                    
+                                    <p class = "right">CS-7B</p>
+                            
+                        <p class = "teacher">Nasreen Akhtar<hr>Database Systems</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Finance_&_Accounting@CS-3E@Agha_Mureed_Ahmad_Khan<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Software_Quality_Engineering@SE-5B@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">SE-5A</p>
+                            
+                        <p class = "teacher">Nasreen Akhtar<hr>Digital Logic Design</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Finance_&_Accounting@CS-3E@Agha_Mureed_Ahmad_Khan<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Software_Quality_Engineering@SE-5B@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1B</p>
+                            
+                        <p class = "teacher">Muhammad Sajid Iqbal<hr>Finance & Accounting</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Finance_&_Accounting@CS-3E@Agha_Mureed_Ahmad_Khan<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Software_Quality_Engineering@SE-5B@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-3E</p>
+                            
+                        <p class = "teacher">Agha Mureed Ahmad Khan<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Finance_&_Accounting@CS-3E@Agha_Mureed_Ahmad_Khan<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Software_Quality_Engineering@SE-5B@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">CS-1C</p>
+                            
+                        <p class = "teacher">Zia Ahmad<hr>Islamic Studies/Ethics</p>
+                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar<hr>Database_Systems@SE-5A@Nasreen_Akhtar<hr>Digital_Logic_Design@CS-1B@Muhammad_Sajid_Iqbal<hr>Finance_&_Accounting@CS-3E@Agha_Mureed_Ahmad_Khan<hr>Islamic_Studies/Ethics@CS-1C@Zia_Ahmad<hr>Islamic_Studies/Ethics@CS-1D@Zia_Ahmad<hr>Programming_Fundamentals@CS-1A@Rizwan_ul_Haq<hr>Software_Quality_Engineering@SE-5B@Abdul_Qadeer_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+
+        </tr>
+
+    </table>
+</body>
+<p class = "new-page"></div>
+
+
+</html>

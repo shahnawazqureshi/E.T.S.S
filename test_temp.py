@@ -490,6 +490,7 @@ if __name__ == "__main__":
             all_sections.append(i)
 
     best_solution = copy.deepcopy(pop[0].chromosome)
+
     best_solution = assign_rooms(best_solution, reg_data)
     print(get_teacher_slot_violations_count(best_solution, reg_data))
     # get_student_clashes_data(best_solution, reg_data)

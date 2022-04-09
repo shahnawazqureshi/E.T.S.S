@@ -49,6 +49,8 @@ def store_new_timetable(timetable, reg_data):
                     if room.name == reg_course.slots[slot_num].room:
                         room_id = room.db_id
                         break
-                db.insert_reg_course_timetable(reg_data[reg_course.id].db_id, reg_course.slots[slot_num].day,
+                    room_id = "1"
+                if (room_id is not "1"):
+                    db.insert_reg_course_timetable(reg_data[reg_course.id].db_id, reg_course.slots[slot_num].day,
                                             reg_course.slots[slot_num].slot, room_id)
 

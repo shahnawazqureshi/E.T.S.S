@@ -1,7 +1,14 @@
 
-arr = "18F-0128"
-email = "f" + arr[0:2] + arr[4:] + "@cfd.nu.edu.pk"
-print(email)
+# arr = "18F-0128"
+# email = "f" + arr[0:2] + arr[4:] + "@cfd.nu.edu.pk"
+# print(email)
+
+# Accessing Dictionary Items 
+# p = {} 
+# p[1] = 5
+# print(p[1])
+# p[1] = 55
+# print(p[1])
 
 # import random 
 
