@@ -14,7 +14,7 @@ from test_sections_timetable import execute_function
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
 mutation_probability = round(rn.uniform(low=0.3, high=0.4), 1)
-population_size = 2
+population_size = 300
 
 class Population:
     def __init__(self, number, fitness, chromosome, t_sections):
@@ -34,9 +34,10 @@ def get_fitness(timetable):
     student_clashes = get_student_clashes(timetable, reg_data)
     teacher_slot_violations = get_teacher_slot_violations_count(timetable, reg_data)
     room_clashes = get_room_clashes_count(timetable, reg_data)
+    get_room_clashes_data(timetable, reg_data)
     return [teacher_clashes * 5 + student_clashes * 2.5 + room_clashes * 5 + teacher_slot_violations * 0.75, 
     ("Student Clashes: " + str(student_clashes), "Teacher Clashes: " + str(teacher_clashes),
-    "Room Clashes" + str(room_clashes), "Teacher Slot Violations: " + str(teacher_slot_violations))]
+    "Room Clashes: " + str(room_clashes), "Teacher Slot Violations: " + str(teacher_slot_violations))]
 
 def initial_population():
     

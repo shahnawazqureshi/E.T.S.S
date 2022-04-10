@@ -1,50 +1,740 @@
-Clash #1	3 1
+Clash #1	1 1
+Room #3
+English Composition and Comprehension - Lab	CS-1D2
+Applied Physics	CS-3A
+
+Clash #2	1 1
+Room #3
+English Composition and Comprehension - Lab	CS-1D2
+English Composition and Comprehension	CS-1C1
+
+Clash #3	1 1
+Room #1
+English Composition and Comprehension - Lab	CS-1F2
+Digital Logic Design	CS-1B
+
+Clash #4	1 1
+Room #4
+English Composition and Comprehension	SE-1B2
+Artificial Intelligence	CS-7A
+
+Clash #5	1 1
+Room #4
+English Composition and Comprehension	SE-1B2
+Differential Equations	CS-3D
+
+Clash #6	1 1
+Room #3
+Applied Physics	CS-3A
+English Composition and Comprehension	CS-1C1
+
+Clash #7	1 1
+Room #4
+Artificial Intelligence	CS-7A
+Differential Equations	CS-3D
+
+Clash #8	1 2
+Room #9
+Software Design and Analysis	CS-5C
+Programming Fundamentals	CS-1E
+
+Clash #9	1 2
+Room #7
+Information Security	CS-7C
+Linear Algebra	CS-1B
+
+Clash #10	1 2
+Room #7
+Information Security	CS-7C
+Linear Algebra	CS-1C
+
+Clash #11	1 2
+Room #1
+English Composition and Comprehension - Lab	CS-1D1
+English Composition and Comprehension - Lab	CS-1F2
+
+Clash #12	1 2
+Room #1
+English Composition and Comprehension - Lab	CS-1D1
+Data Structures	CS-3A
+
+Clash #13	1 2
+Room #3
+English Composition and Comprehension - Lab	CS-1D2
+Computer Networks	CS-5A
+
+Clash #14	1 2
+Room #3
+English Composition and Comprehension - Lab	CS-1D2
+Design and Analysis of Algorithms	CS-5D
+
+Clash #15	1 2
+Room #1
+English Composition and Comprehension - Lab	CS-1F2
+Data Structures	CS-3A
+
+Clash #16	1 2
+Room #3
+Computer Networks	CS-5A
+Design and Analysis of Algorithms	CS-5D
+
+Clash #17	1 2
+Room #6
+Differential Equations	CS-3B
+Software Quality Engineering	SE-5B
+
+Clash #18	1 2
+Room #8
+Differential Equations	CS-3C
+Object Oriented Programming	SE-3A
+
+Clash #19	1 2
+Room #7
+Linear Algebra	CS-1B
+Linear Algebra	CS-1C
+
+Clash #20	1 3
+Room #1
+English Composition and Comprehension - Lab	CS-1D1
+Applied Physics	CS-1F
+
+Clash #21	1 3
+Lab #4
+Programming Fundamentals - Lab	SE-1B
+Database Systems - Lab	CS-5D
+
+Clash #22	1 3
+Room #2
+Data Mining	CS-7A
+Differential Equations	CS-3E
+
+Clash #23	1 3
+Room #2
+Data Mining	CS-7A
+Data Mining	CS-7B
+
+Clash #24	1 3
+Room #2
+Differential Equations	CS-3E
+Data Mining	CS-7B
+
+Clash #25	1 4
+Room #10
+Probability and Statistics	CS-5C
+Technical and Business Writing	SE-5A
+
+Clash #26	1 4
+Room #9
+Pakistan Studies	CS-1E
+Data Science	CS-7A
+
+Clash #27	1 4
+Room #2
+English Composition and Comprehension - Lab	SE-1A1
+Calculus and Analytical Geometry	CS-3A
+
+Clash #28	1 4
+Room #2
+English Composition and Comprehension - Lab	SE-1A1
+Computer Organization and Assembly Language	CS-3A
+
+Clash #29	1 4
+Room #2
+English Composition and Comprehension - Lab	SE-1A1
+Database Systems	CS-5E
+
+Clash #30	1 4
+Lab #4
+Programming Fundamentals - Lab	SE-1B
+Database Systems - Lab	CS-5D
+
+Clash #31	1 4
+Room #2
+Calculus and Analytical Geometry	CS-3A
+Computer Organization and Assembly Language	CS-3A
+
+Clash #32	1 4
+Room #2
+Calculus and Analytical Geometry	CS-3A
+Database Systems	CS-5E
+
+Clash #33	1 4
+Room #2
+Computer Organization and Assembly Language	CS-3A
+Database Systems	CS-5E
+
+Clash #34	1 4
+Room #5
+Discrete Structures	CS-3D
+Islamic Studies/Ethics	CS-1A
+
+Clash #35	1 4
+Room #7
+Information Security	CS-7B
+Islamic Studies/Ethics	CS-1C
+
+Clash #36	1 5
+Room #6
+Islamic Studies/Ethics	CS-1D
+Discrete Structures	CS-5D
+
+Clash #37	1 5
+Room #6
+Islamic Studies/Ethics	CS-1D
+English Composition and Comprehension	CS-1B2
+
+Clash #38	1 5
+Room #2
+Applied Physics	CS-1E
+English Composition and Comprehension - Lab	SE-1A1
+
+Clash #39	1 5
+Room #2
+Applied Physics	CS-1E
+Operation Research	SE-5B
+
+Clash #40	1 5
+Room #12
+Pakistan Studies	CS-1F
+Web Programming	CS-5B
+
+Clash #41	1 5
+Room #2
+English Composition and Comprehension - Lab	SE-1A1
+Operation Research	SE-5B
+
+Clash #42	1 5
+Room #3
+Fundamentals of Management	CS-3B
+Data Structures	SE-3B
+
+Clash #43	1 5
+Room #6
+Discrete Structures	CS-5D
+English Composition and Comprehension	CS-1B2
+
+Clash #44	1 5
+Room #5
+Linear Algebra	CS-1A
+English Composition and Comprehension	CS-1B1
+
+Clash #45	2 1
 Lab #1
+Programming Fundamentals - Lab	CS-1D
+Software for Mobile Devices - Lab	CS-9A
+
+Clash #46	2 1
+Room #7
+Programming Fundamentals	CS-1F
+English Composition and Comprehension	SE-1A1
+
+Clash #47	2 1
+Room #7
+Programming Fundamentals	CS-1F
+Marketing Management	CS-3C
+
+Clash #48	2 1
+Room #7
+Programming Fundamentals	CS-1F
+Marketing Management	CS-3D
+
+Clash #49	2 1
+Room #7
+Programming Fundamentals	CS-1F
+Islamic Studies/Ethics	CS-1B
+
+Clash #50	2 1
+Room #7
+English Composition and Comprehension	SE-1A1
+Marketing Management	CS-3C
+
+Clash #51	2 1
+Room #7
+English Composition and Comprehension	SE-1A1
+Marketing Management	CS-3D
+
+Clash #52	2 1
+Room #7
+English Composition and Comprehension	SE-1A1
+Islamic Studies/Ethics	CS-1B
+
+Clash #53	2 1
+Room #8
+Digital Logic Design	CS-3A
+Differential Equations	CS-3B
+
+Clash #54	2 1
+Room #7
+Marketing Management	CS-3C
+Marketing Management	CS-3D
+
+Clash #55	2 1
+Room #7
+Marketing Management	CS-3C
+Islamic Studies/Ethics	CS-1B
+
+Clash #56	2 1
+Room #7
+Marketing Management	CS-3D
+Islamic Studies/Ethics	CS-1B
+
+Clash #57	2 2
+Room #3
+Information Security	CS-7D
+Discrete Structures	CS-3A
+
+Clash #58	2 2
+Room #3
+Information Security	CS-7D
+Data Mining	CS-7B
+
+Clash #59	2 2
+Lab #1
+Programming Fundamentals - Lab	CS-1D
+Software for Mobile Devices - Lab	CS-9A
+
+Clash #60	2 2
+Room #8
+Programming Fundamentals	CS-1E
+Pakistan Studies	SE-1A
+
+Clash #61	2 2
+Room #8
+Programming Fundamentals	CS-1E
+Software Quality Engineering	SE-5A
+
+Clash #62	2 2
+Room #1
+Applied Physics	CS-1F
+Differential Equations	CS-3D
+
+Clash #63	2 2
+Room #8
+Pakistan Studies	SE-1A
+Software Quality Engineering	SE-5A
+
+Clash #64	2 2
+Room #3
+Discrete Structures	CS-3A
+Data Mining	CS-7B
+
+Clash #65	2 3
+Room #1
+Advanced Programming	CS-5C
+Applied Physics	CS-1D
+
+Clash #66	2 3
+Room #5
+English Composition and Comprehension	CS-1E2
+English Composition and Comprehension	CS-1A1
+
+Clash #67	2 3
+Room #7
+Marketing Management	CS-5B
+Digital Logic Design	CS-1C
+
+Clash #68	2 3
+Room #7
+Marketing Management	CS-5B
+Fundamentals of Software Project Management	CS-7E
+
+Clash #69	2 3
+Room #13
+Software Design and Analysis	CS-5A
+Software Engineering	CS-7B
+
+Clash #70	2 3
+Lab #5
+Data Structures - Lab	SE-3A
+Database Systems - Lab	SE-5A
+
+Clash #71	2 3
+Room #7
+Digital Logic Design	CS-1C
+Fundamentals of Software Project Management	CS-7E
+
+Clash #72	2 4
+Lab #4
+Introduction to Information and Communication Technology - Lab	CS-1D
 Introduction to Information and Communication Technology - Lab	SE-1A
-Object Oriented Programming - Lab	CS-3B
 
-Clash #2	3 2
+Clash #73	2 4
+Lab #6
+Introduction to Information and Communication Technology - Lab	CS-1E
+Introduction to Information and Communication Technology - Lab	CS-1B
+
+Clash #74	2 4
+Lab #6
+Introduction to Information and Communication Technology - Lab	CS-1E
+Introduction to Information and Communication Technology - Lab	CS-1C
+
+Clash #75	2 4
+Cal Lab
+English Composition and Comprehension - Lab	CS-1F1
+English Composition and Comprehension - Lab	SE-1B1
+
+Clash #76	2 4
+Lab #3
+Object Oriented Programming - Lab	CS-3A
+Data Structures - Lab	CS-3D
+
+Clash #77	2 4
+Lab #5
+Data Structures - Lab	SE-3A
+Database Systems - Lab	SE-5A
+
+Clash #78	2 4
+Lab #5
+Data Structures - Lab	SE-3A
+Programming Fundamentals - Lab	CS-1A
+
+Clash #79	2 4
+Lab #5
+Database Systems - Lab	SE-5A
+Programming Fundamentals - Lab	CS-1A
+
+Clash #80	2 4
+Lab #6
+Introduction to Information and Communication Technology - Lab	CS-1B
+Introduction to Information and Communication Technology - Lab	CS-1C
+
+Clash #81	2 5
+Lab #6
+Introduction to Information and Communication Technology - Lab	CS-1E
+Introduction to Information and Communication Technology - Lab	CS-1B
+
+Clash #82	2 5
+Lab #6
+Introduction to Information and Communication Technology - Lab	CS-1E
+Introduction to Information and Communication Technology - Lab	CS-1C
+
+Clash #83	2 5
+Lab #3
+Object Oriented Programming - Lab	CS-3A
+Data Structures - Lab	CS-3D
+
+Clash #84	2 5
+Lab #6
+Introduction to Information and Communication Technology - Lab	CS-1B
+Introduction to Information and Communication Technology - Lab	CS-1C
+
+Clash #85	3 1
+Room #11
+Programming Fundamentals	SE-1A
+Operating System	CS-5D
+
+Clash #86	3 1
+Room #11
+Programming Fundamentals	SE-1A
+Operation Research	SE-5B
+
+Clash #87	3 1
+Room #6
+Finance & Accounting	CS-3A
+Probability and Statistics	SE-5A
+
+Clash #88	3 1
+Room #12
+Software Design and Analysis	CS-5B
+Object Oriented Programming	SE-3A
+
+Clash #89	3 1
+Room #12
+Software Design and Analysis	CS-5B
+Programming Fundamentals	CS-1C
+
+Clash #90	3 1
+Room #12
+Object Oriented Programming	SE-3A
+Programming Fundamentals	CS-1C
+
+Clash #91	3 1
+Room #11
+Operating System	CS-5D
+Operation Research	SE-5B
+
+Clash #92	3 2
+Lab #2
+Introduction to Information and Communication Technology - Lab	CS-1F
+Programming Fundamentals - Lab	CS-1C
+
+Clash #93	3 2
+Room #3
+Professional Practices in IT	CS-7B
+English Composition and Comprehension	CS-1B1
+
+Clash #94	3 3
 Lab #1
-Introduction to Information and Communication Technology - Lab	SE-1B
-Introduction to Information and Communication Technology - Lab	SE-1A
+Computer Networks - Lab	CS-5C
+Computer Orgnaization and Assembly Language - Lab	CS-3C
 
-Clash #3	3 2
+Clash #95	3 3
+Room #9
+Applied Machine Learning	CS-7C
+Programming Fundamentals	SE-1B
+
+Clash #96	3 3
+GP Lab
+English Composition and Comprehension - Lab	CS-1E1
+English Composition and Comprehension - Lab	CS-1E2
+
+Clash #97	3 4
+Room #9
+Professional Practices in IT	CS-7D
+Programming Fundamentals	CS-1D
+
+Clash #98	3 5
+Room #6
+Computer Networks	CS-5C
+English Composition and Comprehension	SE-1A2
+
+Clash #99	3 5
+Room #1
+Applied Physics	SE-1B
+Design and Analysis of Algorithms	CS-5E
+
+Clash #100	3 5
+Room #11
+Professional Practices in IT	CS-7A
+Technical and Business Writing	SE-5B
+
+Clash #101	3 5
+Room #12
+Theory of Automata	CS-5B
+Remote Sensing and GIS	CS-7F
+
+Clash #102	4 1
+Room #3
+English Composition and Comprehension	CS-1D1
+Artificial Intelligence	CS-7A
+
+Clash #103	4 1
+Room #5
+Computer Organization and Assembly Language	CS-3B
+Operation Research	SE-5A
+
+Clash #104	4 1
+Room #5
+Computer Organization and Assembly Language	CS-3B
+Linear Algebra	CS-1B
+
+Clash #105	4 1
+Room #9
+Software Requirement Engineering	SE-3B
+Probability and Statistics	SE-5A
+
+Clash #106	4 1
+Room #4
+Human Computer Interaction	SE-3A
+Information Security	CS-7E
+
+Clash #107	4 1
+Room #5
+Operation Research	SE-5A
+Linear Algebra	CS-1B
+
+Clash #108	4 1
+Room #8
+Programming Fundamentals	CS-1A
+Programming Fundamentals	CS-1C
+
+Clash #109	4 2
+Room #3
+English Composition and Comprehension	CS-1F2
+Applied Physics	SE-1A
+
+Clash #110	4 2
+Room #2
+Discrete Structures	CS-3A
+Computer Architecture	CS-9A
+
+Clash #111	4 3
+Room #6
+English Composition and Comprehension	CS-1F1
+Database Systems	SE-5A
+
+Clash #112	4 3
+Room #10
+Programming Fundamentals	SE-1A
+Marketing Management	CS-3C
+
+Clash #113	4 3
+Room #2
+Finance & Accounting	CS-3E
+Data Structures	CS-3D
+
+Clash #114	4 4
+Room #4
+English Composition and Comprehension - Lab	SE-1B2
+Computer Networks	CS-5A
+
+Clash #115	4 4
+Room #6
+English Composition and Comprehension	SE-1B1
+Finance & Accounting	CS-3A
+
+Clash #116	4 5
+Room #10
+Web Programming	CS-5B
+Software Quality Engineering	SE-5A
+
+Clash #117	4 5
+Room #14
+Data Structures	CS-3C
+Remote Sensing and GIS	CS-7F
+
+Clash #118	5 1
+Room #8
+Pakistan Studies	SE-1A
+Probability and Statistics	CS-5A
+
+Clash #119	5 1
+Room #5
+Discrete Structures	CS-3B
+Database Systems	SE-5A
+
+Clash #120	5 1
+Room #5
+Discrete Structures	CS-3B
+Islamic Studies/Ethics	CS-1A
+
+Clash #121	5 1
+Room #2
+Human Computer Interaction	SE-3B
+Digital Logic Design	CS-1B
+
+Clash #122	5 1
+Room #2
+Human Computer Interaction	SE-3B
+English Composition and Comprehension	CS-1C2
+
+Clash #123	5 1
+Room #5
+Database Systems	SE-5A
+Islamic Studies/Ethics	CS-1A
+
+Clash #124	5 1
+Room #2
+Digital Logic Design	CS-1B
+English Composition and Comprehension	CS-1C2
+
+Clash #125	5 2
+Room #4
+English Composition and Comprehension	CS-1E2
+Object Oriented Programming	CS-3A
+
+Clash #126	5 2
+Room #4
+English Composition and Comprehension	CS-1E2
+Data Structures	SE-3A
+
+Clash #127	5 2
+Lab #2
+Programming Fundamentals - Lab	SE-1A
+Computer Organization and Assembly Language - Lab	CS-3E
+
+Clash #128	5 2
+Room #4
+Object Oriented Programming	CS-3A
+Data Structures	SE-3A
+
+Clash #129	5 2
+Room #13
+Data Science	CS-7A
+Software Construction and Development	SE-5A
+
+Clash #130	5 3
+Room #5
+Calculus and Analytical Geometry	CS-1D
+English Composition and Comprehension	SE-1B1
+
+Clash #131	5 3
+Room #5
+Calculus and Analytical Geometry	CS-1D
+Professional Practices in IT	CS-7A
+
+Clash #132	5 3
+Room #5
+Calculus and Analytical Geometry	CS-1D
+Marketing Management	CS-3D
+
+Clash #133	5 3
+Room #5
+English Composition and Comprehension	SE-1B1
+Professional Practices in IT	CS-7A
+
+Clash #134	5 3
+Room #5
+English Composition and Comprehension	SE-1B1
+Marketing Management	CS-3D
+
+Clash #135	5 3
 Lab #1
-Introduction to Information and Communication Technology - Lab	SE-1B
-Object Oriented Programming - Lab	CS-3B
+Computer Organization and Assembly Language - Lab	CS-3A
+Operating Systems - Lab	SE-5A
 
-Clash #4	3 2
+Clash #136	5 3
+Room #6
+Differential Equations	CS-3A
+Marketing Management	SE-3A
+
+Clash #137	5 3
+Room #6
+Differential Equations	CS-3A
+Islamic Studies/Ethics	CS-1C
+
+Clash #138	5 3
+Room #5
+Professional Practices in IT	CS-7A
+Marketing Management	CS-3D
+
+Clash #139	5 3
+Room #6
+Marketing Management	SE-3A
+Islamic Studies/Ethics	CS-1C
+
+Clash #140	5 4
+Room #4
+Information Security	CS-7C
+English Composition and Comprehension	CS-1E1
+
+Clash #141	5 4
+Room #4
+Information Security	CS-7C
+Object Oriented Programming	CS-3B
+
+Clash #142	5 4
+Room #4
+Information Security	CS-7C
+Digital Logic Design	CS-1C
+
+Clash #143	5 4
+Room #4
+English Composition and Comprehension	CS-1E1
+Object Oriented Programming	CS-3B
+
+Clash #144	5 4
+Room #4
+English Composition and Comprehension	CS-1E1
+Digital Logic Design	CS-1C
+
+Clash #145	5 4
 Lab #1
-Introduction to Information and Communication Technology - Lab	SE-1A
-Object Oriented Programming - Lab	CS-3B
+Computer Organization and Assembly Language - Lab	CS-3A
+Operating Systems - Lab	SE-5A
 
-Clash #5	4 2
-Lab #1
-Computer Networks - Lab	CS-5B
-Software Construction and Development - Lab	SE-5A
+Clash #146	5 4
+Room #4
+Object Oriented Programming	CS-3B
+Digital Logic Design	CS-1C
 
-Clash #6	4 3
-Lab #1
-Computer Networks - Lab	CS-5B
-Software Construction and Development - Lab	SE-5A
+Clash #147	5 5
+Room #10
+Programming Fundamentals	CS-1D
+Operating System	CS-5D
 
-Clash #7	4 3
-Lab #1
-Computer Networks - Lab	CS-5B
-Software Construction and Development - Lab	SE-5B
-
-Clash #8	4 3
-Lab #1
-Software Construction and Development - Lab	SE-5A
-Software Construction and Development - Lab	SE-5B
-
-Clash #9	4 4
-Lab #1
-Computer Networks - Lab	CS-5A
-Software Construction and Development - Lab	SE-5B
-
-Clash #10	4 4
-DLD Lab
-Digital Logic Design - Lab	CS-1B
-Digital Logic Design - Lab	CS-1C
+Clash #148	5 5
+Room #7
+Pakistan Studies	CS-1E
+Information Security	CS-7A
 
