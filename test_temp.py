@@ -499,10 +499,12 @@ if __name__ == "__main__":
     execute_function(best_solution, 1)
     store_new_timetable(best_solution, reg_data)
     generate_rooms_timetable(best_solution, reg_data)
+    get_room_clashes_data(best_solution, reg_data)
+    print("Room: ", get_room_clashes_count(best_solution, reg_data))
     # clashed_ccc = get_clashed_courses(best_solution)
     # for k, v in clashed_ccc.items():
     #     print("For######## ", k)
-    #     for r in v: 
+    #     for r in v:   
     #         print(courses_data[reg_data[r].course_id].name, "\t", sections_data[reg_data[r].section_id].name)
     # # print("\n\n\n-----------------HERE!!!!--------------\n\n\n")
     # arr, count = get_teacher_clashes_data(best_solution, reg_data)

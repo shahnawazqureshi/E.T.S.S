@@ -62,15 +62,17 @@ def get_sorted_preferences(teachers_dictionary, rooms_preferences):
     for v in teachers_dictionary:
         if rooms_preferences[v.room_id] > 0:
             result[v.room_id] = rooms_preferences[v.room_id]
-    return result 
+    return dict(sorted(result.items(), key=lambda item: item[1], reverse=True))
 
 
 def assign_rooms(best_solution, reg_data):
     total_slots = {}
-    # for r, v in rooms_preference_count.items():
-    #     print(r, ": \t", v)
-    # result = get_sorted_preferences(teachers_room_preferences[3], rooms_preference_count)
-    # print("\n", teachers_data[3].name)
+    # cc = 0
+    # # for rr in teachers_data:
+    # #     print(cc, "\t", rr.name)
+    # #     cc += 1
+    # result = get_sorted_preferences(teachers_room_preferences[16], rooms_preference_count)
+    # print("\n", teachers_data[16].name)
     # for k, v in result.items():
     #     print(k, " :\t", v, "\t", rooms_data[k].name)
     for day in range(1, 6):
@@ -80,7 +82,6 @@ def assign_rooms(best_solution, reg_data):
     for lec in best_solution:
         if (courses_data[reg_data[lec.id].course_id].type == "Course"):
             for slot in lec.slots:
-                assigned = False
                 if reg_data[lec.id].teacher_id in teachers_room_preferences.keys():
                     preferences = get_sorted_preferences(teachers_room_preferences[reg_data[lec.id].teacher_id],
                      rooms_preference_count)
@@ -106,16 +107,7 @@ def assign_rooms(best_solution, reg_data):
                     #             total_slots[str(slot.day)+str(slot.slot)].append(preference.room_id)
                     #             assigned = True
                     #             break
-                else: # Teacher had no preference. 
-                    break 
-                    if assigned == False:
-                        for room in rooms_data:
-                            if (room.type == "Course" 
-                            and courses_data[reg_data[lec.id].course_id].course_for == room.department):
-                                if (room.id not in total_slots[str(slot.day)+str(slot.slot)]):
-                                    slot.room = room.name
-                                    total_slots[str(slot.day)+str(slot.slot)].append(room.id)
-                                    break
+               
         else:
             # fh = False
             # assigned = False
@@ -201,6 +193,17 @@ def assign_rooms(best_solution, reg_data):
                             total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(room.id)
                             fh = True
                             break
+                if fh == False:
+                    for room in rooms_data:
+                        if (room.type == "Course" and courses_data[reg_data[lec.id].course_id].course_for == "English"):
+                            if (room.id not in total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)] and 
+                        room.id not in total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)]):
+                                lec.slots[0].room = room.name
+                                lec.slots[1].room = room.name 
+                                total_slots[str(lec.slots[0].day)+str(lec.slots[0].slot)].append(room.id)
+                                total_slots[str(lec.slots[1].day)+str(lec.slots[1].slot)].append(room.id)
+                                fh = True
+                                break
                 if fh == False:
                     for room in rooms_data:
                         if (room.type == "Lab" and 

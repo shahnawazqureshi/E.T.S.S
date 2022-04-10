@@ -3,6 +3,8 @@ from registered_courses import *
 from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
 from time_table import *
 from rooms import *
+from room_clashes import get_room_clashes_count, get_room_clashes_data
+from teacher_slot_clashes import get_teacher_slot_violations_count, get_teacher_slot_violations_data
 from student_clashes import *
 import random
 from numpy import random as rn
@@ -12,7 +14,7 @@ from test_sections_timetable import execute_function
 
 crossover_probability = round(rn.uniform(low=0.3, high=1.0), 1)
 mutation_probability = round(rn.uniform(low=0.3, high=0.4), 1)
-population_size = 300
+population_size = 2
 
 class Population:
     def __init__(self, number, fitness, chromosome, t_sections):
@@ -30,11 +32,15 @@ all_sections = []
 def get_fitness(timetable):
     teacher_clashes = get_teacher_clashes_count(timetable, reg_data)
     student_clashes = get_student_clashes(timetable, reg_data)
-    return [teacher_clashes * 5 + student_clashes * 2.5, (student_clashes, teacher_clashes)]
+    teacher_slot_violations = get_teacher_slot_violations_count(timetable, reg_data)
+    room_clashes = get_room_clashes_count(timetable, reg_data)
+    return [teacher_clashes * 5 + student_clashes * 2.5 + room_clashes * 5 + teacher_slot_violations * 0.75, 
+    ("Student Clashes: " + str(student_clashes), "Teacher Clashes: " + str(teacher_clashes),
+    "Room Clashes" + str(room_clashes), "Teacher Slot Violations: " + str(teacher_slot_violations))]
 
 def initial_population():
     
-    timetables = [] 
+    timetables = []  
 
     for z in range(population_size): # 300 Solutions will be generated. 
         timetable = [] 
@@ -100,6 +106,7 @@ def initial_population():
                 continue
             timetable.append(lecture)
             t_sections[i].append([reg_course.id, slots])
+        timetable = assign_rooms(timetable, reg_data)
         fitness = get_fitness(timetable)
         # clash_count = get_student_clashes(timetable, reg_data)
         population = Population(z, fitness, timetable, t_sections)
@@ -243,11 +250,12 @@ def apply_crossover(population, length, chromosome_length):
 
             # new_crossovered_exams1 = apply_mutation(crossovered_exams1.copy())
             # new_crossovered_exams2 = apply_mutation(crossovered_exams2.copy())
-
+            crossovered_timetable1 = assign_rooms(crossovered_timetable1, reg_data)
             fitness_value = get_fitness(crossovered_timetable1)
             pops = Population(j, fitness_value, crossovered_timetable1, crossovered_sections1)
             crossover_population.append(pops)
 
+            crossovered_timetable2 = assign_rooms(crossovered_timetable2, reg_data)
             fitness_value = get_fitness(crossovered_timetable2)
             pops = Population(j + 1, fitness_value, crossovered_timetable2, crossovered_sections2)
             crossover_population.append(pops)
@@ -386,10 +394,10 @@ def genetic_algo():
     population = initial_population()
     #population = parent_selection(population.copy())
     count = 0
-    regen = 0
+    # regen = 0
     population.sort(key = lambda x: x.fitness[0], reverse=False)
-    f = open("Folder/population 0.txt", "w")
-    f.write(str(population))
+    # f = open("Folder/population 0.txt", "w")
+    # f.write(str(population))
     for i in range(max_iter):
         print("Generation " + str(i) + " going on.....")
         population1 = apply_crossover(population, (len(population) - 1), (len(population[0].chromosome)))
@@ -402,8 +410,8 @@ def genetic_algo():
             regen = 1
         
         population.sort(key = lambda x: x.fitness[0], reverse=False)
-        f = open("Folder/population " + str(i+1) + ".txt", "w")
-        f.write(str(population))
+        # f = open("Folder/population " + str(i+1) + ".txt", "w")
+        # f.write(str(population))
         execute_function(population[0].chromosome, i)
 
         print("Generation " + str(i) + " Done!.....")
@@ -417,7 +425,7 @@ def genetic_algo():
 
 
         count += 1 
-        regen += 1
+        # regen += 1
     return best_solution
 
 
@@ -425,7 +433,7 @@ def genetic_algo():
 def main_fun(best_solution, best_fitness):
     fh = True 
     total_time = 0 
-    count = 11
+    count = 51
     while fh == True: 
         fh = False
         execute_function(best_solution, count)
@@ -472,6 +480,7 @@ def Hill_Climbing(arguments):
                             #if (temp_timetable[index].slots[slot].day) is not i and (temp_timetable[index].slots[slot].slot is not j):
                             temp_timetable[index].slots[slot].day = i
                             temp_timetable[index].slots[slot].slot = j
+                            temp_timetable = assign_rooms(temp_timetable, reg_data)
                             fitness_value = get_fitness(temp_timetable)
                             # fitness_value = get_student_clashes(temp_timetable, reg_data)
                             # print("i: ", i, "\tj: ", j, "\t", fitness_value)
@@ -492,6 +501,7 @@ def Hill_Climbing(arguments):
                 temp_timetable[index].slots[1].day = i
                 temp_timetable[index].slots[1].slot = j+1
                 # fitness_value = get_student_clashes(temp_timetable, reg_data)
+                temp_timetable = assign_rooms(temp_timetable, reg_data)
                 fitness_value = get_fitness(temp_timetable)
                 # print("i: ", i, "\tj: ", j, "\t", fitness_value)
                 if (fitness_value[0] < best_fitness[0]):
