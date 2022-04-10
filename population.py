@@ -1,5 +1,6 @@
 import copy
 from registered_courses import *
+from rooms_timetable import generate_rooms_timetable
 from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
 from time_table import *
 from rooms import *
@@ -34,7 +35,6 @@ def get_fitness(timetable):
     student_clashes = get_student_clashes(timetable, reg_data)
     teacher_slot_violations = get_teacher_slot_violations_count(timetable, reg_data)
     room_clashes = get_room_clashes_count(timetable, reg_data)
-    get_room_clashes_data(timetable, reg_data)
     return [teacher_clashes * 5 + student_clashes * 2.5 + room_clashes * 5 + teacher_slot_violations * 0.75, 
     ("Student Clashes: " + str(student_clashes), "Teacher Clashes: " + str(teacher_clashes),
     "Room Clashes: " + str(room_clashes), "Teacher Slot Violations: " + str(teacher_slot_violations))]
@@ -532,6 +532,8 @@ if __name__ == "__main__":
     best_solution = assign_rooms(best_solution, reg_data)
     get_student_clashes_data(best_solution, reg_data)
     get_teacher_clashes_data(best_solution, reg_data)
+    get_room_clashes_data(best_solution, reg_data)
+    generate_rooms_timetable(best_solution, reg_data)
     execute_function(best_solution, 1000)
 
     store_new_timetable(best_solution, reg_data)
