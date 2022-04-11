@@ -414,7 +414,7 @@ def genetic_algo():
         # f = open("Folder/population " + str(i+1) + ".txt", "w")
         # f.write(str(population))
         # population[0].chromosome = assign_rooms(population[0].chromosome, reg_data)
-        print("Fitness: ", get_fitness(population[0].chromosome))
+        # print("Fitness: ", get_fitness(population[0].chromosome))
         execute_function(population[0].chromosome, i)
         # generate_rooms_timetable(population[0].chromosome, reg_data)
 
