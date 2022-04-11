@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -182,12 +195,14 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
+                        <p class="left">Programming Fundamentals</p>
                                     
-                                    <p class = "right">Room #3</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #10</span>
                             
-                        <p class = "teacher">Muhammad Ammar</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#3@Muhammad_Ammar</p>
+                        <span class = "room">Rizwan ul Haq</span>
+                        </p>
+                        <!-- <p class="left">Programming_Fundamentals@Room_#10@Rizwan_ul_Haq</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -195,18 +210,38 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">English Composition and Comprehension - Lab</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">GP Lab</span>
+                            
+                        <span class = "room">Muhammad Iqbal<hr>English Composition and Comprehension</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@GP_Lab@Muhammad_Iqbal<hr>English_Composition_and_Comprehension@Room_#7@Junaid_Shahid</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">Room #7</span>
+                            
+                        <span class = "room">Junaid Shahid</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@GP_Lab@Muhammad_Iqbal<hr>English_Composition_and_Comprehension@Room_#7@Junaid_Shahid</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
                 
                     <td colspan=1>
-                        <p class="left">Linear Algebra</p>
+                        <p class="left">English Composition and Comprehension - Lab</p>
                                     
-                                    <p class = "right">Room #6</p>
+                                    <p class = "info">
+                                    <span class = "teacher">GP Lab</span>
                             
-                        <p class = "teacher">Amjad Hussain</p>
-                        <!-- <p class="left">Linear_Algebra@Room_#6@Amjad_Hussain</p>
+                        <span class = "room">Muhammad Iqbal</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@GP_Lab@Muhammad_Iqbal</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -218,12 +253,14 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Programming Fundamentals</p>
+                        <p class="left">English Composition and Comprehension</p>
                                     
-                                    <p class = "right">Room #12</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #6</span>
                             
-                        <p class = "teacher">Rizwan ul Haq</p>
-                        <!-- <p class="left">Programming_Fundamentals@Room_#12@Rizwan_ul_Haq</p>
+                        <span class = "room">Muhammad Ammar</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#6@Muhammad_Ammar</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -231,7 +268,16 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Linear Algebra</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">Room #10</span>
+                            
+                        <span class = "room">Amjad Hussain</span>
+                        </p>
+                        <!-- <p class="left">Linear_Algebra@Room_#10@Amjad_Hussain</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
 
@@ -244,86 +290,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Linear Algebra</p>
-                                    
-                                    <p class = "right">Room #5</p>
-                            
-                        <p class = "teacher">Amjad Hussain</p>
-                        <!-- <p class="left">Linear_Algebra@Room_#5@Amjad_Hussain</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
-                                    
-                                    <p class = "right">Room #6</p>
-                            
-                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#6@Muhammad_Ammar<hr>English_Composition_and_Comprehension@Room_#1@Junaid_Shahid</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --><p class="left"></p>
-                                    
-                                    <p class = "right">Room #1</p>
-                            
-                        <p class = "teacher">Junaid Shahid</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#6@Muhammad_Ammar<hr>English_Composition_and_Comprehension@Room_#1@Junaid_Shahid</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">Cal Lab</p>
-                            
-                        <p class = "teacher">Sadia Ashfaq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Sadia_Ashfaq</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">Cal Lab</p>
-                            
-                        <p class = "teacher">Sadia Ashfaq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Sadia_Ashfaq</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Programming Fundamentals</p>
-                                    
-                                    <p class = "right">Room #7</p>
-                            
-                        <p class = "teacher">Rizwan ul Haq</p>
-                        <!-- <p class="left">Programming_Fundamentals@Room_#7@Rizwan_ul_Haq</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-        </tr>
-<!-- Wednesday -->
-        <tr>
-            <td class="center">
-                <b>Wednesday</b>
-            </td>
-            
-                
-                    <td colspan=1>
                         <p class="left">Digital Logic Design</p>
                                     
-                                    <p class = "right">Room #18</p>
+                                    <p class = "right">Room #11</p>
                             
                         <p class = "teacher">Mirza Waqar Baig</p>
-                        <!-- <p class="left">Digital_Logic_Design@Room_#18@Mirza_Waqar_Baig</p>
+                        <!-- <p class="left">Digital_Logic_Design@Room_#11@Mirza_Waqar_Baig</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -343,17 +315,56 @@ td{
                 
             
                 
-                    <td colspan=2>
-                        <p class="left">Programming Fundamentals - Lab</p>
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+        </tr>
+<!-- Wednesday -->
+        <tr>
+            <td class="center">
+                <b>Wednesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Islamic Studies/Ethics</p>
                                     
-                                    <p class = "right">Lab #5</p>
+                                    <p class = "right">Room #12</p>
                             
-                        <p class = "teacher">Mughees Ismail</p>
-                        <!-- <p class="left">Programming_Fundamentals_-_Lab@Lab_#5@Mughees_Ismail</p>
+                        <p class = "teacher">Rizwanullah</p>
+                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#12@Rizwanullah</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=2>
+                        <p class="left">English Composition and Comprehension - Lab</p>
+                                    
+                                    <p class = "right">GP Lab</p>
+                            
+                        <p class = "teacher">Sadia Ashfaq</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@GP_Lab@Sadia_Ashfaq</p>
                         <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
             
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
         </tr>
@@ -365,48 +376,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Islamic Studies/Ethics</p>
+                        <p class="left">Programming Fundamentals</p>
                                     
-                                    <p class = "right">Room #6</p>
+                                    <p class = "right">Room #7</p>
                             
-                        <p class = "teacher">Rizwanullah</p>
-                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#6@Rizwanullah</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Digital Logic Design</p>
-                                    
-                                    <p class = "right">Room #16</p>
-                            
-                        <p class = "teacher">Mirza Waqar Baig</p>
-                        <!-- <p class="left">Digital_Logic_Design@Room_#16@Mirza_Waqar_Baig</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
-                                    
-                                    <p class = "right">Lab #1</p>
-                            
-                        <p class = "teacher">Muiz Qadir</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@Lab_#1@Muiz_Qadir</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
-                                    
-                                    <p class = "right">Lab #1</p>
-                            
-                        <p class = "teacher">Muiz Qadir</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@Lab_#1@Muiz_Qadir</p>
+                        <p class = "teacher">Rizwan ul Haq</p>
+                        <!-- <p class="left">Programming_Fundamentals@Room_#7@Rizwan_ul_Haq</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -415,12 +390,48 @@ td{
                     <td colspan=1>
                         <p class="left">English Composition and Comprehension</p>
                                     
-                                    <p class = "right">Room #8</p>
+                                    <p class = "right">Room #6</p>
+                            
+                        <p class = "teacher">Muhammad Ammar<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#6@Muhammad_Ammar<hr>English_Composition_and_Comprehension@Room_#7@Junaid_Shahid</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">Room #7</p>
                             
                         <p class = "teacher">Junaid Shahid</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#8@Junaid_Shahid</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#6@Muhammad_Ammar<hr>English_Composition_and_Comprehension@Room_#7@Junaid_Shahid</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Programming Fundamentals - Lab</p>
+                                    
+                                    <p class = "right">Lab #5</p>
+                            
+                        <p class = "teacher">Mughees Ismail</p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@Lab_#5@Mughees_Ismail</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Programming Fundamentals - Lab</p>
+                                    
+                                    <p class = "right">Lab #5</p>
+                            
+                        <p class = "teacher">Mughees Ismail</p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@Lab_#5@Mughees_Ismail</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
 
@@ -433,34 +444,24 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
+                        <p class="left">Digital Logic Design</p>
                                     
-                                    <p class = "right">Cal Lab</p>
+                                    <p class = "right">Room #8</p>
                             
-                        <p class = "teacher">Muhammad Iqbal</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Muhammad_Iqbal</p>
+                        <p class = "teacher">Mirza Waqar Baig</p>
+                        <!-- <p class="left">Digital_Logic_Design@Room_#8@Mirza_Waqar_Baig</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
+                        <p class="left">Linear Algebra</p>
                                     
-                                    <p class = "right">Cal Lab</p>
+                                    <p class = "right">Room #11</p>
                             
-                        <p class = "teacher">Muhammad Iqbal</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Muhammad_Iqbal</p>
+                        <p class = "teacher">Amjad Hussain</p>
+                        <!-- <p class="left">Linear_Algebra@Room_#11@Amjad_Hussain</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -469,12 +470,26 @@ td{
                     <td colspan=1>
                         <p class="left">Islamic Studies/Ethics</p>
                                     
-                                    <p class = "right">Room #6</p>
+                                    <p class = "right">Room #9</p>
                             
                         <p class = "teacher">Rizwanullah</p>
-                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#6@Rizwanullah</p>
+                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#9@Rizwanullah</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=2>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                                    
+                                    <p class = "right">Lab #4</p>
+                            
+                        <p class = "teacher">Muiz Qadir</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@Lab_#4@Muiz_Qadir</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
                 
             
 

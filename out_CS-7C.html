@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -181,28 +194,20 @@ td{
             
                 
                 
-                    <td colspan=1>
-                        <p class="left">Information Security</p>
+                    <td colspan=2>
+                        <p class="left">Software for Mobile Devices - Lab</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Lab #1</span>
                             
-                        <p class = "teacher">Dr. Irfan ul Haq</p>
-                        <!-- <p class="left">Information_Security@Room_#4@Dr._Irfan_ul_Haq</p>
-                        <p class="right">1</p>
+                        <span class = "room">Tahir Farooq</span>
+                        </p>
+                        <!-- <p class="left">Software_for_Mobile_Devices_-_Lab@Lab_#1@Tahir_Farooq</p>
+                        <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
-                
-                    <td colspan=1>
-                        <p class="left">Applied Machine Learning</p>
-                                    
-                                    <p class = "right">Room #9</p>
-                            
-                        <p class = "teacher">Dr. Hashim Yasin</p>
-                        <!-- <p class="left">Applied_Machine_Learning@Room_#9@Dr._Hashim_Yasin</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -218,14 +223,7 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Professional Practices in IT</p>
-                                    
-                                    <p class = "right">Room #9</p>
-                            
-                        <p class = "teacher">Masood Habib</p>
-                        <!-- <p class="left">Professional_Practices_in_IT@Room_#9@Masood_Habib</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
@@ -244,12 +242,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Professional Practices in IT</p>
+                        <p class="left">Information Security</p>
                                     
-                                    <p class = "right">Room #8</p>
+                                    <p class = "right">Room #2</p>
                             
-                        <p class = "teacher">Masood Habib</p>
-                        <!-- <p class="left">Professional_Practices_in_IT@Room_#8@Masood_Habib</p>
+                        <p class = "teacher">Dr. Irfan ul Haq</p>
+                        <!-- <p class="left">Information_Security@Room_#2@Dr._Irfan_ul_Haq</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -261,7 +259,14 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Professional Practices in IT</p>
+                                    
+                                    <p class = "right">Room #2</p>
+                            
+                        <p class = "teacher">Masood Habib</p>
+                        <!-- <p class="left">Professional_Practices_in_IT@Room_#2@Masood_Habib</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -315,12 +320,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Information Security</p>
+                        <p class="left">Professional Practices in IT</p>
                                     
-                                    <p class = "right">Room #7</p>
+                                    <p class = "right">Room #1</p>
                             
-                        <p class = "teacher">Dr. Irfan ul Haq</p>
-                        <!-- <p class="left">Information_Security@Room_#7@Dr._Irfan_ul_Haq</p>
+                        <p class = "teacher">Masood Habib</p>
+                        <!-- <p class="left">Professional_Practices_in_IT@Room_#1@Masood_Habib</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -344,10 +349,10 @@ td{
                     <td colspan=1>
                         <p class="left">Applied Machine Learning</p>
                                     
-                                    <p class = "right">Seminar Hall</p>
+                                    <p class = "right">Room #2</p>
                             
                         <p class = "teacher">Dr. Hashim Yasin</p>
-                        <!-- <p class="left">Applied_Machine_Learning@Seminar_Hall@Dr._Hashim_Yasin</p>
+                        <!-- <p class="left">Applied_Machine_Learning@Room_#2@Dr._Hashim_Yasin</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -361,20 +366,18 @@ td{
             </td>
             
                 
-                    <td colspan=2>
-                        <p class="left">Software for Mobile Devices - Lab</p>
+                    <td colspan=1>
+                        <p class="left">Information Security</p>
                                     
-                                    <p class = "right">Lab #6</p>
+                                    <p class = "right">Room #1</p>
                             
-                        <p class = "teacher">Tahir Farooq</p>
-                        <!-- <p class="left">Software_for_Mobile_Devices_-_Lab@Lab_#6@Tahir_Farooq</p>
-                        <p class="right">2</p>
+                        <p class = "teacher">Dr. Irfan ul Haq</p>
+                        <!-- <p class="left">Information_Security@Room_#1@Dr._Irfan_ul_Haq</p>
+                        <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
-            
-                
                     <td colspan=1>
                         </td>
                 
@@ -387,6 +390,18 @@ td{
                 
                     <td colspan=1>
                         </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Applied Machine Learning</p>
+                                    
+                                    <p class = "right">Room #2</p>
+                            
+                        <p class = "teacher">Dr. Hashim Yasin</p>
+                        <!-- <p class="left">Applied_Machine_Learning@Room_#2@Dr._Hashim_Yasin</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
 

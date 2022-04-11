@@ -66,6 +66,12 @@ def get_sorted_preferences(teachers_dictionary, rooms_preferences):
 
 
 def assign_rooms(best_solution, reg_data):
+
+    for lec in best_solution:
+        for slot in lec.slots:
+            slot.room = "1"
+
+
     total_slots = {}
     # cc = 0
     # # for rr in teachers_data:

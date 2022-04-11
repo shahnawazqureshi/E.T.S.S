@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -182,12 +195,20 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Discrete Structures</p>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Design and Analysis of Algorithms</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #5</span>
                             
-                        <p class = "teacher">Usman Ghous</p>
-                        <!-- <p class="left">Discrete_Structures@Room_#4@Usman_Ghous</p>
+                        <span class = "room">Shoaib Saleem</span>
+                        </p>
+                        <!-- <p class="left">Design_and_Analysis_of_Algorithms@Room_#5@Shoaib_Saleem</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -195,18 +216,14 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        <p class="left">Psychology</p>
+                        <p class="left">Operating System</p>
                                     
-                                    <p class = "right">Room #2</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #11</span>
                             
-                        <p class = "teacher">Aisha Bano</p>
-                        <!-- <p class="left">Psychology@Room_#2@Aisha_Bano</p>
+                        <span class = "room">Usman Ghous</span>
+                        </p>
+                        <!-- <p class="left">Operating_System@Room_#11@Usman_Ghous</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -217,14 +234,20 @@ td{
                     </td>
                 
                 
-                    <td colspan=1>
-                        </td>
+                    <td colspan=2>
+                        <p class="left">Operating Systems - Lab</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">Lab #3</span>
+                            
+                        <span class = "room">Muhammad Haseeb Arshad</span>
+                        </p>
+                        <!-- <p class="left">Operating_Systems_-_Lab@Lab_#3@Muhammad_Haseeb_Arshad</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
-                
-                    <td colspan=1>
-                        </td>
                 
             
 
@@ -237,26 +260,31 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Design and Analysis of Algorithms</p>
+                        <p class="left">Theory of Automata</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "right">Room #9</p>
                             
-                        <p class = "teacher">Shoaib Saleem</p>
-                        <!-- <p class="left">Design_and_Analysis_of_Algorithms@Room_#4@Shoaib_Saleem</p>
+                        <p class = "teacher">Numan Shafi</p>
+                        <!-- <p class="left">Theory_of_Automata@Room_#9@Numan_Shafi</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Theory of Automata</p>
+                        <p class="left">Psychology</p>
                                     
-                                    <p class = "right">Room #15</p>
+                                    <p class = "right">Room #13</p>
                             
-                        <p class = "teacher">Numan Shafi</p>
-                        <!-- <p class="left">Theory_of_Automata@Room_#15@Numan_Shafi</p>
+                        <p class = "teacher">Aisha Bano</p>
+                        <!-- <p class="left">Psychology@Room_#13@Aisha_Bano</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
                 
@@ -268,17 +296,12 @@ td{
                     <td colspan=1>
                         <p class="left">Database Systems</p>
                                     
-                                    <p class = "right">Room #5</p>
+                                    <p class = "right">Room #11</p>
                             
                         <p class = "teacher">Saqib Hayat</p>
-                        <!-- <p class="left">Database_Systems@Room_#5@Saqib_Hayat</p>
+                        <!-- <p class="left">Database_Systems@Room_#11@Saqib_Hayat</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
                 
             
         </tr>
@@ -287,6 +310,37 @@ td{
             <td class="center">
                 <b>Wednesday</b>
             </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Discrete Structures</p>
+                                    
+                                    <p class = "right">Room #11</p>
+                            
+                        <p class = "teacher">Usman Ghous</p>
+                        <!-- <p class="left">Discrete_Structures@Room_#11@Usman_Ghous</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=2>
+                        <p class="left">Database Systems - Lab</p>
+                                    
+                                    <p class = "right">Lab #4</p>
+                            
+                        <p class = "teacher">Saqib Hayat</p>
+                        <!-- <p class="left">Database_Systems_-_Lab@Lab_#4@Saqib_Hayat</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
             
                 
                     <td colspan=1>
@@ -300,40 +354,6 @@ td{
                         <p class="teacher"></p> --></td>
                 
             
-                
-                    <td colspan=1>
-                        <p class="left">Discrete Structures</p>
-                                    
-                                    <p class = "right">Room #5</p>
-                            
-                        <p class = "teacher">Usman Ghous</p>
-                        <!-- <p class="left">Discrete_Structures@Room_#5@Usman_Ghous</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Design and Analysis of Algorithms</p>
-                                    
-                                    <p class = "right">Room #3</p>
-                            
-                        <p class = "teacher">Shoaib Saleem</p>
-                        <!-- <p class="left">Design_and_Analysis_of_Algorithms@Room_#3@Shoaib_Saleem</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
         </tr>
 <!-- Thursday -->
         <tr>
@@ -343,6 +363,18 @@ td{
             
                 
                     <td colspan=1>
+                        <p class="left">Design and Analysis of Algorithms</p>
+                                    
+                                    <p class = "right">Room #6</p>
+                            
+                        <p class = "teacher">Shoaib Saleem</p>
+                        <!-- <p class="left">Design_and_Analysis_of_Algorithms@Room_#6@Shoaib_Saleem</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
                         </td>
                 
             
@@ -353,36 +385,17 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Operating Systems - Lab</p>
-                                    
-                                    <p class = "right">Lab #1</p>
-                            
-                        <p class = "teacher">Muhammad Haseeb Arshad</p>
-                        <!-- <p class="left">Operating_Systems_-_Lab@Lab_#1@Muhammad_Haseeb_Arshad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Operating Systems - Lab</p>
+                        <p class="left">Database Systems</p>
                                     
-                                    <p class = "right">Lab #1</p>
+                                    <p class = "right">Room #11</p>
                             
-                        <p class = "teacher">Muhammad Haseeb Arshad</p>
-                        <!-- <p class="left">Operating_Systems_-_Lab@Lab_#1@Muhammad_Haseeb_Arshad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Theory of Automata</p>
-                                    
-                                    <p class = "right">Room #13</p>
-                            
-                        <p class = "teacher">Numan Shafi</p>
-                        <!-- <p class="left">Theory_of_Automata@Room_#13@Numan_Shafi</p>
+                        <p class = "teacher">Saqib Hayat</p>
+                        <!-- <p class="left">Database_Systems@Room_#11@Saqib_Hayat</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -397,60 +410,46 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Operating System</p>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Theory of Automata</p>
                                     
-                                    <p class = "right">Room #7</p>
+                                    <p class = "right">Room #9</p>
                             
-                        <p class = "teacher">Usman Ghous</p>
-                        <!-- <p class="left">Operating_System@Room_#7@Usman_Ghous</p>
+                        <p class = "teacher">Numan Shafi</p>
+                        <!-- <p class="left">Theory_of_Automata@Room_#9@Numan_Shafi</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
                 
                     <td colspan=1>
                         <p class="left">Psychology</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "right">Room #8</p>
                             
                         <p class = "teacher">Aisha Bano</p>
-                        <!-- <p class="left">Psychology@Room_#4@Aisha_Bano</p>
+                        <!-- <p class="left">Psychology@Room_#8@Aisha_Bano</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Database Systems - Lab</p>
+                        <p class="left">Discrete Structures</p>
                                     
-                                    <p class = "right">Lab #6</p>
+                                    <p class = "right">Room #7</p>
                             
-                        <p class = "teacher">Saqib Hayat</p>
-                        <!-- <p class="left">Database_Systems_-_Lab@Lab_#6@Saqib_Hayat</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Database Systems - Lab</p>
-                                    
-                                    <p class = "right">Lab #6</p>
-                            
-                        <p class = "teacher">Saqib Hayat</p>
-                        <!-- <p class="left">Database_Systems_-_Lab@Lab_#6@Saqib_Hayat</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Database Systems</p>
-                                    
-                                    <p class = "right">Room #4</p>
-                            
-                        <p class = "teacher">Saqib Hayat</p>
-                        <!-- <p class="left">Database_Systems@Room_#4@Saqib_Hayat</p>
+                        <p class = "teacher">Usman Ghous</p>
+                        <!-- <p class="left">Discrete_Structures@Room_#7@Usman_Ghous</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 

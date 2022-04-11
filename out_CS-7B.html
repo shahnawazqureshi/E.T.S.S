@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -182,26 +195,28 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Data Mining</p>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Information Security</p>
                                     
-                                    <p class = "right">Room #6</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #9</span>
                             
-                        <p class = "teacher">Nasreen Akhtar</p>
-                        <!-- <p class="left">Data_Mining@Room_#6@Nasreen_Akhtar</p>
+                        <span class = "room">Dr. Danish Shehzad</span>
+                        </p>
+                        <!-- <p class="left">Information_Security@Room_#9@Dr._Danish_Shehzad</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        </td>
                 
             
                 
@@ -211,7 +226,16 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Software Engineering</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">Room #4</span>
+                            
+                        <span class = "room">Awais Azam</span>
+                        </p>
+                        <!-- <p class="left">Software_Engineering@Room_#4@Awais_Azam</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -235,23 +259,6 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Data Mining</p>
-                                    
-                                    <p class = "right">Room #1</p>
-                            
-                        <p class = "teacher">Nasreen Akhtar</p>
-                        <!-- <p class="left">Data_Mining@Room_#1@Nasreen_Akhtar</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
                         <p class="left">Data Science</p>
                                     
                                     <p class = "right">Room #11</p>
@@ -267,6 +274,30 @@ td{
                         </td>
                 
             
+                
+                    <td colspan=1>
+                        <p class="left">Professional Practices in IT</p>
+                                    
+                                    <p class = "right">Room #7</p>
+                            
+                        <p class = "teacher">Masood Habib</p>
+                        <!-- <p class="left">Professional_Practices_in_IT@Room_#7@Masood_Habib</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Software Engineering</p>
+                                    
+                                    <p class = "right">Room #10</p>
+                            
+                        <p class = "teacher">Awais Azam</p>
+                        <!-- <p class="left">Software_Engineering@Room_#10@Awais_Azam</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
         </tr>
 <!-- Wednesday -->
         <tr>
@@ -276,70 +307,14 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Professional Practices in IT</p>
+                        <p class="left">Data Mining</p>
                                     
-                                    <p class = "right">Room #3</p>
+                                    <p class = "right">Room #8</p>
                             
-                        <p class = "teacher">Masood Habib</p>
-                        <!-- <p class="left">Professional_Practices_in_IT@Room_#3@Masood_Habib</p>
+                        <p class = "teacher">Nasreen Akhtar</p>
+                        <!-- <p class="left">Data_Mining@Room_#8@Nasreen_Akhtar</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Software Engineering</p>
-                                    
-                                    <p class = "right">Room #3</p>
-                            
-                        <p class = "teacher">Awais Azam</p>
-                        <!-- <p class="left">Software_Engineering@Room_#3@Awais_Azam</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-        </tr>
-<!-- Thursday -->
-        <tr>
-            <td class="center">
-                <b>Thursday</b>
-            </td>
-            
-                
-                    <td colspan=1>
-                        <p class="left">Data Science</p>
-                                    
-                                    <p class = "right">Room #12</p>
-                            
-                        <p class = "teacher">Adeel Ashraf Cheema</p>
-                        <!-- <p class="left">Data_Science@Room_#12@Adeel_Ashraf_Cheema</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
                 
             
                 
@@ -359,6 +334,55 @@ td{
                         <p class="teacher"></p> --></td>
                 
             
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Professional Practices in IT</p>
+                                    
+                                    <p class = "right">Room #9</p>
+                            
+                        <p class = "teacher">Masood Habib</p>
+                        <!-- <p class="left">Professional_Practices_in_IT@Room_#9@Masood_Habib</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
 
         </tr>
 <!-- Friday -->
@@ -369,24 +393,24 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Information Security</p>
-                                    
-                                    <p class = "right">Room #1</p>
-                            
-                        <p class = "teacher">Dr. Danish Shehzad</p>
-                        <!-- <p class="left">Information_Security@Room_#1@Dr._Danish_Shehzad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Professional Practices in IT</p>
+                        <p class="left">Data Mining</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "right">Room #7</p>
                             
-                        <p class = "teacher">Masood Habib</p>
-                        <!-- <p class="left">Professional_Practices_in_IT@Room_#4@Masood_Habib</p>
+                        <p class = "teacher">Nasreen Akhtar<hr>Data Science</p>
+                        <!-- <p class="left">Data_Mining@Room_#7@Nasreen_Akhtar<hr>Data_Science@Room_#8@Adeel_Ashraf_Cheema</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">Room #8</p>
+                            
+                        <p class = "teacher">Adeel Ashraf Cheema</p>
+                        <!-- <p class="left">Data_Mining@Room_#7@Nasreen_Akhtar<hr>Data_Science@Room_#8@Adeel_Ashraf_Cheema</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -403,14 +427,7 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Software Engineering</p>
-                                    
-                                    <p class = "right">Room #2</p>
-                            
-                        <p class = "teacher">Awais Azam</p>
-                        <!-- <p class="left">Software_Engineering@Room_#2@Awais_Azam</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
 

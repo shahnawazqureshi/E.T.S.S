@@ -408,16 +408,19 @@ def genetic_algo():
             best_solution = temp_best 
         elif temp_best.fitness[0] < best_solution.fitness[0]:
             best_solution = temp_best 
-            regen = 1
+            # regen = 1
         
         population.sort(key = lambda x: x.fitness[0], reverse=False)
         # f = open("Folder/population " + str(i+1) + ".txt", "w")
         # f.write(str(population))
+        # population[0].chromosome = assign_rooms(population[0].chromosome, reg_data)
+        print("Fitness: ", get_fitness(population[0].chromosome))
         execute_function(population[0].chromosome, i)
+        # generate_rooms_timetable(population[0].chromosome, reg_data)
 
         print("Generation " + str(i) + " Done!.....")
         print("Best Solution Fitness: " + str(best_solution.fitness))
-        
+        # input("")
         # if regen > 7:
         #     print("Re-Generating Population")
         #     population1 = initial_population()
@@ -527,7 +530,7 @@ if __name__ == "__main__":
     ga_solution = genetic_algo()
     
     best_solution = copy.deepcopy(ga_solution.chromosome)
-    print("Actual Fitness Value: ", ga_solution.fitness)
+    print("Genetic Algorithm's Solution's Fitness Value: ", ga_solution.fitness)
     best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
     best_solution = assign_rooms(best_solution, reg_data)
     get_student_clashes_data(best_solution, reg_data)

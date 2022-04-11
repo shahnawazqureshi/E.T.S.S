@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -182,26 +195,34 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        <p class="left">Computer Networks</p>
+                        <p class="left">Software Design and Analysis</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #6</span>
                             
-                        <p class = "teacher">Dr. Bilal Khan</p>
-                        <!-- <p class="left">Computer_Networks@Room_#4@Dr._Bilal_Khan</p>
+                        <span class = "room">Dr. Muhammad Bilal</span>
+                        </p>
+                        <!-- <p class="left">Software_Design_and_Analysis@Room_#6@Dr._Muhammad_Bilal</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                 
-                    <td colspan=1>
-                        </td>
+                    <td colspan=2>
+                        <p class="left">Computer Networks - Lab</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">Lab #3</span>
+                            
+                        <span class = "room">Ayesha Liaqat</span>
+                        </p>
+                        <!-- <p class="left">Computer_Networks_-_Lab@Lab_#3@Ayesha_Liaqat</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
                 
             
                 
@@ -211,20 +232,22 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Web Programming</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">Room #2</span>
+                            
+                        <span class = "room">Muhammad Shahrose Khan</span>
+                        </p>
+                        <!-- <p class="left">Web_Programming@Room_#2@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
                 
                     <td colspan=1>
-                        <p class="left">Software Design and Analysis</p>
-                                    
-                                    <p class = "right">Room #12</p>
-                            
-                        <p class = "teacher">Dr. Muhammad Bilal</p>
-                        <!-- <p class="left">Software_Design_and_Analysis@Room_#12@Dr._Muhammad_Bilal</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
 
@@ -239,10 +262,22 @@ td{
                     <td colspan=1>
                         <p class="left">Theory of Automata</p>
                                     
-                                    <p class = "right">Room #17</p>
+                                    <p class = "right">Room #7</p>
                             
                         <p class = "teacher">Anmol Bilal</p>
-                        <!-- <p class="left">Theory_of_Automata@Room_#17@Anmol_Bilal</p>
+                        <!-- <p class="left">Theory_of_Automata@Room_#7@Anmol_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Software Design and Analysis</p>
+                                    
+                                    <p class = "right">Room #9</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Bilal</p>
+                        <!-- <p class="left">Software_Design_and_Analysis@Room_#9@Dr._Muhammad_Bilal</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -254,22 +289,24 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
                         <p class="left">Web Programming</p>
                                     
-                                    <p class = "right">Room #10</p>
+                                    <p class = "right">Room #4</p>
                             
                         <p class = "teacher">Muhammad Shahrose Khan</p>
-                        <!-- <p class="left">Web_Programming@Room_#10@Muhammad_Shahrose_Khan</p>
+                        <!-- <p class="left">Web_Programming@Room_#4@Muhammad_Shahrose_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Networks</p>
+                                    
+                                    <p class = "right">Room #6</p>
+                            
+                        <p class = "teacher">Dr. Bilal Khan</p>
+                        <!-- <p class="left">Computer_Networks@Room_#6@Dr._Bilal_Khan</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -282,27 +319,23 @@ td{
             </td>
             
                 
-                    <td colspan=2>
-                        <p class="left">Computer Networks - Lab</p>
-                                    
-                                    <p class = "right">Lab #2</p>
-                            
-                        <p class = "teacher">Ayesha Liaqat</p>
-                        <!-- <p class="left">Computer_Networks_-_Lab@Lab_#2@Ayesha_Liaqat</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
-                
-            
+                    <td colspan=1>
+                        </td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Web Programming</p>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Marketing Management</p>
                                     
-                                    <p class = "right">Room #12</p>
+                                    <p class = "right">Room #4</p>
                             
-                        <p class = "teacher">Muhammad Shahrose Khan</p>
-                        <!-- <p class="left">Web_Programming@Room_#12@Muhammad_Shahrose_Khan</p>
+                        <p class = "teacher">Hafiz M.Zeeshan Raza</p>
+                        <!-- <p class="left">Marketing_Management@Room_#4@Hafiz_M.Zeeshan_Raza</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -314,7 +347,14 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Theory of Automata</p>
+                                    
+                                    <p class = "right">Room #7</p>
+                            
+                        <p class = "teacher">Anmol Bilal</p>
+                        <!-- <p class="left">Theory_of_Automata@Room_#7@Anmol_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
         </tr>
@@ -336,14 +376,7 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Marketing Management</p>
-                                    
-                                    <p class = "right">Room #8</p>
-                            
-                        <p class = "teacher">Hafiz M.Zeeshan Raza</p>
-                        <!-- <p class="left">Marketing_Management@Room_#8@Hafiz_M.Zeeshan_Raza</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
@@ -366,12 +399,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Theory of Automata</p>
+                        <p class="left">Computer Networks</p>
                                     
-                                    <p class = "right">Room #12</p>
+                                    <p class = "right">Room #3</p>
                             
-                        <p class = "teacher">Anmol Bilal</p>
-                        <!-- <p class="left">Theory_of_Automata@Room_#12@Anmol_Bilal</p>
+                        <p class = "teacher">Dr. Bilal Khan</p>
+                        <!-- <p class="left">Computer_Networks@Room_#3@Dr._Bilal_Khan</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -380,36 +413,22 @@ td{
                     <td colspan=1>
                         <p class="left">Marketing Management</p>
                                     
-                                    <p class = "right">Room #7</p>
+                                    <p class = "right">Room #4</p>
                             
                         <p class = "teacher">Hafiz M.Zeeshan Raza</p>
-                        <!-- <p class="left">Marketing_Management@Room_#7@Hafiz_M.Zeeshan_Raza</p>
+                        <!-- <p class="left">Marketing_Management@Room_#4@Hafiz_M.Zeeshan_Raza</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Computer Networks</p>
-                                    
-                                    <p class = "right">Room #1</p>
-                            
-                        <p class = "teacher">Dr. Bilal Khan</p>
-                        <!-- <p class="left">Computer_Networks@Room_#1@Dr._Bilal_Khan</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Software Design and Analysis</p>
-                                    
-                                    <p class = "right">Room #12</p>
-                            
-                        <p class = "teacher">Dr. Muhammad Bilal</p>
-                        <!-- <p class="left">Software_Design_and_Analysis@Room_#12@Dr._Muhammad_Bilal</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 

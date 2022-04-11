@@ -494,7 +494,7 @@ if __name__ == "__main__":
     best_solution = assign_rooms(best_solution, reg_data)
     print(get_teacher_slot_violations_count(best_solution, reg_data))
     # get_student_clashes_data(best_solution, reg_data)
-    get_room_clashes_data(best_solution, reg_data)
+    # get_room_clashes_data(best_solution, reg_data)
     # get_teacher_slot_violations_data(best_solution, reg_data)
     execute_function(best_solution, 1)
     store_new_timetable(best_solution, reg_data)

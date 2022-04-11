@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -182,12 +195,14 @@ td{
                 
                 
                     <td colspan=2>
-                        <p class="left">Computer Orgnaization and Assembly Language - Lab</p>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
                                     
-                                    <p class = "right">CS-3C</p>
+                                    <p class = "info">
+                                    <span class = "teacher">CS-1F</span>
                             
-                        <p class = "teacher">Ali Raza</p>
-                        <!-- <p class="left">Computer_Orgnaization_and_Assembly_Language_-_Lab@CS-3C@Ali_Raza</p>
+                        <span class = "room">Muhammad Haseeb Arshad</span>
+                        </p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1F@Muhammad_Haseeb_Arshad</p>
                         <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
@@ -198,14 +213,7 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
-                                    
-                                    <p class = "right">CS-1B</p>
-                            
-                        <p class = "teacher">Umar Naseer</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1B@Umar_Naseer</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
@@ -214,21 +222,20 @@ td{
                     </td>
                 
                 
-                    <td colspan=1>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                    <td colspan=2>
+                        <p class="left">Programming Fundamentals - Lab</p>
                                     
-                                    <p class = "right">CS-1B</p>
+                                    <p class = "info">
+                                    <span class = "teacher">SE-1B</span>
                             
-                        <p class = "teacher">Umar Naseer</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1B@Umar_Naseer</p>
-                        <p class="right">1</p>
+                        <span class = "room">Aliza Saeed</span>
+                        </p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@SE-1B@Aliza_Saeed</p>
+                        <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
-                
-                    <td colspan=1>
-                        </td>
                 
             
 
@@ -240,13 +247,18 @@ td{
             </td>
             
                 
+                    <td colspan=1>
+                        </td>
+                
+            
+                
                     <td colspan=2>
-                        <p class="left">Operating Systems - Lab</p>
+                        <p class="left">Programming Fundamentals - Lab</p>
                                     
-                                    <p class = "right">CS-5D</p>
+                                    <p class = "right">CS-1F</p>
                             
-                        <p class = "teacher">Muhammad Haseeb Arshad</p>
-                        <!-- <p class="left">Operating_Systems_-_Lab@CS-5D@Muhammad_Haseeb_Arshad</p>
+                        <p class = "teacher">Umar Naseer</p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@CS-1F@Umar_Naseer</p>
                         <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
@@ -254,32 +266,17 @@ td{
                 
             
                 
-                    <td colspan=1>
+                    <td colspan=2>
                         <p class="left">Introduction to Information and Communication Technology - Lab</p>
                                     
-                                    <p class = "right">CS-1F</p>
+                                    <p class = "right">CS-1E</p>
                             
-                        <p class = "teacher">Muhammad Haseeb Arshad</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1F@Muhammad_Haseeb_Arshad</p>
-                        <p class="right">1</p>
+                        <p class = "teacher">Muiz Qadir</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1E@Muiz_Qadir</p>
+                        <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
             
-                
-                    <td colspan=1>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
-                                    
-                                    <p class = "right">CS-1F</p>
-                            
-                        <p class = "teacher">Muhammad Haseeb Arshad</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1F@Muhammad_Haseeb_Arshad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
                 
             
         </tr>
@@ -290,44 +287,9 @@ td{
             </td>
             
                 
-                    <td colspan=2>
-                        <p class="left">Artificial Intelligence - Lab</p>
-                                    
-                                    <p class = "right">CS-7A</p>
-                            
-                        <p class = "teacher">Saba Aslam</p>
-                        <!-- <p class="left">Artificial_Intelligence_-_Lab@CS-7A@Saba_Aslam</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-            
-                
                     <td colspan=1>
                         </td>
                 
-            
-                
-                    <td colspan=2>
-                        <p class="left">Computer Orgnaization and Assembly Language - Lab</p>
-                                    
-                                    <p class = "right">CS-3B</p>
-                            
-                        <p class = "teacher">Ali Raza</p>
-                        <!-- <p class="left">Computer_Orgnaization_and_Assembly_Language_-_Lab@CS-3B@Ali_Raza</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-            
-        </tr>
-<!-- Thursday -->
-        <tr>
-            <td class="center">
-                <b>Thursday</b>
-            </td>
             
                 
                     <td colspan=2>
@@ -344,25 +306,60 @@ td{
                 
             
                 
-                    <td colspan=1>
-                        <p class="left">Data Structures - Lab</p>
+                    <td colspan=2>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
                                     
-                                    <p class = "right">SE-3B</p>
+                                    <p class = "right">CS-1B</p>
                             
-                        <p class = "teacher">Asif Ameer</p>
-                        <!-- <p class="left">Data_Structures_-_Lab@SE-3B@Asif_Ameer</p>
+                        <p class = "teacher">Umar Naseer</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1B@Umar_Naseer</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
+            
+                
+                    <td colspan=2>
+                        <p class="left">Computer Networks - Lab</p>
+                                    
+                                    <p class = "right">CS-5A</p>
+                            
+                        <p class = "teacher">Ayesha Liaqat</p>
+                        <!-- <p class="left">Computer_Networks_-_Lab@CS-5A@Ayesha_Liaqat</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Computer Orgnaization and Assembly Language - Lab</p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Ali Raza</p>
+                        <!-- <p class="left">Computer_Orgnaization_and_Assembly_Language_-_Lab@CS-3B@Ali_Raza</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Data Structures - Lab</p>
+                        <p class="left">Computer Orgnaization and Assembly Language - Lab</p>
                                     
-                                    <p class = "right">SE-3B</p>
+                                    <p class = "right">CS-3B</p>
                             
-                        <p class = "teacher">Asif Ameer</p>
-                        <!-- <p class="left">Data_Structures_-_Lab@SE-3B@Asif_Ameer</p>
+                        <p class = "teacher">Ali Raza</p>
+                        <!-- <p class="left">Computer_Orgnaization_and_Assembly_Language_-_Lab@CS-3B@Ali_Raza</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -381,8 +378,17 @@ td{
             </td>
             
                 
-                    <td colspan=1>
-                        </td>
+                    <td colspan=2>
+                        <p class="left">Programming Fundamentals - Lab</p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Muhammad Azeem Iftikhar</p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@CS-1D@Muhammad_Azeem_Iftikhar</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
                 
             
                 
@@ -391,18 +397,17 @@ td{
                 
             
                 
-                    <td colspan=1>
-                        </td>
+                    <td colspan=2>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Muhammad Haseeb Arshad</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@SE-1B@Muhammad_Haseeb_Arshad</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
                 
             
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
                 
             
 

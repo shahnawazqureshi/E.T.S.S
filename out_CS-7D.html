@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -187,18 +200,14 @@ td{
             
                 
                 
-                    <td colspan=2>
-                        <p class="left">Software for Mobile Devices - Lab</p>
-                                    
-                                    <p class = "right">Lab #5</p>
-                            
-                        <p class = "teacher">Tahir Farooq</p>
-                        <!-- <p class="left">Software_for_Mobile_Devices_-_Lab@Lab_#5@Tahir_Farooq</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
+                    <td colspan=1>
+                        </td>
                 
             
                 
+                
+                    <td colspan=1>
+                        </td>
                 
             
                 
@@ -208,25 +217,20 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Applied Machine Learning</p>
-                                    
-                                    <p class = "right">Room #12</p>
-                            
-                        <p class = "teacher">Dr. Hashim Yasin</p>
-                        <!-- <p class="left">Applied_Machine_Learning@Room_#12@Dr._Hashim_Yasin</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                 
                     <td colspan=1>
-                        <p class="left">Professional Practices in IT</p>
+                        <p class="left">Information Security</p>
                                     
-                                    <p class = "right">Room #11</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #1</span>
                             
-                        <p class = "teacher">Tehreem Aslam</p>
-                        <!-- <p class="left">Professional_Practices_in_IT@Room_#11@Tehreem_Aslam</p>
+                        <span class = "room">Dr. Muhammad Umar Aftab</span>
+                        </p>
+                        <!-- <p class="left">Information_Security@Room_#1@Dr._Muhammad_Umar_Aftab</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -241,24 +245,31 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Information Security</p>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Professional Practices in IT</p>
                                     
-                                    <p class = "right">Room #3</p>
+                                    <p class = "right">Room #2</p>
                             
-                        <p class = "teacher">Dr. Muhammad Umar Aftab</p>
-                        <!-- <p class="left">Information_Security@Room_#3@Dr._Muhammad_Umar_Aftab</p>
+                        <p class = "teacher">Tehreem Aslam</p>
+                        <!-- <p class="left">Professional_Practices_in_IT@Room_#2@Tehreem_Aslam</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
+                        <p class="left">Applied Machine Learning</p>
+                                    
+                                    <p class = "right">Room #1</p>
+                            
+                        <p class = "teacher">Dr. Hashim Yasin</p>
+                        <!-- <p class="left">Applied_Machine_Learning@Room_#1@Dr._Hashim_Yasin</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -290,24 +301,31 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Applied Machine Learning</p>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Professional Practices in IT</p>
                                     
-                                    <p class = "right">Seminar Hall</p>
+                                    <p class = "right">Room #1</p>
                             
-                        <p class = "teacher">Dr. Hashim Yasin</p>
-                        <!-- <p class="left">Applied_Machine_Learning@Seminar_Hall@Dr._Hashim_Yasin</p>
+                        <p class = "teacher">Tehreem Aslam</p>
+                        <!-- <p class="left">Professional_Practices_in_IT@Room_#1@Tehreem_Aslam</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
+                        <p class="left">Information Security</p>
+                                    
+                                    <p class = "right">Room #2</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Umar Aftab</p>
+                        <!-- <p class="left">Information_Security@Room_#2@Dr._Muhammad_Umar_Aftab</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
         </tr>
@@ -319,14 +337,7 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Professional Practices in IT</p>
-                                    
-                                    <p class = "right">Room #9</p>
-                            
-                        <p class = "teacher">Tehreem Aslam</p>
-                        <!-- <p class="left">Professional_Practices_in_IT@Room_#9@Tehreem_Aslam</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
@@ -341,12 +352,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Information Security</p>
+                        <p class="left">Applied Machine Learning</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "right">Room #1</p>
                             
-                        <p class = "teacher">Dr. Muhammad Umar Aftab</p>
-                        <!-- <p class="left">Information_Security@Room_#4@Dr._Muhammad_Umar_Aftab</p>
+                        <p class = "teacher">Dr. Hashim Yasin</p>
+                        <!-- <p class="left">Applied_Machine_Learning@Room_#1@Dr._Hashim_Yasin</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -365,13 +376,17 @@ td{
             </td>
             
                 
-                    <td colspan=1>
-                        </td>
+                    <td colspan=2>
+                        <p class="left">Software for Mobile Devices - Lab</p>
+                                    
+                                    <p class = "right">Lab #1</p>
+                            
+                        <p class = "teacher">Tahir Farooq</p>
+                        <!-- <p class="left">Software_for_Mobile_Devices_-_Lab@Lab_#1@Tahir_Farooq</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
                 
             
-                
-                    <td colspan=1>
-                        </td>
                 
             
                 

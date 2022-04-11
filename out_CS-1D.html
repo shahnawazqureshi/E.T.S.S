@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -182,12 +195,20 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Calculus and Analytical Geometry</p>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">English Composition and Comprehension</p>
                                     
-                                    <p class = "right">Room #1</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Room #1</span>
                             
-                        <p class = "teacher">Dr.Mushtaq Ahmad</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@Room_#1@Dr.Mushtaq_Ahmad</p>
+                        <span class = "room">Sadia Ashfaq</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#1@Sadia_Ashfaq</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -195,18 +216,14 @@ td{
                 
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        <p class="left">Programming Fundamentals</p>
+                        <p class="left">English Composition and Comprehension - Lab</p>
                                     
-                                    <p class = "right">Room #9</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Cal Lab</span>
                             
-                        <p class = "teacher">Dr. Rabia Maqsood</p>
-                        <!-- <p class="left">Programming_Fundamentals@Room_#9@Dr._Rabia_Maqsood</p>
+                        <span class = "room">Amna Farooq</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Amna_Farooq</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -217,18 +234,23 @@ td{
                     </td>
                 
                 
-                    <td colspan=2>
-                        <p class="left">Programming Fundamentals - Lab</p>
+                    <td colspan=1>
+                        <p class="left">English Composition and Comprehension - Lab</p>
                                     
-                                    <p class = "right">Lab #1</p>
+                                    <p class = "info">
+                                    <span class = "teacher">Cal Lab</span>
                             
-                        <p class = "teacher">Muhammad Azeem Iftikhar</p>
-                        <!-- <p class="left">Programming_Fundamentals_-_Lab@Lab_#1@Muhammad_Azeem_Iftikhar</p>
-                        <p class="right">2</p>
+                        <span class = "room">Amna Farooq</span>
+                        </p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Amna_Farooq</p>
+                        <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
+                
+                    <td colspan=1>
+                        </td>
                 
             
 
@@ -246,42 +268,6 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">Room #1</p>
-                            
-                        <p class = "teacher">Rida Akram<hr>English Composition and Comprehension</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Room_#1@Rida_Akram<hr>English_Composition_and_Comprehension@Room_#7@Sadia_Ashfaq</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --><p class="left"></p>
-                                    
-                                    <p class = "right">Room #7</p>
-                            
-                        <p class = "teacher">Sadia Ashfaq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Room_#1@Rida_Akram<hr>English_Composition_and_Comprehension@Room_#7@Sadia_Ashfaq</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">Room #1</p>
-                            
-                        <p class = "teacher">Rida Akram</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Room_#1@Rida_Akram</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
                         <p class="left">English Composition and Comprehension</p>
                                     
                                     <p class = "right">Room #3</p>
@@ -290,6 +276,35 @@ td{
                         <!-- <p class="left">English_Composition_and_Comprehension@Room_#3@Farah_Iqbal</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">English Composition and Comprehension - Lab</p>
+                                    
+                                    <p class = "right">Cal Lab</p>
+                            
+                        <p class = "teacher">Rida Akram</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Rida_Akram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">English Composition and Comprehension - Lab</p>
+                                    
+                                    <p class = "right">Cal Lab</p>
+                            
+                        <p class = "teacher">Rida Akram</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Cal_Lab@Rida_Akram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
         </tr>
@@ -301,36 +316,21 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Islamic Studies/Ethics</p>
-                                    
-                                    <p class = "right">Room #7</p>
-                            
-                        <p class = "teacher">Zia Ahmad</p>
-                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#7@Zia_Ahmad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
                         <p class="left">English Composition and Comprehension</p>
                                     
-                                    <p class = "right">Room #6</p>
+                                    <p class = "right">Room #2</p>
+                            
+                        <p class = "teacher">Farah Iqbal<hr>English Composition and Comprehension</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#2@Farah_Iqbal<hr>English_Composition_and_Comprehension@Room_#3@Sadia_Ashfaq</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "right">Room #3</p>
                             
                         <p class = "teacher">Sadia Ashfaq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#6@Sadia_Ashfaq</p>
+                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#2@Farah_Iqbal<hr>English_Composition_and_Comprehension@Room_#3@Sadia_Ashfaq</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
                 
             
                 
@@ -341,6 +341,42 @@ td{
                             
                         <p class = "teacher">Waheed Ahmad</p>
                         <!-- <p class="left">Applied_Physics@Room_#1@Waheed_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                                    
+                                    <p class = "right">Lab #1</p>
+                            
+                        <p class = "teacher">Aqsa Younas</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@Lab_#1@Aqsa_Younas</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                                    
+                                    <p class = "right">Lab #1</p>
+                            
+                        <p class = "teacher">Aqsa Younas</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@Lab_#1@Aqsa_Younas</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Programming Fundamentals</p>
+                                    
+                                    <p class = "right">Room #3</p>
+                            
+                        <p class = "teacher">Dr. Rabia Maqsood</p>
+                        <!-- <p class="left">Programming_Fundamentals@Room_#3@Dr._Rabia_Maqsood</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -354,41 +390,80 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "right">Room #2</p>
+                            
+                        <p class = "teacher">Dr.Mushtaq Ahmad</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@Room_#2@Dr.Mushtaq_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Calculus and Analytical Geometry</p>
-                                    
-                                    <p class = "right">Room #5</p>
-                            
-                        <p class = "teacher">Dr.Mushtaq Ahmad</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@Room_#5@Dr.Mushtaq_Ahmad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                     <td colspan=1>
                         <p class="left">Programming Fundamentals</p>
                                     
-                                    <p class = "right">Room #10</p>
+                                    <p class = "right">Room #2</p>
                             
                         <p class = "teacher">Dr. Rabia Maqsood</p>
-                        <!-- <p class="left">Programming_Fundamentals@Room_#10@Dr._Rabia_Maqsood</p>
+                        <!-- <p class="left">Programming_Fundamentals@Room_#2@Dr._Rabia_Maqsood</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
+                        <p class="left">Islamic Studies/Ethics</p>
                                     
-                                    <p class = "right">Room #4</p>
+                                    <p class = "right">Room #2</p>
                             
-                        <p class = "teacher">Farah Iqbal</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@Room_#4@Farah_Iqbal</p>
+                        <p class = "teacher">Zia Ahmad</p>
+                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#2@Zia_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+
+        </tr>
+<!-- Friday -->
+        <tr>
+            <td class="center">
+                <b>Friday</b>
+            </td>
+            
+                
+                    <td colspan=2>
+                        <p class="left">Programming Fundamentals - Lab</p>
+                                    
+                                    <p class = "right">Lab #2</p>
+                            
+                        <p class = "teacher">Muhammad Azeem Iftikhar</p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@Lab_#2@Muhammad_Azeem_Iftikhar</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "right">Room #1</p>
+                            
+                        <p class = "teacher">Dr.Mushtaq Ahmad</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@Room_#1@Dr.Mushtaq_Ahmad</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -405,52 +480,16 @@ td{
                         <p class="teacher"></p> --></td>
                 
             
-
-        </tr>
-<!-- Friday -->
-        <tr>
-            <td class="center">
-                <b>Friday</b>
-            </td>
-            
                 
                     <td colspan=1>
                         <p class="left">Islamic Studies/Ethics</p>
                                     
-                                    <p class = "right">Room #6</p>
-                            
-                        <p class = "teacher">Zia Ahmad</p>
-                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#6@Zia_Ahmad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=2>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
-                                    
-                                    <p class = "right">Lab #4</p>
-                            
-                        <p class = "teacher">Aqsa Younas</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@Lab_#4@Aqsa_Younas</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-            
-                
-                    <td colspan=2>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
                                     <p class = "right">Room #3</p>
                             
-                        <p class = "teacher">Amna Farooq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@Room_#3@Amna_Farooq</p>
-                        <p class="right">2</p>
+                        <p class = "teacher">Zia Ahmad</p>
+                        <!-- <p class="left">Islamic_Studies/Ethics@Room_#3@Zia_Ahmad</p>
+                        <p class="right">1</p>
                         <p class="teacher"></p> --></td>
-                
-            
                 
             
 

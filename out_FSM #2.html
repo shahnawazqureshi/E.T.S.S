@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm;
+  height: 210mm; removed to see
   border-collapse: collapse;
 }
 
@@ -127,6 +127,7 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
+/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -135,9 +136,21 @@ tbody td>div {
 {
     margin-left: 4px;
 }
+*/
 td{
-  height:175px;
+  /* height:175px; removed for 1. */
   width:150px;
+}
+
+/* Added for 2. */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 6px;
+}
+
+.room {
+  text-align: right;
 }
 
 
@@ -188,20 +201,22 @@ td{
                 
                 
                     <td colspan=1>
-                        <p class="left">Differential Equations</p>
-                                    
-                                    <p class = "right">CS-3B</p>
-                            
-                        <p class = "teacher">Arfan Shahzad</p>
-                        <!-- <p class="left">Differential_Equations@CS-3B@Arfan_Shahzad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">SE-1B</span>
+                            
+                        <span class = "room">Bushra Niaz</span>
+                        </p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@SE-1B@Bushra_Niaz</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -219,10 +234,21 @@ td{
                     <td colspan=1>
                         <p class="left">Calculus and Analytical Geometry</p>
                                     
-                                    <p class = "right">CS-1E</p>
+                                    <p class = "info">
+                                    <span class = "teacher">SE-1A</span>
                             
-                        <p class = "teacher">Dr. Mushtaq Ahmad</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1E@Dr._Mushtaq_Ahmad</p>
+                        <span class = "room">Bushra Niaz<hr>Finance & Accounting</span>
+                        </p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@SE-1A@Bushra_Niaz<hr>Finance_&_Accounting@CS-3A@Agha_Mureed_Ahmad_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --><p class="left"></p>
+                                    
+                                    <p class = "info">
+                                    <span class = "teacher">CS-3A</span>
+                            
+                        <span class = "room">Agha Mureed Ahmad Khan</span>
+                        </p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@SE-1A@Bushra_Niaz<hr>Finance_&_Accounting@CS-3A@Agha_Mureed_Ahmad_Khan</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -247,7 +273,14 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Linear Algebra</p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Ghilmana Sarmad</p>
+                        <!-- <p class="left">Linear_Algebra@CS-3A@Ghilmana_Sarmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -269,22 +302,12 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
                         <p class="left">Calculus and Analytical Geometry</p>
                                     
-                                    <p class = "right">SE-1A</p>
+                                    <p class = "right">CS-1E</p>
                             
-                        <p class = "teacher">Bushra Niaz</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@SE-1A@Bushra_Niaz</p>
+                        <p class = "teacher">Dr. Mushtaq Ahmad</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1E@Dr._Mushtaq_Ahmad</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -297,6 +320,23 @@ td{
                 
                     <td colspan=1>
                         </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Differential Equations</p>
+                                    
+                                    <p class = "right">CS-3B</p>
+                            
+                        <p class = "teacher">Arfan Shahzad</p>
+                        <!-- <p class="left">Differential_Equations@CS-3B@Arfan_Shahzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
         </tr>
@@ -328,14 +368,7 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Linear Algebra</p>
-                                    
-                                    <p class = "right">SE-3A</p>
-                            
-                        <p class = "teacher">Ghilmana Sarmad</p>
-                        <!-- <p class="left">Linear_Algebra@SE-3A@Ghilmana_Sarmad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
 
@@ -348,26 +381,7 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Finance & Accounting</p>
-                                    
-                                    <p class = "right">CS-3A</p>
-                            
-                        <p class = "teacher">Agha Mureed Ahmad Khan</p>
-                        <!-- <p class="left">Finance_&_Accounting@CS-3A@Agha_Mureed_Ahmad_Khan</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Calculus and Analytical Geometry</p>
-                                    
-                                    <p class = "right">SE-1B</p>
-                            
-                        <p class = "teacher">Bushra Niaz</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@SE-1B@Bushra_Niaz</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
@@ -377,14 +391,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Finance & Accounting</p>
-                                    
-                                    <p class = "right">CS-3E</p>
-                            
-                        <p class = "teacher">Agha Mureed Ahmad Khan</p>
-                        <!-- <p class="left">Finance_&_Accounting@CS-3E@Agha_Mureed_Ahmad_Khan</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
                 
