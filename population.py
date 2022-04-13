@@ -391,7 +391,8 @@ def apply_mutation(chromosome, t_sections, lec_index):
 
 def genetic_algo():
     best_solution = None
-    max_iter = 50
+    total_time = 0
+    max_iter = 250
     population = initial_population()
     #population = parent_selection(population.copy())
     count = 0
@@ -400,6 +401,7 @@ def genetic_algo():
     # f = open("Folder/population 0.txt", "w")
     # f.write(str(population))
     for i in range(max_iter):
+        start = time.perf_counter()
         print("Generation " + str(i) + " going on.....")
         population1 = apply_crossover(population, (len(population) - 1), (len(population[0].chromosome)))
         population = parent_selection(copy.deepcopy(population1))
@@ -420,6 +422,11 @@ def genetic_algo():
 
         print("Generation " + str(i) + " Done!.....")
         print("Best Solution Fitness: " + str(best_solution.fitness))
+        stop = time.perf_counter()
+        print("Finished this Step in ", (round(((stop-start) / 60), 2)), " minutes.")
+        total_time += ((stop-start) / 60)
+        print("Total Time: ", round(total_time, 2), " minutes")
+        print("---------------------------------")
         # input("")
         # if regen > 7:
         #     print("Re-Generating Population")
@@ -530,8 +537,8 @@ if __name__ == "__main__":
     ga_solution = genetic_algo()
     
     best_solution = copy.deepcopy(ga_solution.chromosome)
-    print("Genetic Algorithm's Solution's Fitness Value: ", ga_solution.fitness)
-    best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
+    # print("Genetic Algorithm's Solution's Fitness Value: ", ga_solution.fitness)
+    # best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
     best_solution = assign_rooms(best_solution, reg_data)
     get_student_clashes_data(best_solution, reg_data)
     get_teacher_clashes_data(best_solution, reg_data)
@@ -542,4 +549,4 @@ if __name__ == "__main__":
     store_new_timetable(best_solution, reg_data)
     print("\n--------------------------------------\n")
     print("All Done!!!")
-    print("Final Fitness Value: ", best_fitness)
+    print("Final Fitness Value: ", ga_solution.fitness)

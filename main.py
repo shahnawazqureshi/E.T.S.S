@@ -1,9 +1,9 @@
 ## IMPORTS
 import sys
 import os
-from PyQt5.sip import delete
-from PySide2 import shiboken2
-# import iconify as ico
+# from PyQt5.sip import delete
+# from PySide2 import shiboken2
+import iconify as ico
 from iconify.qt import QtGui as IconQtGui, QtWidgets as IconQtWidgets
 import PySide2
 import mysql.connector as mc

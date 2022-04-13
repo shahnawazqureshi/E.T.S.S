@@ -22,7 +22,7 @@ table>caption {
 
 table {
   width: 297mm;
-  height: 210mm; removed to see
+  height: 210mm;
   border-collapse: collapse;
 }
 
@@ -127,7 +127,6 @@ tbody td>div {
     margin-left: 6px;
     /*margin-top: 10px;*/
 }
-/* Remove for 2.
 .right
 {
     text-align: right;  margin-right: 4px;
@@ -136,21 +135,9 @@ tbody td>div {
 {
     margin-left: 4px;
 }
-*/
 td{
-  /* height:175px; removed for 1. */
+  height:175px;
   width:150px;
-}
-
-/* Added for 2. */
-.info {
-  display: flex;
-  justify-content: space-between;
-  margin: auto 6px;
-}
-
-.room {
-  text-align: right;
 }
 
 
@@ -217,8 +204,7 @@ td{
                                     {%- endfor -%}
                                     </p>
                                     {% set __ = count.append(1) %}
-                                    <p class = "info">
-                                    <span class = "teacher">
+                                    <p class = "right">
                                     {%- for z in range(count|length, course[0]|length) -%}
                                         {%- if course[0][count|length] == '@' -%}
                                         {%- else -%}
@@ -231,9 +217,9 @@ td{
                                         {%- endif -%}
                                     {%- endfor -%}
 
-                                </span>
+                                </p>
                             {% set __ = count.append(1) %}
-                        <span class = "room">
+                        <p class = "teacher">
                         {%- for z in range(count|length, course[0]|length) -%}
                             {%- if course[0][count|length] == '@' -%}
                             {%- else -%}
@@ -245,7 +231,6 @@ td{
                                 {%- endif -%}
                             {%- endif -%}
                         {%- endfor -%}  
-                    	</span>
                         </p>
                         <!-- <p class="left">{{course[0]}}</p>
                         <p class="right">{{course[1]}}</p>
