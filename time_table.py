@@ -7,7 +7,7 @@ class Timetable:
         self.binary_val = bin(int(id))[2:].zfill(8)
     def __repr__(self) -> str:
         return f'{self.id} {self.slots}'
-        
+
 class Slot:
     def __init__(self,day,slot,room = "1"):
         self.day  = day
@@ -36,6 +36,7 @@ def read_timetable(reg_data):
                 list.append(slot)
         if list:
             timetable.append(Timetable(reg_course.id, list))
+    print(timetable)
     return timetable
 
 
@@ -53,4 +54,6 @@ def store_new_timetable(timetable, reg_data):
                 if (room_id is not "1"):
                     db.insert_reg_course_timetable(reg_data[reg_course.id].db_id, reg_course.slots[slot_num].day,
                                             reg_course.slots[slot_num].slot, room_id)
+                else:
+                    print("Not Saved: ", reg_course)
 
