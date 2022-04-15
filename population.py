@@ -392,7 +392,7 @@ def apply_mutation(chromosome, t_sections, lec_index):
 def genetic_algo():
     best_solution = None
     total_time = 0
-    max_iter = 250
+    max_iter = 50
     population = initial_population()
     #population = parent_selection(population.copy())
     count = 0
@@ -537,8 +537,8 @@ if __name__ == "__main__":
     ga_solution = genetic_algo()
     
     best_solution = copy.deepcopy(ga_solution.chromosome)
-    # print("Genetic Algorithm's Solution's Fitness Value: ", ga_solution.fitness)
-    # best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
+    print("Genetic Algorithm's Solution's Fitness Value: ", ga_solution.fitness)
+    best_solution, best_fitness = main_fun(best_solution, ga_solution.fitness)
     best_solution = assign_rooms(best_solution, reg_data)
     get_student_clashes_data(best_solution, reg_data)
     get_teacher_clashes_data(best_solution, reg_data)

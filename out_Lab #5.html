@@ -2,10 +2,33 @@
 
 <html>
   <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
 :root {
   --border-strong: 3px solid #777;
   --border-normal: 1px solid gray;
 }
+
+.cell p{
+  margin: 0;
+}
+
+.cell hr{
+  margin: 0;
+  height: 2px;
+  background-color: black;
+  padding: 0;
+} 
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -98,10 +121,6 @@ tbody td>div {
   height: 10mm;
 }
 
-
-/* td contents */
-
-
 .note {
   font-size: 3mm;
 }
@@ -121,25 +140,36 @@ tbody td>div {
   text-align: center;
 
 }
-.left
-{
-    text-align: left;
-    margin-left: 6px;
-    /*margin-top: 10px;*/
-}
-.right
-{
-    text-align: right;  margin-right: 4px;
-}
-.teacher
-{
-    margin-left: 4px;
-}
+
 td{
   height:175px;
   width:150px;
 }
 
+
+.cell{
+ height: 100%; 
+ display: flex;
+ flex-direction: column;
+}
+
+.class{
+  flex-basis: 100%;
+  padding: 0 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  background-color: bisque;
+  
+}
+
+.class__information{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
   </style>
 <body>
@@ -180,42 +210,52 @@ td{
                 <b>Monday</b></td>
             
                 
+                <div class = "cell">
+                
+                    <td colspan=2>
+                        <p class="left">Operating Systems - Lab</p>
+                                    
+                                    <p class = "right">CS-5E</p>
+                            
+                        <p class = "teacher">Muhammad Yousaf</p>
+                        <!-- <p class="left">Operating_Systems_-_Lab@CS-5E@Muhammad_Yousaf</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+                </div>
+            
+                
+                <div class = "cell">
+                
+                </div>
+            
+                
+                <div class = "cell">
                 
                     <td colspan=1>
                         </td>
                 
-            
-                
-                
-                    <td colspan=2>
-                        <p class="left">Programming Fundamentals - Lab</p>
-                                    
-                                    <p class = "right">CS-1A</p>
-                            
-                        <p class = "teacher">Mughees Ismail</p>
-                        <!-- <p class="left">Programming_Fundamentals_-_Lab@CS-1A@Mughees_Ismail</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                
+                </div>
             
                 
                     <td rowspan="6" class="center">
                         <h2>L<br>U<br>N<br>C<br>H</h2>
                     </td>
                 
+                <div class = "cell">
                 
                     <td colspan=1>
                         </td>
                 
+                </div>
             
                 
+                <div class = "cell">
                 
                     <td colspan=1>
                         </td>
                 
+                </div>
             
 
         </tr>
@@ -227,41 +267,39 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
                 
             
                 
                     <td colspan=1>
-                        </td>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Data Structures - Lab</p>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=2>
+                        <div class ="cell">
+                        <div class = "class"><p class="left">Introduction to Information and Communication Technology - Lab</p>
                                     
-                                    <p class = "right">SE-3A</p>
+                                    <p class = "right">CS-1F</p>
                             
-                        <p class = "teacher">Aqsa Younas</p>
-                        <!-- <p class="left">Data_Structures_-_Lab@SE-3A@Aqsa_Younas</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        <p class = "teacher">Muhammad Haseeb Arshad</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1F@Muhammad_Haseeb_Arshad</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
                 
             
-                
-                    <td colspan=1>
-                        <p class="left">Data Structures - Lab</p>
-                                    
-                                    <p class = "right">SE-3A</p>
-                            
-                        <p class = "teacher">Aqsa Younas</p>
-                        <!-- <p class="left">Data_Structures_-_Lab@SE-3A@Aqsa_Younas</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
                 
             
         </tr>
@@ -272,18 +310,13 @@ td{
             </td>
             
                 
-                    <td colspan=1>
-                        </td>
-                
-            
-                
                     <td colspan=2>
-                        <p class="left">Software Construction and Development - Lab</p>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
                                     
-                                    <p class = "right">SE-5B</p>
+                                    <p class = "right">CS-1D</p>
                             
-                        <p class = "teacher">Muhammad Azeem Iftikhar</p>
-                        <!-- <p class="left">Software_Construction_and_Development_-_Lab@SE-5B@Muhammad_Azeem_Iftikhar</p>
+                        <p class = "teacher">Aqsa Younas</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1D@Aqsa_Younas</p>
                         <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
@@ -291,13 +324,18 @@ td{
                 
             
                 
+                    <td colspan=1>
+                        </td>
+                
+            
+                
                     <td colspan=2>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                        <p class="left">Programming Fundamentals - Lab</p>
                                     
-                                    <p class = "right">SE-1A</p>
+                                    <p class = "right">CS-1A</p>
                             
-                        <p class = "teacher">Umar Naseer</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@SE-1A@Umar_Naseer</p>
+                        <p class = "teacher">Mughees Ismail</p>
+                        <!-- <p class="left">Programming_Fundamentals_-_Lab@CS-1A@Mughees_Ismail</p>
                         <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
@@ -312,18 +350,13 @@ td{
             </td>
             
                 
-                    <td colspan=1>
-                        </td>
-                
-            
-                
                     <td colspan=2>
-                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                        <p class="left">Data Structures - Lab</p>
                                     
-                                    <p class = "right">CS-1C</p>
+                                    <p class = "right">SE-3A</p>
                             
                         <p class = "teacher">Aqsa Younas</p>
-                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1C@Aqsa_Younas</p>
+                        <!-- <p class="left">Data_Structures_-_Lab@SE-3A@Aqsa_Younas</p>
                         <p class="right">2</p>
                         <p class="teacher"></p> --></td>
                 
@@ -336,8 +369,17 @@ td{
                 
             
                 
-                    <td colspan=1>
-                        </td>
+                    <td colspan=2>
+                        <p class="left">Introduction to Information and Communication Technology - Lab</p>
+                                    
+                                    <p class = "right">CS-1E</p>
+                            
+                        <p class = "teacher">Muiz Qadir</p>
+                        <!-- <p class="left">Introduction_to_Information_and_Communication_Technology_-_Lab@CS-1E@Muiz_Qadir</p>
+                        <p class="right">2</p>
+                        <p class="teacher"></p> --></td>
+                
+            
                 
             
 

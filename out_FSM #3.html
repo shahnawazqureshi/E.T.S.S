@@ -2,10 +2,33 @@
 
 <html>
   <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
 :root {
   --border-strong: 3px solid #777;
   --border-normal: 1px solid gray;
 }
+
+.cell p{
+  margin: 0;
+}
+
+.cell hr{
+  margin: 0;
+  height: 2px;
+  background-color: black;
+  padding: 0;
+} 
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -98,10 +121,6 @@ tbody td>div {
   height: 10mm;
 }
 
-
-/* td contents */
-
-
 .note {
   font-size: 3mm;
 }
@@ -121,25 +140,36 @@ tbody td>div {
   text-align: center;
 
 }
-.left
-{
-    text-align: left;
-    margin-left: 6px;
-    /*margin-top: 10px;*/
-}
-.right
-{
-    text-align: right;  margin-right: 4px;
-}
-.teacher
-{
-    margin-left: 4px;
-}
+
 td{
   height:175px;
   width:150px;
 }
 
+
+.cell{
+ height: 100%; 
+ display: flex;
+ flex-direction: column;
+}
+
+.class{
+  flex-basis: 100%;
+  padding: 0 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  background-color: bisque;
+  
+}
+
+.class__information{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
   </style>
 <body>
@@ -180,12 +210,30 @@ td{
                 <b>Monday</b></td>
             
                 
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        <p class="left">Differential Equations</p>
+                                    
+                                    <p class = "right">CS-3C</p>
+                            
+                        <p class = "teacher">Arfan Shahzad</p>
+                        <!-- <p class="left">Differential_Equations@CS-3C@Arfan_Shahzad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+                </div>
+            
+                
+                <div class = "cell">
                 
                     <td colspan=1>
                         </td>
                 
+                </div>
             
                 
+                <div class = "cell">
                 
                     <td colspan=1>
                         <p class="left">Calculus and Analytical Geometry</p>
@@ -197,8 +245,92 @@ td{
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
+                </div>
             
                 
+                    <td rowspan="6" class="center">
+                        <h2>L<br>U<br>N<br>C<br>H</h2>
+                    </td>
+                
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        </td>
+                
+                </div>
+            
+                
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        <p class="left">Calculus and Analytical Geometry</p>
+                                    
+                                    <p class = "right">CS-1F</p>
+                            
+                        <p class = "teacher">Dr. Mushtaq Ahmad</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1F@Dr._Mushtaq_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+                </div>
+            
+
+        </tr>
+<!-- Tuesday -->
+        <tr>
+            <td class="center">
+                <b>Tuesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"><p class="left">Linear Algebra</p>
+                                    
+                                    <p class = "right">SE-3B</p>
+                            
+                        <p class = "teacher">Ghilmana Sarmad</p>
+                        <!-- <p class="left">Linear_Algebra@SE-3B@Ghilmana_Sarmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+        </tr>
+<!-- Wednesday -->
+        <tr>
+            <td class="center">
+                <b>Wednesday</b>
+            </td>
+            
                 
                     <td colspan=1>
                         <p class="left">Linear Algebra</p>
@@ -212,40 +344,38 @@ td{
                 
             
                 
-                    <td rowspan="6" class="center">
-                        <h2>L<br>U<br>N<br>C<br>H</h2>
-                    </td>
+                    <td colspan=1>
+                        </td>
                 
+            
                 
                     <td colspan=1>
                         </td>
                 
             
                 
-                
                     <td colspan=1>
                         </td>
                 
             
-
-        </tr>
-<!-- Tuesday -->
-        <tr>
-            <td class="center">
-                <b>Tuesday</b>
-            </td>
-            
                 
                     <td colspan=1>
-                        <p class="left">Calculus and Analytical Geometry</p>
+                        <p class="left">Linear Algebra</p>
                                     
-                                    <p class = "right">CS-3A</p>
+                                    <p class = "right">SE-3B</p>
                             
-                        <p class = "teacher">Bushra Niaz</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-3A@Bushra_Niaz</p>
+                        <p class = "teacher">Ghilmana Sarmad</p>
+                        <!-- <p class="left">Linear_Algebra@SE-3B@Ghilmana_Sarmad</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
             
                 
                     <td colspan=1>
@@ -274,72 +404,6 @@ td{
                         </td>
                 
             
-        </tr>
-<!-- Wednesday -->
-        <tr>
-            <td class="center">
-                <b>Wednesday</b>
-            </td>
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-        </tr>
-<!-- Thursday -->
-        <tr>
-            <td class="center">
-                <b>Thursday</b>
-            </td>
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Differential Equations</p>
-                                    
-                                    <p class = "right">CS-3C</p>
-                            
-                        <p class = "teacher">Arfan Shahzad</p>
-                        <!-- <p class="left">Differential_Equations@CS-3C@Arfan_Shahzad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
                 
                     <td colspan=1>
                         </td>
@@ -355,36 +419,29 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Linear Algebra</p>
-                                    
-                                    <p class = "right">SE-3B</p>
-                            
-                        <p class = "teacher">Ghilmana Sarmad</p>
-                        <!-- <p class="left">Linear_Algebra@SE-3B@Ghilmana_Sarmad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
                         <p class="left">Calculus and Analytical Geometry</p>
                                     
-                                    <p class = "right">CS-1F</p>
+                                    <p class = "right">CS-3A</p>
                             
-                        <p class = "teacher">Dr. Mushtaq Ahmad</p>
-                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-1F@Dr._Mushtaq_Ahmad</p>
+                        <p class = "teacher">Bushra Niaz</p>
+                        <!-- <p class="left">Calculus_and_Analytical_Geometry@CS-3A@Bushra_Niaz</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
                 
             
                 

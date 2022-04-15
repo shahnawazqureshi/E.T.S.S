@@ -2,10 +2,33 @@
 
 <html>
   <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
 :root {
   --border-strong: 3px solid #777;
   --border-normal: 1px solid gray;
 }
+
+.cell p{
+  margin: 0;
+}
+
+.cell hr{
+  margin: 0;
+  height: 2px;
+  background-color: black;
+  padding: 0;
+} 
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -98,10 +121,6 @@ tbody td>div {
   height: 10mm;
 }
 
-
-/* td contents */
-
-
 .note {
   font-size: 3mm;
 }
@@ -121,25 +140,36 @@ tbody td>div {
   text-align: center;
 
 }
-.left
-{
-    text-align: left;
-    margin-left: 6px;
-    /*margin-top: 10px;*/
-}
-.right
-{
-    text-align: right;  margin-right: 4px;
-}
-.teacher
-{
-    margin-left: 4px;
-}
+
 td{
   height:175px;
   width:150px;
 }
 
+
+.cell{
+ height: 100%; 
+ display: flex;
+ flex-direction: column;
+}
+
+.class{
+  flex-basis: 100%;
+  padding: 0 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  background-color: bisque;
+  
+}
+
+.class__information{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
   </style>
 <body>
@@ -180,48 +210,7 @@ td{
                 <b>Monday</b></td>
             
                 
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        <p class="left">Software Design and Analysis</p>
-                                    
-                                    <p class = "right">CS-5C</p>
-                            
-                        <p class = "teacher">Dr. Uzair Iqbal</p>
-                        <!-- <p class="left">Software_Design_and_Analysis@CS-5C@Dr._Uzair_Iqbal</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                
-                    <td colspan=1>
-                        <p class="left">Software Design and Analysis</p>
-                                    
-                                    <p class = "right">CS-5A</p>
-                            
-                        <p class = "teacher">Dr. Muhammad Bilal</p>
-                        <!-- <p class="left">Software_Design_and_Analysis@CS-5A@Dr._Muhammad_Bilal</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td rowspan="6" class="center">
-                        <h2>L<br>U<br>N<br>C<br>H</h2>
-                    </td>
-                
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
+                <div class = "cell">
                 
                     <td colspan=1>
                         <p class="left">Software Design and Analysis</p>
@@ -233,6 +222,50 @@ td{
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
+                </div>
+            
+                
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        </td>
+                
+                </div>
+            
+                
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        <p class="left">Data Structures</p>
+                                    
+                                    <p class = "right">SE-3B</p>
+                            
+                        <p class = "teacher">Asif Ameer</p>
+                        <!-- <p class="left">Data_Structures@SE-3B@Asif_Ameer</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+                </div>
+            
+                
+                    <td rowspan="6" class="center">
+                        <h2>L<br>U<br>N<br>C<br>H</h2>
+                    </td>
+                
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        </td>
+                
+                </div>
+            
+                
+                <div class = "cell">
+                
+                    <td colspan=1>
+                        </td>
+                
+                </div>
             
 
         </tr>
@@ -244,34 +277,51 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Software Testing</p>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
+                
+            
+                
+                    <td colspan=1>
+                        <div class ="cell">
+                        <div class = "class"><p class="left">Software Design and Analysis</p>
                                     
-                                    <p class = "right">CS-7E</p>
+                                    <p class = "right">CS-5C</p>
                             
                         <p class = "teacher">Dr. Uzair Iqbal</p>
-                        <!-- <p class="left">Software_Testing@CS-7E@Dr._Uzair_Iqbal</p>
+                        <!-- <p class="left">Software_Design_and_Analysis@CS-5C@Dr._Uzair_Iqbal</p>
                         <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
                 
             
                 
                     <td colspan=1>
-                        </td>
+                        <div class ="cell">
+                        <div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
                 
             
                 
                     <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
-                
-            
-                
-                    <td colspan=1>
-                        </td>
+                        <div class ="cell">
+                        <div class = "class"><p class="left">Software Design and Analysis</p>
+                                    
+                                    <p class = "right">CS-5A</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Bilal</p>
+                        <!-- <p class="left">Software_Design_and_Analysis@CS-5A@Dr._Muhammad_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
+                    </td>
                 
             
         </tr>
@@ -315,12 +365,12 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Fundamentals of Software Project Management</p>
+                        <p class="left">Software Testing</p>
                                     
                                     <p class = "right">CS-7E</p>
                             
-                        <p class = "teacher">Dr. Muhammad Bilal</p>
-                        <!-- <p class="left">Fundamentals_of_Software_Project_Management@CS-7E@Dr._Muhammad_Bilal</p>
+                        <p class = "teacher">Dr. Uzair Iqbal</p>
+                        <!-- <p class="left">Software_Testing@CS-7E@Dr._Uzair_Iqbal</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -337,7 +387,14 @@ td{
             
                 
                     <td colspan=1>
-                        </td>
+                        <p class="left">Fundamentals of Software Project Management</p>
+                                    
+                                    <p class = "right">CS-7E</p>
+                            
+                        <p class = "teacher">Dr. Muhammad Bilal</p>
+                        <!-- <p class="left">Fundamentals_of_Software_Project_Management@CS-7E@Dr._Muhammad_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
                 
             
                 
@@ -355,14 +412,7 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">Data Structures</p>
-                                    
-                                    <p class = "right">SE-3B</p>
-                            
-                        <p class = "teacher">Asif Ameer</p>
-                        <!-- <p class="left">Data_Structures@SE-3B@Asif_Ameer</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 

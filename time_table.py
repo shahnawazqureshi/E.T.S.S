@@ -7,7 +7,7 @@ class Timetable:
         self.binary_val = bin(int(id))[2:].zfill(8)
     def __repr__(self) -> str:
         return f'{self.id} {self.slots}'
-
+        
 class Slot:
     def __init__(self,day,slot,room = "1"):
         self.day  = day

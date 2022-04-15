@@ -31,7 +31,7 @@ from clashed_courses import get_clashed_rooms
 
 def get_room_clashes_count(timetable, reg_data):
     clashed_sections = get_clashed_rooms(timetable)
-    count = 1
+    count = 0
     i = 0
     # f = open("room_final_clashes.txt", "w")
     # for k, v in clashed_sections.items():
@@ -66,6 +66,7 @@ def get_room_clashes_data(timetable, reg_data):
         for lec in range(0, size_of_classes):
             for x in range(lec + 1, size_of_classes):
                 if (v[lec][1] == v[x][1]):
+                   
                     # print(v[lec][1], " ", v[x][1])
                     f.write("Clash #" + str(count) + "\t" + k + "\n" + v[lec][1])
                     f.write("\n" + courses_data[reg_data[v[lec][0]].course_id].name + "\t" + sections_data[reg_data[v[lec][0]].section_id].name)
