@@ -557,4 +557,4 @@ if __name__ == "__main__":
     store_new_timetable(best_solution, reg_data)
     print("\n--------------------------------------\n")
     print("All Done!!!")
-    print("Final Fitness Value: ", best_solution.fitness)
+    print("Final Fitness Value: ", best_fitness)
