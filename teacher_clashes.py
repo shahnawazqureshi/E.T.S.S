@@ -89,3 +89,19 @@ def get_teacher_clashes_count(timetable, reg_data):
         i += 1
     
     return count
+
+
+def get_courses_with_teacher_clashes(timetable, reg_data):
+    clashed_sections = get_clashed_courses(timetable)
+    count = 0
+    courses_list = []
+    for _, v in clashed_sections.items():
+        size_of_classes = len(v)
+        for lec in range(0, size_of_classes):
+            for x in range(lec + 1, size_of_classes):    
+                if (teachers_data[reg_data[v[lec]].teacher_id].name == teachers_data[reg_data[v[x]].teacher_id].name):
+                    courses_list.append(v[lec])
+                    courses_list.append(v[x])
+           
+    
+    return courses_list

@@ -27,7 +27,7 @@ def read_timetable(reg_data):
     for reg_course in reg_data:
         list = []
         for i in timetable_data:
-            if (i[0] == reg_course.id):
+            if (i[0] == reg_course.db_id):
                 for room in rooms_data: # Getting actual Room ID 
                     if room.db_id == i[3]:
                         room_id = room.id
@@ -36,7 +36,6 @@ def read_timetable(reg_data):
                 list.append(slot)
         if list:
             timetable.append(Timetable(reg_course.id, list))
-    print(timetable)
     return timetable
 
 

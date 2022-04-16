@@ -145,3 +145,21 @@ def get_section_clashes_lab(t_section, chromosome, reg_data, lec_index):
 
     return True
     
+
+
+def get_courses_with_student_clashes(timetable, reg_data):
+    courses_list = []
+    clashed_sections = get_clashed_courses(timetable)
+    # f = open("damn_man.txt", "w")
+    for _, v in clashed_sections.items():
+        size_of_classes = len(v)
+        for lec in range(0, size_of_classes):
+            for student in reg_data[v[lec]].students:
+                for x in range(lec + 1, size_of_classes):
+                    for z in reg_data[v[x]].students:
+                        if (student == z):
+                            
+                            courses_list.append(v[lec])
+                            courses_list.append(v[x])
+                            
+    return courses_list

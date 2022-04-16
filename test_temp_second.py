@@ -1,3 +1,8 @@
+# list1 = [1, 2, 3]
+# list2 = [4, 5, 6, 6, 6, 7]
+
+# list1.extend(list2)
+# print(list1)
 
 # arr = "18F-0128"
 # email = "f" + arr[0:2] + arr[4:] + "@cfd.nu.edu.pk"

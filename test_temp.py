@@ -488,17 +488,20 @@ if __name__ == "__main__":
         i = sections.sections_data[reg_course.section_id].name[:5] # Getting Section Name. 
         if (i) not in all_sections:
             all_sections.append(i)
-    sol = copy.deepcopy(pop[0].chromosome)
-    sol.sort(key=reg_id)
-    count = 0
-    # for k in sol:
-    #     print(count, "\t",  k, "\t", sol[count])
-    #     count += 1
-    for li in all_sections:
-        chr[li] = pop[0].t_sections[li]
-        pop[0].t_sections
-    sol = assign_rooms(sol, reg_data)
-    store_new_timetable(sol, reg_data)
+
+    sol = read_timetable(reg_data)
+    print("Student Clashes: ", get_student_clashes(sol, reg_data))
+    # sol = copy.deepcopy(pop[0].chromosome)
+    # sol.sort(key=reg_id)
+    # count = 0
+    # # for k in sol:
+    # #     print(count, "\t",  k, "\t", sol[count])
+    # #     count += 1
+    # for li in all_sections:
+    #     chr[li] = pop[0].t_sections[li]
+    #     pop[0].t_sections
+    # sol = assign_rooms(sol, reg_data)
+    # store_new_timetable(sol, reg_data)
     
     # sol = read_timetable(reg_data)
     # for k in sol:
@@ -513,24 +516,24 @@ if __name__ == "__main__":
     # for ind in chr[all_sections[23]]:
     #     print(ind, "\t")
     #     print(sol[ind[0]])
-    execute_function(pop[0].chromosome, 0)
-    print(pop[0].fitness)
-    for li in range(0, len(chr)):
+    # execute_function(pop[0].chromosome, 0)
+    # print(pop[0].fitness)
+    # for li in range(0, len(chr)):
 
-        for index in range(0, len(chr[all_sections[li]])):
-            chr[all_sections[li]] = apply_mutation(chr[all_sections[li]][index], chr[all_sections[li]], index)
-            #print(chr[all_sections[0]][index])
-            # li.append(Timetable(chr[all_sections[23]][index][0], chr[all_sections[23]][index][1]))
+    #     for index in range(0, len(chr[all_sections[li]])):
+    #         chr[all_sections[li]] = apply_mutation(chr[all_sections[li]][index], chr[all_sections[li]], index)
+    #         #print(chr[all_sections[0]][index])
+    #         # li.append(Timetable(chr[all_sections[23]][index][0], chr[all_sections[23]][index][1]))
     
-    for li in range(0, len(chr)):
+    # for li in range(0, len(chr)):
 
-        for ind in chr[all_sections[li]]:
-            sol[ind[0]].slots = ind[1]
+    #     for ind in chr[all_sections[li]]:
+    #         sol[ind[0]].slots = ind[1]
     # print(chr[all_sections[0]])
     # print(li)
     # pop[0].t_sections[all_sections[23]] = chr[all_sections[23]]
-    print(get_fitness(sol))
-    execute_function(sol, 1)
+    # print(get_fitness(sol))
+    # execute_function(sol, 1)
 
 
     # best_solution = copy.deepcopy(pop[0].chromosome)

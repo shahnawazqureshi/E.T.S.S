@@ -1,7 +1,7 @@
 import copy
 from registered_courses import *
 from rooms_timetable import generate_rooms_timetable
-from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data
+from teacher_clashes import get_teacher_clashes_count, get_teacher_clashes_data, get_courses_with_teacher_clashes
 from time_table import *
 from rooms import *
 from room_clashes import get_room_clashes_count, get_room_clashes_data
@@ -26,7 +26,7 @@ class Population:
 
     def __repr__(self):
         return ('(Population Number: {0}\Student Clashes: {1}\nChromosome: \n{2})\n'.format(self.number, self.fitness,
-                                                                                     self.chromosome))
+                                                                                        self.chromosome))
     
 all_sections = []
 
@@ -38,6 +38,12 @@ def get_fitness(timetable):
     return [teacher_clashes * 5 + student_clashes * 2.5 + room_clashes * 5 + teacher_slot_violations * 0.75, 
     ("Student Clashes: " + str(student_clashes), "Teacher Clashes: " + str(teacher_clashes),
     "Room Clashes: " + str(room_clashes), "Teacher Slot Violations: " + str(teacher_slot_violations))]
+
+def get_courses_with_clashes(timetable):
+    student_clashes_courses = get_courses_with_student_clashes(timetable, reg_data)
+    teacher_clashes_courses = get_courses_with_teacher_clashes(timetable, reg_data)
+    student_clashes_courses.extend(teacher_clashes_courses)
+    return list(set(student_clashes_courses))
 
 def initial_population():
     
@@ -452,11 +458,13 @@ def main_fun(best_solution, best_fitness):
         print("-------------- ITERATION #", count, " ----------------------") 
         count += 1
         start = time.perf_counter()
+        clashed_courses = get_courses_with_clashes(best_solution)
         with concurrent.futures.ProcessPoolExecutor() as executor: 
             # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
             arguments = []
             for index in range(0, len(best_solution)):
-                arguments.append((index, best_solution, reg_data, best_fitness))
+                if index in clashed_courses: 
+                    arguments.append((index, best_solution, reg_data, best_fitness))
             results = executor.map(Hill_Climbing, arguments)
             for chromosome, result, ch_course, ch_section in results:
                 if result[0] < best_fitness[0]:
