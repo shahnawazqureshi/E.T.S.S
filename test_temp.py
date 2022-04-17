@@ -491,6 +491,9 @@ if __name__ == "__main__":
 
     sol = read_timetable(reg_data)
     print("Student Clashes: ", get_student_clashes(sol, reg_data))
+    # sol = assign_rooms(sol, reg_data)
+    execute_function(sol, 1001)
+    generate_rooms_timetable(sol, reg_data)
     # sol = copy.deepcopy(pop[0].chromosome)
     # sol.sort(key=reg_id)
     # count = 0

@@ -398,7 +398,7 @@ def apply_mutation(chromosome, t_sections, lec_index):
 def genetic_algo():
     best_solution = None
     total_time = 0
-    max_iter = 50
+    max_iter = 10
     population = initial_population()
     #population = parent_selection(population.copy())
     count = 0
@@ -459,6 +459,10 @@ def main_fun(best_solution, best_fitness):
         count += 1
         start = time.perf_counter()
         clashed_courses = get_courses_with_clashes(best_solution)
+        print("All Clashed Courses")
+        print(clashed_courses)
+        for r in clashed_courses:
+            print(courses_data[reg_data[r].course_id].name, end = ", ")
         with concurrent.futures.ProcessPoolExecutor() as executor: 
             # results = [executor.submit(Hill_Climbing, ) for row in range(0, 2)]
             arguments = []

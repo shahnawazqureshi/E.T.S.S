@@ -28,33 +28,37 @@ for data in temp:
 
 # for data in rooms_data: 
 #     print(data.id, "\t", data.name, "\t", data.department, "\t", data.type)
+teacher_rooms_preferences_db = db.db.get_all_teacher_room_preferences()
+
+def get_teacher_rooms_preferences():
+    teachers_room_preferences = {}
+    rooms_preference_count = {} 
+    count = 0 
+    for data in teacher_rooms_preferences_db:
+        for teacher in teachers_data:
+            if teacher.db_id == data[1]:
+                teacher_id = teacher.id
+                break
+        for room in rooms_data:
+            if room.db_id == data[2]:
+                room_id = room.id
+        room_preference = Room_Preference(count, teacher_id, room_id)
+        if teacher_id not in teachers_room_preferences.keys():
+            teachers_room_preferences[teacher_id] = []
+        teachers_room_preferences[teacher_id].append(room_preference)
+        
+        # Adding the Room to Room Preference Count
+        if room_id not in rooms_preference_count.keys():
+            rooms_preference_count[room_id] = 2
+        else:
+            rooms_preference_count[room_id] += 2
+
+        count += 1 
+
+    return teachers_room_preferences, rooms_preference_count
 
 
 
-temp = db.db.get_all_teacher_room_preferences()
-teachers_room_preferences = {}
-rooms_preference_count = {} 
-count = 0 
-for data in temp:
-    for teacher in teachers_data:
-        if teacher.db_id == data[1]:
-            teacher_id = teacher.id
-            break
-    for room in rooms_data:
-        if room.db_id == data[2]:
-            room_id = room.id
-    room_preference = Room_Preference(count, teacher_id, room_id)
-    if teacher_id not in teachers_room_preferences.keys():
-        teachers_room_preferences[teacher_id] = []
-    teachers_room_preferences[teacher_id].append(room_preference)
-    
-    # Adding the Room to Room Preference Count
-    if room_id not in rooms_preference_count.keys():
-        rooms_preference_count[room_id] = 2
-    else:
-        rooms_preference_count[room_id] += 2
-
-    count += 1 
 
 
 def get_sorted_preferences(teachers_dictionary, rooms_preferences):
@@ -71,7 +75,7 @@ def assign_rooms(best_solution, reg_data):
         for slot in lec.slots:
             slot.room = "1"
 
-
+    teachers_room_preferences, rooms_preference_count = get_teacher_rooms_preferences()
     total_slots = {}
     # cc = 0
     # # for rr in teachers_data:

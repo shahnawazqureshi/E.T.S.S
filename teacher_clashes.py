@@ -93,7 +93,6 @@ def get_teacher_clashes_count(timetable, reg_data):
 
 def get_courses_with_teacher_clashes(timetable, reg_data):
     clashed_sections = get_clashed_courses(timetable)
-    count = 0
     courses_list = []
     for _, v in clashed_sections.items():
         size_of_classes = len(v)

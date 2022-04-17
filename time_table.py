@@ -32,7 +32,7 @@ def read_timetable(reg_data):
                     if room.db_id == i[3]:
                         room_id = room.id
                         break
-                slot = Slot(i[1], i[2], room_id)
+                slot = Slot(i[1], i[2], rooms_data[room_id].name)
                 list.append(slot)
         if list:
             timetable.append(Timetable(reg_course.id, list))

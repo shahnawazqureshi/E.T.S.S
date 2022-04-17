@@ -2,33 +2,10 @@
 
 <html>
   <style>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body{
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-}
-
 :root {
   --border-strong: 3px solid #777;
   --border-normal: 1px solid gray;
 }
-
-.cell p{
-  margin: 0;
-}
-
-.cell hr{
-  margin: 0;
-  height: 2px;
-  background-color: black;
-  padding: 0;
-} 
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -121,6 +98,10 @@ tbody td>div {
   height: 10mm;
 }
 
+
+/* td contents */
+
+
 .note {
   font-size: 3mm;
 }
@@ -140,36 +121,25 @@ tbody td>div {
   text-align: center;
 
 }
-
+.left
+{
+    text-align: left;
+    margin-left: 6px;
+    /*margin-top: 10px;*/
+}
+.right
+{
+    text-align: right;  margin-right: 4px;
+}
+.teacher
+{
+    margin-left: 4px;
+}
 td{
   height:175px;
   width:150px;
 }
 
-
-.cell{
- height: 100%; 
- display: flex;
- flex-direction: column;
-}
-
-.class{
-  flex-basis: 100%;
-  padding: 0 0.1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  background-color: bisque;
-  
-}
-
-.class__information{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
 
   </style>
 <body>
@@ -210,171 +180,42 @@ td{
                 <b>Monday</b></td>
             
                 
-                <div class = "cell">
-                
-                    <td colspan=2>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">SE-1A1</p>
-                            
-                        <p class = "teacher">Ehtasham-Ul-Haq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@SE-1A1@Ehtasham-Ul-Haq</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></td>
-                
-                </div>
-            
-                
-                <div class = "cell">
-                
-                </div>
-            
-                
-                <div class = "cell">
                 
                     <td colspan=1>
-                        <p class="left">Linear Algebra</p>
+                        <p class="left">Data Mining</p>
                                     
-                                    <p class = "right">CS-1C</p>
+                                    <p class = "right">CS-7A</p>
                             
-                        <p class = "teacher">Amjad Hussain</p>
-                        <!-- <p class="left">Linear_Algebra@CS-1C@Amjad_Hussain</p>
+                        <p class = "teacher">Dr. Rabia Maqsood</p>
+                        <!-- <p class="left">Data_Mining@CS-7A@Dr._Rabia_Maqsood</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
-                </div>
+            
+                
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                
+                    <td colspan=1>
+                        <p class="left">Applied Physics</p>
+                                    
+                                    <p class = "right">CS-1D</p>
+                            
+                        <p class = "teacher">Waheed Ahmad</p>
+                        <!-- <p class="left">Applied_Physics@CS-1D@Waheed_Ahmad</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
             
                 
                     <td rowspan="6" class="center">
                         <h2>L<br>U<br>N<br>C<br>H</h2>
                     </td>
                 
-                <div class = "cell">
-                
-                    <td colspan=1>
-                        <p class="left">Differential Equations</p>
-                                    
-                                    <p class = "right">CS-3E</p>
-                            
-                        <p class = "teacher">Hayat Ali</p>
-                        <!-- <p class="left">Differential_Equations@CS-3E@Hayat_Ali</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-                </div>
-            
-                
-                <div class = "cell">
-                
-                    <td colspan=1>
-                        <p class="left">Islamic Studies/Ethics</p>
-                                    
-                                    <p class = "right">CS-1A</p>
-                            
-                        <p class = "teacher">Rizwanullah</p>
-                        <!-- <p class="left">Islamic_Studies/Ethics@CS-1A@Rizwanullah</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-                </div>
-            
-
-        </tr>
-<!-- Tuesday -->
-        <tr>
-            <td class="center">
-                <b>Tuesday</b>
-            </td>
-            
-                
-                    <td colspan=2>
-                        <div class ="cell">
-                        <div class = "class"><p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">CS-1E1</p>
-                            
-                        <p class = "teacher">Amna Farooq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@CS-1E1@Amna_Farooq</p>
-                        <p class="right">2</p>
-                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
-                    </td>
-                
-            
-                
-            
-                
-                    <td colspan=1>
-                        <div class ="cell">
-                        <div class = "class"><p class="left">Marketing Management</p>
-                                    
-                                    <p class = "right">CS-3D</p>
-                            
-                        <p class = "teacher">Syed Zeeshan Haider</p>
-                        <!-- <p class="left">Marketing_Management@CS-3D@Syed_Zeeshan_Haider</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
-                    </td>
-                
-            
-                
-                    <td colspan=1>
-                        <div class ="cell">
-                        <div class = "class"><p class="left">Probability and Statistics</p>
-                                    
-                                    <p class = "right">CS-5C</p>
-                            
-                        <p class = "teacher">Haris Khurram</p>
-                        <!-- <p class="left">Probability_and_Statistics@CS-5C@Haris_Khurram</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
-                    </td>
-                
-            
-                
-                    <td colspan=1>
-                        <div class ="cell">
-                        <div class = "class"><p class="left">Islamic Studies/Ethics</p>
-                                    
-                                    <p class = "right">CS-1A</p>
-                            
-                        <p class = "teacher">Rizwanullah</p>
-                        <!-- <p class="left">Islamic_Studies/Ethics@CS-1A@Rizwanullah</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --><div class = "class"></div> <!-- class = "class" div end --></div> <!-- class = "cell" div end  -->
-                    </td>
-                
-            
-        </tr>
-<!-- Wednesday -->
-        <tr>
-            <td class="center">
-                <b>Wednesday</b>
-            </td>
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
-                                    
-                                    <p class = "right">SE-1A2</p>
-                            
-                        <p class = "teacher">Sadia Ashfaq</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@SE-1A2@Sadia_Ashfaq</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
-                                    
-                                    <p class = "right">SE-1A1</p>
-                            
-                        <p class = "teacher">Farah Iqbal</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@SE-1A1@Farah_Iqbal</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
                 
                     <td colspan=1>
                         <p class="left">Applied Physics</p>
@@ -388,13 +229,164 @@ td{
                 
             
                 
+                
                     <td colspan=1>
-                        <p class="left">Web Programming</p>
+                        <p class="left">Computer Architecture</p>
+                                    
+                                    <p class = "right">CS-9A</p>
+                            
+                        <p class = "teacher">Muhammad Usman Joyia</p>
+                        <!-- <p class="left">Computer_Architecture@CS-9A@Muhammad_Usman_Joyia</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+
+        </tr>
+<!-- Tuesday -->
+        <tr>
+            <td class="center">
+                <b>Tuesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Software Design and Analysis</p>
                                     
                                     <p class = "right">CS-5A</p>
                             
-                        <p class = "teacher">Muhammad Shahrose Khan</p>
-                        <!-- <p class="left">Web_Programming@CS-5A@Muhammad_Shahrose_Khan</p>
+                        <p class = "teacher">Dr. Muhammad Bilal</p>
+                        <!-- <p class="left">Software_Design_and_Analysis@CS-5A@Dr._Muhammad_Bilal</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Probability and Statistics</p>
+                                    
+                                    <p class = "right">CS-5A</p>
+                            
+                        <p class = "teacher">Haris Khurram</p>
+                        <!-- <p class="left">Probability_and_Statistics@CS-5A@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Probability and Statistics</p>
+                                    
+                                    <p class = "right">CS-5C</p>
+                            
+                        <p class = "teacher">Haris Khurram</p>
+                        <!-- <p class="left">Probability_and_Statistics@CS-5C@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Pakistan Studies</p>
+                                    
+                                    <p class = "right">SE-1B</p>
+                            
+                        <p class = "teacher">Zainab Javeed</p>
+                        <!-- <p class="left">Pakistan_Studies@SE-1B@Zainab_Javeed</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+        </tr>
+<!-- Wednesday -->
+        <tr>
+            <td class="center">
+                <b>Wednesday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Theory of Automata</p>
+                                    
+                                    <p class = "right">CS-5C</p>
+                            
+                        <p class = "teacher">Numan Shafi</p>
+                        <!-- <p class="left">Theory_of_Automata@CS-5C@Numan_Shafi</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Finance & Accounting</p>
+                                    
+                                    <p class = "right">CS-3A</p>
+                            
+                        <p class = "teacher">Agha Mureed Ahmad Khan</p>
+                        <!-- <p class="left">Finance_&_Accounting@CS-3A@Agha_Mureed_Ahmad_Khan</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        </td>
+                
+            
+        </tr>
+<!-- Thursday -->
+        <tr>
+            <td class="center">
+                <b>Thursday</b>
+            </td>
+            
+                
+                    <td colspan=1>
+                        <p class="left">Advanced Programming</p>
+                                    
+                                    <p class = "right">CS-5C</p>
+                            
+                        <p class = "teacher">Awais Azam</p>
+                        <!-- <p class="left">Advanced_Programming@CS-5C@Awais_Azam</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Probability and Statistics</p>
+                                    
+                                    <p class = "right">SE-5B</p>
+                            
+                        <p class = "teacher">Haris Khurram</p>
+                        <!-- <p class="left">Probability_and_Statistics@SE-5B@Haris_Khurram</p>
+                        <p class="right">1</p>
+                        <p class="teacher"></p> --></td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Design and Analysis of Algorithms</p>
+                                    
+                                    <p class = "right">CS-5E</p>
+                            
+                        <p class = "teacher">Shoaib Saleem</p>
+                        <!-- <p class="left">Design_and_Analysis_of_Algorithms@CS-5E@Shoaib_Saleem</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
@@ -411,71 +403,9 @@ td{
                         <p class="teacher"></p> --></td>
                 
             
-        </tr>
-<!-- Thursday -->
-        <tr>
-            <td class="center">
-                <b>Thursday</b>
-            </td>
-            
                 
                     <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
-                                    
-                                    <p class = "right">CS-1C1</p>
-                            
-                        <p class = "teacher">Junaid Shahid</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1C1@Junaid_Shahid</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Linear Algebra</p>
-                                    
-                                    <p class = "right">CS-1A</p>
-                            
-                        <p class = "teacher">Amjad Hussain</p>
-                        <!-- <p class="left">Linear_Algebra@CS-1A@Amjad_Hussain</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">CS-1F1</p>
-                            
-                        <p class = "teacher">Mah Rukh</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@CS-1F1@Mah_Rukh</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">English Composition and Comprehension - Lab</p>
-                                    
-                                    <p class = "right">CS-1F1</p>
-                            
-                        <p class = "teacher">Mah Rukh</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension_-_Lab@CS-1F1@Mah_Rukh</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Data Mining</p>
-                                    
-                                    <p class = "right">CS-7B</p>
-                            
-                        <p class = "teacher">Nasreen Akhtar</p>
-                        <!-- <p class="left">Data_Mining@CS-7B@Nasreen_Akhtar</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
 
@@ -488,62 +418,41 @@ td{
             
                 
                     <td colspan=1>
-                        <p class="left">English Composition and Comprehension</p>
+                        </td>
+                
+            
+                
+                    <td colspan=1>
+                        <p class="left">Pakistan Studies</p>
                                     
-                                    <p class = "right">CS-1F1</p>
+                                    <p class = "right">CS-1E</p>
                             
-                        <p class = "teacher">Muhammad Iqbal</p>
-                        <!-- <p class="left">English_Composition_and_Comprehension@CS-1F1@Muhammad_Iqbal</p>
+                        <p class = "teacher">Asif Naveed</p>
+                        <!-- <p class="left">Pakistan_Studies@CS-1E@Asif_Naveed</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Discrete Structures</p>
+                        <p class="left">Pakistan Studies</p>
                                     
-                                    <p class = "right">CS-3A</p>
+                                    <p class = "right">CS-1F</p>
                             
-                        <p class = "teacher">Dr. Muhammad Ahmad</p>
-                        <!-- <p class="left">Discrete_Structures@CS-3A@Dr._Muhammad_Ahmad</p>
+                        <p class = "teacher">Asif Naveed</p>
+                        <!-- <p class="left">Pakistan_Studies@CS-1F@Asif_Naveed</p>
                         <p class="right">1</p>
                         <p class="teacher"></p> --></td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Theory of Automata</p>
-                                    
-                                    <p class = "right">CS-5A</p>
-                            
-                        <p class = "teacher">Anmol Bilal</p>
-                        <!-- <p class="left">Theory_of_Automata@CS-5A@Anmol_Bilal</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
                 
                     <td colspan=1>
-                        <p class="left">Database Systems</p>
-                                    
-                                    <p class = "right">SE-5A</p>
-                            
-                        <p class = "teacher">Nasreen Akhtar</p>
-                        <!-- <p class="left">Database_Systems@SE-5A@Nasreen_Akhtar</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
-                
-            
-                
-                    <td colspan=1>
-                        <p class="left">Discrete Structures</p>
-                                    
-                                    <p class = "right">CS-3B</p>
-                            
-                        <p class = "teacher">Dr. Muhammad Ahmad</p>
-                        <!-- <p class="left">Discrete_Structures@CS-3B@Dr._Muhammad_Ahmad</p>
-                        <p class="right">1</p>
-                        <p class="teacher"></p> --></td>
+                        </td>
                 
             
 
